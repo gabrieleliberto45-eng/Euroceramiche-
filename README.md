@@ -8,7 +8,7 @@ Sito a pagina singola, statico, senza dipendenze né build. Brief di brand e pri
 index.html      pagina principale (CSS e JS inline)
 privacy.html    informativa privacy (modello da completare)
 fonts/          Bodoni Moda + Hanken Grotesk, self-hosted (licenza SIL OFL)
-img/            foto (facoltative, vedi sotto)
+img/            foto WebP (provvisorie, da Pexels: vedi sotto)
 ```
 
 ## Prima di pubblicare
@@ -17,7 +17,7 @@ img/            foto (facoltative, vedi sotto)
 2. **Orari**: modificare le righe della tabella orari in `index.html` (`data-hours="08:30-13:00,15:30-19:30"`). Lo stato "Aperto ora / Chiuso" viene calcolato da quei valori, sull'ora italiana.
 3. Aggiornare indirizzo e orari anche nel blocco **JSON-LD** in `<head>` (serve a Google).
 4. **Collezioni**: sostituire i nomi d'esempio con le collezioni reali; ogni prodotto ha `data-cat` per i filtri (`marmo`, `legno`, `pietra`, `rivestimenti`, `esterni`).
-5. **Foto** (facoltative): `img/showroom-1.jpg`, `showroom-2.jpg`, `showroom-3.jpg` (≈1600 px, ≤ 200 KB) e `img/og.jpg` (1200×630) per le anteprime social. Finché mancano, al loro posto resta una texture.
+5. **Foto**: le immagini in `img/` sono foto stock di [Pexels](https://www.pexels.com/license/) (uso commerciale gratuito, nessuna attribuzione obbligatoria). Sostituirle con foto reali mantenendo gli stessi nomi file (WebP, ~1600 px di lato lungo, versioni `-800`/`-900` per mobile). La foto accanto agli orari va sostituita con una dello showroom vero.
 6. Completare `privacy.html` e farla verificare.
 
 ## Ricevere i preventivi

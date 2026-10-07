@@ -31,9 +31,9 @@ venire in showroom**.
 
 ## Personalità del brand
 
-**Concreta, artigiana, mediterranea.** Non lusso ostentato: qualità che si
-tocca con mano. Parliamo come un consulente esperto dietro il bancone dello
-showroom: diretto, cordiale, senza superlativi vuoti.
+**Lusso editoriale, sobrio e serio.** Il tono dei grandi marchi italiani della
+ceramica: poche parole, fotografia protagonista, nessun effetto "giocattolo".
+Parliamo come un consulente esperto: diretto, cordiale, senza superlativi vuoti.
 
 - Sì: "Portiamo i campioni a casa vostra." "Vi rispondiamo in giornata."
 - No: "Soluzioni innovative all'avanguardia per ogni esigenza."
@@ -43,40 +43,34 @@ pulsanti brevi ("Scrivici su WhatsApp").
 
 ## Direzione visiva
 
-- **Palette**: pietra calcarea chiara (sfondo), inchiostro blu-nero (testo),
-  **blu cobalto della maiolica** come unico colore d'accento, ocra solo in
-  dettagli minimi. Niente gradienti viola, niente neon, niente nero/grigio puri.
-- **Tipografia**: *Bodoni Moda* per i titoli (Bodoni è il carattere italiano per
-  eccellenza, contrasto alto come una superficie lucidata), *Hanken Grotesk*
-  per il testo. Font self-hosted, niente richieste a terzi.
-- **Materia prima ai prodotti**: le anteprime delle collezioni sono texture
-  generate (marmo, legno, cemento, cotto, maiolica) con le fughe in scala reale
-  sul formato della piastrella. Il sito è bello anche senza foto e resta leggero;
-  quando arrivano le foto vere si sostituiscono.
-- **Layout**: asimmetrico, molto respiro, griglie a fuga come un pavimento posato.
-  Niente card dentro card, niente "numeroni" di statistiche inventate.
+- **Fotografia prima di tutto**: hero a tutto schermo, ambienti e dettagli di
+  materia. Le foto attuali sono stock Pexels (licenza gratuita anche commerciale)
+  e vanno sostituite con quelle dello showroom e delle collezioni reali.
+- **Palette**: carta calda (sfondo), inchiostro quasi nero, sezioni scure per il
+  ritmo, oro tenue in dettagli minimi. Il cobalto solo per il focus.
+- **Tipografia**: *Bodoni Moda* regular per i titoli, grandi e con corsivo come
+  accento; *Hanken Grotesk* per il testo; etichette in maiuscoletto spaziato
+  con numerazione di sezione (01, 02…). Font self-hosted.
+- **Layout**: molto bianco, griglia a 12 colonne, collage asimmetrici, angoli
+  quasi vivi, linee sottili al posto dei riquadri. Niente card arrotondate,
+  niente statistiche inventate.
 
 ## Principi di interazione (motion)
 
-- Easing **ease-out** personalizzati, durate 150–300 ms: l'interfaccia deve
-  sembrare istantanea. Nessun bounce.
-- Feedback alla pressione: `scale(.97)` sui pulsanti.
-- Hover solo su dispositivi con puntatore fine (`hover: hover`).
-- Popover e menu nascono dal punto d'origine (`transform-origin`), mai da `scale(0)`.
-- Transizioni interrompibili (CSS transitions, non keyframe) per ciò che
-  l'utente può invertire.
-- Filtro collezioni con View Transitions dove supportate.
-- Effetti "wow" su base chiara: intro col logo che si compone, parete 3D di
-  campioni che si assemblano in volo su un pavimento di marmo, pulsanti magnetici,
-  piastrelle che si posano entrando nello schermo. Hero con pavimento 3D e luce
-  che segue il cursore, sezione materiali bloccata allo scroll con lastra 3D,
-  titoli rivelati parola per parola, schede con inclinazione 3D.
+- Lento e misurato: rivelazioni a sipario delle foto (clip-path + leggero
+  zoom che si assesta), titoli che salgono parola per parola, testo del
+  manifesto che si "accende" leggendo, parallasse leggera.
+- Un solo momento scenografico: la galleria "Ambienti" orizzontale bloccata
+  durante lo scroll (su mobile diventa uno scorrimento a scatto).
+- Header trasparente sulla foto, solido dopo; si nasconde scendendo e riappare
+  salendo.
+- Hover solo su dispositivi con puntatore fine; feedback alla pressione discreto.
 - `prefers-reduced-motion` rispettato ovunque.
 
 ## Vincoli tecnici
 
 - Un solo `index.html` con CSS e JS inline, nessuna dipendenza, nessun build.
-- Peso pagina (senza foto) < 150 KB compressi; nessun cookie di terze parti
+- HTML < 30 KB compressi; foto in WebP con `srcset` e caricamento lazy (~850 KB totali, scaricate solo quando servono); nessun cookie di terze parti
   → nessun banner cookie necessario.
 - Accessibilità: contrasto AA, focus visibile, target touch ≥ 44 px,
   form con etichette ed errori leggibili dagli screen reader.
@@ -91,4 +85,5 @@ blocco `CONFIG` in fondo a `index.html`:
 - Numero WhatsApp Business e telefono fisso
 - Indirizzo esatto, email, Partita IVA
 - Orari reali dello showroom
-- Nomi reali delle collezioni/marchi trattati e foto (cartella `img/`)
+- Nomi reali delle collezioni/marchi trattati
+- Foto reali dello showroom e delle collezioni (cartella `img/`, stessi nomi file)
