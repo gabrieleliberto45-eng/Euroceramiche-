@@ -45,9 +45,9 @@
    Token — carta calda, inchiostro, un solo accento discreto
    ========================================================================== */
 :root {
-  --bg: oklch(96.4% .007 80);
-  --surface: oklch(98.6% .004 80);
-  --surface-2: oklch(92.8% .01 78);
+  --bg: oklch(92.6% .022 76);            /* sabbia calda */
+  --surface: oklch(95.6% .016 78);       /* crema */
+  --surface-2: oklch(87.5% .03 70);      /* pietra / cappuccino */
   --ink: oklch(20% .008 70);
   --ink-2: oklch(40% .01 70);
   --ink-3: oklch(54% .01 70);
@@ -58,10 +58,13 @@
   --ok: oklch(56% .12 152);
   --danger: oklch(50% .16 28);
   --wa: #1fae5b;
-  --dark: oklch(17% .008 70);
-  --dark-ink: oklch(95% .006 80);
+  --dark: oklch(24% .022 55);            /* caffè */
+  --dark-ink: oklch(94% .016 78);
 
-  --radius: 2px;                          /* angoli quasi vivi: più architettura, meno app */
+  --radius: 999px;                        /* pulsanti a pillola */
+  --r-img: clamp(18px, 2.2vw, 28px);     /* foto e riquadri morbidi */
+  --r-panel: clamp(24px, 3.4vw, 48px);   /* sezioni a pannello */
+  --panel-gap: clamp(8px, 1.4vw, 20px);
   --ease-out: cubic-bezier(.23, 1, .32, 1);
   --ease-lux: cubic-bezier(.77, 0, .175, 1);
   --d-press: 140ms;
@@ -536,9 +539,75 @@ fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
 .js [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity 1200ms var(--ease-out), transform 1200ms var(--ease-out); transition-delay: calc(var(--i, 0) * 100ms); }
 .js [data-reveal].is-in { opacity: 1; transform: none; }
 
+/* ==========================================================================
+   Morbidezza: sezioni a pannello, angoli arrotondati, archi mediterranei
+   ========================================================================== */
+.panel { margin-inline: var(--panel-gap); border-radius: var(--r-panel); }
+.panel--cream { background: var(--surface); }
+.rooms.panel { overflow: clip; }
+.rooms.panel .rooms-sticky { border-radius: var(--r-panel); }
+#servizi { padding-top: clamp(96px, 13vw, 180px) !important; }
+.pro.panel { margin-top: 0; }
+.footer { margin: var(--panel-gap); border-radius: var(--r-panel); }
+
+.frame { border-radius: var(--r-img); isolation: isolate; }
+.frame.arch { border-radius: 999px 999px var(--r-img) var(--r-img); }
+.frame.round { border-radius: 999px; aspect-ratio: 3 / 4; }
+.js [data-clip] { clip-path: inset(100% 0 0 0 round var(--r-img)); }
+.js [data-clip].is-in { clip-path: inset(0 0 0 0 round var(--r-img)); }
+.js .frame.arch[data-clip], .js .frame.round[data-clip] { clip-path: inset(100% 0 0 0 round 999px 999px var(--r-img) var(--r-img)); }
+.js .frame.arch[data-clip].is-in, .js .frame.round[data-clip].is-in { clip-path: inset(0 0 0 0 round 999px 999px var(--r-img) var(--r-img)); }
+.js .frame.round[data-clip].is-in { clip-path: inset(0 0 0 0 round 999px); }
+.collage .c1 .frame.arch { aspect-ratio: 4 / 4.4; }
+.collage .c2 .frame.round { aspect-ratio: 3 / 4.2; }
+.pro .frame.arch { aspect-ratio: 4 / 5.2; }
+
+/* pulsanti e controlli a pillola */
+.btn { padding: 0 30px; }
+.btn--sm { padding: 0 20px; }
+.seg { border-radius: 999px; padding: 4px; background: var(--bg); box-shadow: inset 0 0 0 1px var(--line); }
+.seg-thumb { top: 4px; bottom: 4px; left: 4px; width: calc(50% - 4px); border-radius: 999px; }
+.seg label { min-height: 46px; }
+.check-chip span { border-radius: 999px; background: var(--bg); box-shadow: none; }
+.check-chip input:checked + span { background: var(--ink); }
+.filters { border-bottom: 0; gap: 8px; }
+.chip { padding: 0 20px; min-height: 42px; border-radius: 999px; background: var(--bg); color: var(--ink-2); }
+.chip::after { display: none; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+@media (hover: hover) and (pointer: fine) { .chip[aria-pressed="false"]:hover { background: var(--surface-2); color: var(--ink); } }
+
+/* campi del modulo: morbidi e pieni */
+.form { padding: clamp(22px, 3.5vw, 44px); border-radius: var(--r-img); background: var(--surface); }
+.field input, .field textarea, .field select { padding: 0 18px; border-radius: 14px; background-color: var(--bg); box-shadow: none; }
+.field select { background-position: right 16px center; }
+.field textarea { padding: 14px 18px; }
+.field input:focus, .field textarea:focus, .field select:focus { box-shadow: 0 0 0 1.5px var(--ink); background-color: var(--surface); }
+.field [aria-invalid="true"] { box-shadow: 0 0 0 1.5px var(--danger); }
+.field.is-flash input { animation: flashSoft 1400ms var(--ease-out); }
+@keyframes flashSoft { 0% { box-shadow: 0 0 0 6px color-mix(in oklch, var(--gold) 45%, transparent); } }
+
+/* numeri, showroom, liste: riquadri morbidi invece di righe dure */
+.stats { border: 0; background: var(--surface-2); border-radius: var(--r-panel); padding-inline: clamp(8px, 1.5vw, 16px); }
+.stat + .stat { border-left-color: oklch(24% .022 55 / .1); }
+.showroom { border-radius: var(--r-panel); overflow: hidden; box-shadow: none; background: var(--surface); }
+.showroom .frame { border-radius: 0; }
+.js .showroom .frame[data-clip], .js .showroom .frame[data-clip].is-in { clip-path: none; }
+.reassure, .reassure li { border-color: var(--line); }
+.room .frame { border-radius: var(--r-img); }
+.wa-float { box-shadow: 0 14px 30px -12px oklch(24% .022 55 / .5); }
+.toast { border-radius: 999px; }
+.header.is-solid { background: color-mix(in oklch, var(--bg) 88%, transparent); }
+@media (max-width: 760px) {
+  .actionbar { left: 10px; right: 10px; bottom: calc(10px + env(safe-area-inset-bottom)); padding: 0; border-radius: 999px; overflow: hidden; gap: 0; background: var(--surface); box-shadow: 0 12px 30px -10px oklch(24% .022 55 / .45); }
+  .actionbar a { min-height: 54px; background: transparent; }
+  body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  .stats { padding-inline: 14px; }
+  .form { padding: 20px 16px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 1ms !important; animation: none !important; transition-delay: 0s !important; }
-  .js [data-reveal], .js [data-clip], .step { opacity: 1; transform: none; clip-path: none; }
+  .js [data-reveal], .js [data-clip], .js .frame.arch[data-clip], .js .frame.round[data-clip], .step { opacity: 1; transform: none; }
   .js [data-clip] img, .hero-media img, .room .frame img { transform: none !important; }
   .split .w > span { transform: none; }
   .statement .word { opacity: 1; }
@@ -612,11 +681,11 @@ fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
 
       <div class="collage">
         <figure class="c1" style="margin:0">
-          <div class="frame" data-clip data-speed="-0.06"><img src="img/bagno-marmo.webp" srcset="img/bagno-marmo-800.webp 800w, img/bagno-marmo.webp 1400w" sizes="(max-width: 760px) 100vw, 58vw" alt="Bagno con pareti in marmo bianco venato e doccia in vetro" width="1400" height="934" loading="lazy" decoding="async"></div>
+          <div class="frame arch" data-clip data-speed="-0.06"><img src="img/bagno-marmo.webp" srcset="img/bagno-marmo-800.webp 800w, img/bagno-marmo.webp 1400w" sizes="(max-width: 760px) 100vw, 58vw" alt="Bagno con pareti in marmo bianco venato e doccia in vetro" width="1400" height="934" loading="lazy" decoding="async"></div>
           <figcaption><span>Marmo bianco venato, grande formato</span><span>Bagno</span></figcaption>
         </figure>
         <div class="c2" data-speed="0.08">
-          <div class="frame" data-clip><img src="img/marmo-dettaglio.webp" alt="Dettaglio delle venature di una lastra di marmo" width="1000" height="667" loading="lazy" decoding="async"></div>
+          <div class="frame round" data-clip><img src="img/marmo-dettaglio.webp" alt="Dettaglio delle venature di una lastra di marmo" width="1000" height="667" loading="lazy" decoding="async"></div>
           <p data-reveal>Consulenza, progetto, preventivo chiaro e consegna in cantiere: un solo interlocutore, dalla scelta alla posa.</p>
           <a class="link" href="#servizi" data-reveal>Come lavoriamo <svg><use href="#i-arrow"/></svg></a>
         </div>
@@ -638,7 +707,7 @@ fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
   </section>
 
   <!-- AMBIENTI: galleria orizzontale -->
-  <section class="rooms" id="ambienti" aria-label="Ambienti">
+  <section class="rooms panel" id="ambienti" aria-label="Ambienti">
     <div class="rooms-sticky">
       <div class="rooms-track">
         <div class="rooms-intro">
@@ -656,7 +725,7 @@ fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
   </section>
 
   <!-- COLLEZIONI — sostituire nomi e foto con le collezioni realmente trattate -->
-  <section class="section" id="collezioni">
+  <section class="section panel panel--cream" id="collezioni">
     <div class="wrap">
       <div class="head" data-reveal>
         <span class="label"><span class="n">03</span> Collezioni</span>
@@ -771,7 +840,7 @@ fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
   </section>
 
   <!-- PROFESSIONISTI -->
-  <section class="section pro" id="professionisti">
+  <section class="section pro panel" id="professionisti">
     <div class="wrap">
       <div>
         <span class="label" data-reveal><span class="n">05</span> Professionisti</span>
@@ -785,7 +854,7 @@ fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
         </ul>
         <a class="btn btn--line-light" href="#preventivo" data-pro data-reveal>Richiedi condizioni dedicate <svg class="arrow"><use href="#i-arrow"/></svg></a>
       </div>
-      <div class="frame" data-clip><img src="img/campioni.webp" srcset="img/campioni-800.webp 800w, img/campioni.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" alt="Due mani confrontano campioni di marmo bianco e nero su un tavolo da progetto" width="1400" height="934" loading="lazy" decoding="async"></div>
+      <div class="frame arch" data-clip><img src="img/campioni.webp" srcset="img/campioni-800.webp 800w, img/campioni.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" alt="Due mani confrontano campioni di marmo bianco e nero su un tavolo da progetto" width="1400" height="934" loading="lazy" decoding="async"></div>
     </div>
   </section>
 

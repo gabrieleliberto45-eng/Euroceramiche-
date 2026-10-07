@@ -46,14 +46,14 @@ pulsanti brevi ("Scrivici su WhatsApp").
 - **Fotografia prima di tutto**: hero a tutto schermo, ambienti e dettagli di
   materia. Le foto attuali sono stock Pexels (licenza gratuita anche commerciale)
   e vanno sostituite con quelle dello showroom e delle collezioni reali.
-- **Palette**: carta calda (sfondo), inchiostro quasi nero, sezioni scure per il
-  ritmo, oro tenue in dettagli minimi. Il cobalto solo per il focus.
+- **Palette**: sabbia calda (sfondo), crema e pietra/cappuccino per alternare le
+  sezioni, caffè per le parti scure, oro tenue nei dettagli. Mai bianco puro.
 - **Tipografia**: *Bodoni Moda* regular per i titoli, grandi e con corsivo come
   accento; *Hanken Grotesk* per il testo; etichette in maiuscoletto spaziato
   con numerazione di sezione (01, 02…). Font self-hosted.
-- **Layout**: molto bianco, griglia a 12 colonne, collage asimmetrici, angoli
-  quasi vivi, linee sottili al posto dei riquadri. Niente card arrotondate,
-  niente statistiche inventate.
+- **Forme morbide**: sezioni come pannelli arrotondati, foto con angoli morbidi
+  e alcune ad arco (richiamo mediterraneo), pulsanti e filtri a pillola, campi
+  del modulo pieni e arrotondati. Griglia a 12 colonne, collage asimmetrici.
 
 ## Principi di interazione (motion)
 
