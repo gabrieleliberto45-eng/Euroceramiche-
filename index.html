@@ -2,58 +2,122 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Euroceramiche Niscemi — Pavimenti, rivestimenti e arredo bagno</title>
-<meta name="description" content="Pavimenti, rivestimenti e arredo bagno a Niscemi e nella provincia di Caltanissetta. Showroom, progettazione 3D gratuita, consegna e posa in opera.">
-<meta name="theme-color" content="#f6f2ec">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Euroceramiche Niscemi — Piastrelle, ceramiche e arredo bagno · Showroom a Niscemi (CL)</title>
+<meta name="description" content="Piastrelle, gres porcellanato, ceramiche e arredo bagno di qualità a Niscemi. Showroom con campionario completo, preventivi gratuiti, progettazione 3D e consegna in cantiere per privati e professionisti.">
+<meta name="theme-color" content="#f5f1ea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14171d" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Euroceramiche Niscemi — Piastrelle e ceramiche di qualità">
+<meta property="og:description" content="Showroom a Niscemi (CL). Collezioni, preventivi gratuiti, consulenza su WhatsApp.">
+<meta property="og:image" content="img/og.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2324479a'/><rect x='7' y='7' width='8' height='8' rx='1.5' fill='%23f5f1ea'/><rect x='17' y='7' width='8' height='8' rx='1.5' fill='%23f5f1ea' opacity='.55'/><rect x='7' y='17' width='8' height='8' rx='1.5' fill='%23f5f1ea' opacity='.55'/><rect x='17' y='17' width='8' height='8' rx='1.5' fill='%23e2a93b'/></svg>">
+<link rel="preload" href="fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- Dati strutturati per Google (SEO locale). Completare i campi tra [ ]. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeGoodsStore",
+  "name": "Euroceramiche Niscemi",
+  "description": "Piastrelle, ceramiche, gres porcellanato e arredo bagno. Showroom a Niscemi.",
+  "telephone": "+39 000 000 0000",
+  "email": "info@euroceramiche-niscemi.it",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[Via e numero civico]",
+    "addressLocality": "Niscemi",
+    "postalCode": "93015",
+    "addressRegion": "CL",
+    "addressCountry": "IT"
+  },
+  "areaServed": ["Niscemi", "Gela", "Caltagirone", "Provincia di Caltanissetta"],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:30", "closes": "13:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "15:30", "closes": "19:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:30", "closes": "13:00" }
+  ]
+}
+</script>
+
 <style>
 /* ==========================================================================
-   Token
+   Font self-hosted (nessuna richiesta a terzi → niente banner cookie)
+   ========================================================================== */
+@font-face { font-family: "Bodoni Moda"; src: url(fonts/bodoni-moda.woff2) format("woff2"); font-weight: 400 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Bodoni Moda"; src: url(fonts/bodoni-moda-italic.woff2) format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Hanken Grotesk"; src: url(fonts/hanken-grotesk.woff2) format("woff2"); font-weight: 400 600; font-style: normal; font-display: swap; }
+
+/* ==========================================================================
+   Token — pietra calcarea, inchiostro blu-nero, cobalto della maiolica
    ========================================================================== */
 :root {
-  --bg: #f6f2ec;
-  --surface: #fffdf9;
-  --surface-2: #efe8de;
-  --ink: #1f1b16;
-  --ink-2: #5b534a;
-  --ink-3: #8a8177;
-  --line: rgba(31, 27, 22, .10);
-  --accent: #b5532f;          /* terracotta siciliana */
-  --accent-ink: #fff;
-  --accent-soft: #f3e1d7;
-  --focus: #b5532f;
+  --bg: oklch(96.8% .009 85);
+  --surface: oklch(98.8% .005 85);
+  --surface-2: oklch(93.6% .013 82);
+  --ink: oklch(23% .025 258);
+  --ink-2: oklch(41% .022 258);
+  --ink-3: oklch(52% .018 258);
+  --line: oklch(23% .025 258 / .11);
+  --line-strong: oklch(23% .025 258 / .22);
+  --accent: oklch(43% .135 262);          /* cobalto maiolica */
+  --accent-hover: oklch(38% .13 262);
+  --accent-ink: oklch(98% .005 85);
+  --accent-soft: oklch(93% .028 262);
+  --ochre: oklch(76% .135 75);
+  --ok: oklch(58% .13 152);
+  --danger: oklch(52% .17 28);
+  --wa: #1fae5b;
+  --band: oklch(21% .03 258);              /* fascia scura professionisti */
+  --band-ink: oklch(95% .01 85);
 
-  --radius-s: 8px;
+  --radius-s: 10px;
   --radius: 14px;
-  --radius-l: 22px;
-  --shadow: 0 1px 2px rgba(31,27,22,.04), 0 8px 24px -12px rgba(31,27,22,.18);
+  --radius-l: 20px;
+  --shadow: 0 1px 2px oklch(23% .025 258 / .05), 0 10px 30px -14px oklch(23% .025 258 / .22);
 
-  /* Curve di easing: sempre ease-out per ciò che entra/risponde all'utente.
-     Le curve native sono troppo deboli, queste hanno più "carattere". */
+  /* Curve ease-out decise: le native sono troppo morbide. Mai bounce. */
   --ease-out: cubic-bezier(.23, 1, .32, 1);
   --ease-in-out: cubic-bezier(.77, 0, .175, 1);
   --ease-drawer: cubic-bezier(.32, .72, 0, 1);
-
-  /* Durate brevi: l'interfaccia deve sembrare istantanea. */
-  --d-press: 160ms;
-  --d-fast: 200ms;
+  --d-press: 140ms;
+  --d-fast: 180ms;
   --d-base: 260ms;
 
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-serif: "Fraunces", ui-serif, Georgia, serif;
-  --wrap: 1180px;
+  --font-display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wrap: 1200px;
+  --header-h: 68px;
+
+  /* Texture materiche generate (SVG feTurbulence): nessuna foto da scaricare. */
+  --tex-veins-warm: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='700' height='700'><filter id='f' x='0' y='0'><feTurbulence type='fractalNoise' baseFrequency='.0022 .0055' numOctaves='4' seed='14' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .58 0 0 0 0 .49 0 0 0 0 .35 1 0 0 0 0'/><feComponentTransfer><feFuncA type='table' tableValues='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .75 .15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0'/></feComponentTransfer></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");
+  --tex-veins-grey: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600'><filter id='f' x='0' y='0'><feTurbulence type='fractalNoise' baseFrequency='.004 .008' numOctaves='4' seed='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .52 1 0 0 0 0'/><feComponentTransfer><feFuncA type='table' tableValues='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0'/></feComponentTransfer></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");
+  --tex-veins-white: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='700' height='700'><filter id='f' x='0' y='0'><feTurbulence type='turbulence' baseFrequency='.0028 .0065' numOctaves='4' seed='21' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .93 0 0 0 0 .92 0 0 0 0 .9 -8 0 0 0 1.1'/><feGaussianBlur stdDeviation='1.2'/></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");
+  --tex-mottle: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><filter id='f' x='0' y='0'><feTurbulence type='fractalNoise' baseFrequency='.008' numOctaves='3' seed='5' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .7 0 0 0 -.27'/></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");
+  --tex-cloud: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='500' height='500'><filter id='f' x='0' y='0'><feTurbulence type='fractalNoise' baseFrequency='.006' numOctaves='3' seed='9' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1.1 0 0 0 -.45'/></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");
+  --tex-grain: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='f' x='0' y='0'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0 0 0 -.24'/></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");
+  --tex-wood: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='300'><filter id='f' x='0' y='0'><feTurbulence type='fractalNoise' baseFrequency='.0025 .09' numOctaves='4' seed='8' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .3 0 0 0 0 .18 0 0 0 0 .08 1.7 0 0 0 -.65'/></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");
+  --tex-bands: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='300'><filter id='f' x='0' y='0'><feTurbulence type='fractalNoise' baseFrequency='.0015 .035' numOctaves='4' seed='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5 0 0 0 0 .4 0 0 0 0 .27 1.3 0 0 0 -.52'/></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #15120f; --surface: #1d1915; --surface-2: #26211c;
-    --ink: #f3ede5; --ink-2: #bdb3a7; --ink-3: #8c8378;
-    --line: rgba(243,237,229,.10);
-    --accent: #e07a52; --accent-ink: #1a0f0a; --accent-soft: #3a241a; --focus: #e07a52;
-    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
+    --bg: oklch(18.5% .016 258);
+    --surface: oklch(22% .018 258);
+    --surface-2: oklch(26% .02 258);
+    --ink: oklch(95% .008 85);
+    --ink-2: oklch(80% .012 85);
+    --ink-3: oklch(68% .012 85);
+    --line: oklch(95% .008 85 / .1);
+    --line-strong: oklch(95% .008 85 / .2);
+    --accent: oklch(72% .12 262);
+    --accent-hover: oklch(77% .11 262);
+    --accent-ink: oklch(18% .03 262);
+    --accent-soft: oklch(28% .05 262);
+    --band: oklch(14% .02 258);
+    --shadow: 0 1px 2px oklch(0% 0 0 / .3), 0 10px 30px -14px oklch(0% 0 0 / .7);
   }
 }
 
@@ -61,463 +125,579 @@
    Base
    ========================================================================== */
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 84px; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 16px); }
 body {
   margin: 0; background: var(--bg); color: var(--ink);
-  font: 400 16px/1.6 var(--font-sans);
+  font: 400 1rem/1.6 var(--font-sans);
   -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
 }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
-h1, h2, h3 { font-family: var(--font-serif); font-weight: 400; letter-spacing: -.02em; line-height: 1.1; margin: 0; text-wrap: balance; }
-h2 { font-size: clamp(2rem, 4vw, 3rem); }
-h3 { font-size: 1.35rem; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 500; letter-spacing: -.015em; line-height: 1.05; margin: 0; text-wrap: balance; }
+h2 { font-size: clamp(2.1rem, 4.4vw, 3.4rem); }
+h3 { font-size: 1.45rem; line-height: 1.15; }
+h1 em, h2 em { font-style: italic; font-weight: 400; color: var(--accent); }
 p { margin: 0; text-wrap: pretty; }
 ::selection { background: var(--accent); color: var(--accent-ink); }
-:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
 .wrap { width: min(var(--wrap), 100% - 32px); margin-inline: auto; }
-.section { padding-block: clamp(72px, 10vw, 128px); }
+.section { padding-block: clamp(80px, 11vw, 144px); }
 .eyebrow {
-  display: inline-block; font-size: .75rem; font-weight: 600; letter-spacing: .14em;
-  text-transform: uppercase; color: var(--accent); margin-bottom: 14px;
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: .76rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-2);
 }
-.section-head { max-width: 640px; margin-bottom: clamp(36px, 5vw, 56px); }
-.section-head p { color: var(--ink-2); margin-top: 14px; font-size: 1.05rem; }
+.eyebrow::before { content: ""; width: 18px; height: 1px; background: currentColor; }
+.section-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .8fr); gap: 24px 64px; align-items: end; margin-bottom: clamp(40px, 6vw, 64px); }
+.section-head .eyebrow { grid-column: 1 / -1; }
+.section-head p { color: var(--ink-2); font-size: 1.06rem; max-width: 46ch; }
+@media (max-width: 860px) { .section-head { grid-template-columns: 1fr; } }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: fixed; left: 16px; top: -60px; z-index: 100; padding: 10px 16px; border-radius: 10px; background: var(--ink); color: var(--bg); text-decoration: none; transition: top var(--d-fast) var(--ease-out); }
+.skip:focus { top: 12px; }
+.ph { color: var(--ink-3); }  /* segnaposto da completare */
 
 /* ==========================================================================
-   Bottoni — feedback immediato alla pressione (scale .97)
+   Pulsanti — feedback immediato alla pressione
    ========================================================================== */
 .btn {
   --btn-bg: var(--ink); --btn-fg: var(--bg);
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  height: 48px; padding: 0 22px; border-radius: 999px; border: 0; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  min-height: 50px; padding: 0 24px; border-radius: 999px; border: 0; cursor: pointer;
   background: var(--btn-bg); color: var(--btn-fg);
-  font: 500 .95rem/1 var(--font-sans); text-decoration: none; white-space: nowrap;
-  transition: transform var(--d-press) var(--ease-out), background-color var(--d-fast) var(--ease-out), box-shadow var(--d-fast) var(--ease-out);
-  user-select: none;
+  font: 500 .97rem/1 var(--font-sans); text-decoration: none; white-space: nowrap;
+  transition: transform var(--d-press) var(--ease-out), background-color var(--d-fast) var(--ease-out), box-shadow var(--d-fast) var(--ease-out), color var(--d-fast) var(--ease-out);
+  user-select: none; -webkit-user-select: none;
 }
 .btn:active { transform: scale(.97); }
-.btn--accent { --btn-bg: var(--accent); --btn-fg: var(--accent-ink); }
-.btn--ghost { --btn-bg: transparent; --btn-fg: var(--ink); box-shadow: inset 0 0 0 1px var(--line); }
-.btn--light { --btn-bg: #fffdf9; --btn-fg: #1f1b16; }
-.btn--glass { --btn-bg: rgba(255,255,255,.14); --btn-fg: #fff; box-shadow: inset 0 0 0 1px rgba(255,255,255,.35); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
 .btn svg { width: 18px; height: 18px; flex: none; }
-
-/* Hover solo su dispositivi con puntatore reale: niente hover "appiccicoso" su touch */
+.btn--accent { --btn-bg: var(--accent); --btn-fg: var(--accent-ink); }
+.btn--ghost { --btn-bg: transparent; --btn-fg: var(--ink); box-shadow: inset 0 0 0 1px var(--line-strong); }
+.btn--wa { --btn-bg: var(--wa); --btn-fg: #fff; }
+.btn--sm { min-height: 42px; padding: 0 16px; font-size: .9rem; }
+.btn--icon { width: 42px; padding: 0; }
 @media (hover: hover) and (pointer: fine) {
-  .btn:hover { box-shadow: 0 6px 20px -8px rgba(31,27,22,.45); }
+  .btn:hover { box-shadow: 0 8px 22px -10px oklch(23% .025 258 / .55); }
+  .btn--accent:hover { --btn-bg: var(--accent-hover); }
   .btn--ghost:hover { box-shadow: inset 0 0 0 1px var(--ink-3); }
-  .btn--glass:hover { --btn-bg: rgba(255,255,255,.22); }
   .btn .arrow { transition: transform var(--d-fast) var(--ease-out); }
   .btn:hover .arrow { transform: translateX(3px); }
 }
-
-/* ==========================================================================
-   Barra annunci
-   ========================================================================== */
-.announce {
-  display: grid; grid-template-rows: 1fr;
-  background: var(--ink); color: var(--bg); font-size: .875rem;
-  transition: grid-template-rows var(--d-base) var(--ease-out), opacity var(--d-fast) var(--ease-out);
-}
-.announce > div { overflow: hidden; }
-.announce.is-hidden { grid-template-rows: 0fr; opacity: 0; }
-.announce .wrap { display: flex; align-items: center; gap: 12px; padding-block: 10px; }
-.announce p { flex: 1; }
-.announce strong { font-weight: 600; }
-.announce a { text-underline-offset: 3px; }
-.icon-btn {
-  display: grid; place-items: center; width: 36px; height: 36px; flex: none;
-  border: 0; border-radius: 999px; background: transparent; color: inherit; cursor: pointer;
-  transition: transform var(--d-press) var(--ease-out), background-color var(--d-fast) var(--ease-out);
-}
-.icon-btn:active { transform: scale(.92); }
-@media (hover: hover) and (pointer: fine) { .icon-btn:hover { background: rgba(127,127,127,.16); } }
-.icon-btn svg { width: 18px; height: 18px; }
 
 /* ==========================================================================
    Header
    ========================================================================== */
 .header {
   position: sticky; top: 0; z-index: 50;
-  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  background: color-mix(in oklch, var(--bg) 84%, transparent);
   backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px);
   border-bottom: 1px solid transparent;
   transition: border-color var(--d-base) var(--ease-out);
 }
 .header.is-scrolled { border-bottom-color: var(--line); }
-.header .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.logo-mark {
-  width: 34px; height: 34px; border-radius: 9px; background: var(--accent);
-  display: grid; grid-template-columns: 1fr 1fr; gap: 3px; padding: 7px;
-}
-.logo-mark i { background: var(--accent-ink); border-radius: 2px; opacity: .92; }
+.header .wrap { display: flex; align-items: center; gap: 24px; height: var(--header-h); }
+.logo { display: flex; align-items: center; gap: 11px; text-decoration: none; margin-right: auto; }
+.logo-mark { width: 34px; height: 34px; border-radius: 8px; background: var(--accent); display: grid; grid-template-columns: 1fr 1fr; gap: 3px; padding: 7px; flex: none; }
+.logo-mark i { border-radius: 1.5px; background: var(--accent-ink); }
 .logo-mark i:nth-child(2), .logo-mark i:nth-child(3) { opacity: .55; }
-.logo-text { font-family: var(--font-serif); font-size: 1.2rem; letter-spacing: -.01em; line-height: 1; }
-.logo-text small { display: block; font-family: var(--font-sans); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3); margin-top: 4px; }
+.logo-mark i:nth-child(4) { background: var(--ochre); }
+.logo-text { font-family: var(--font-display); font-weight: 500; font-size: 1.28rem; letter-spacing: -.01em; line-height: 1; }
+.logo-text small { display: block; font-family: var(--font-sans); font-weight: 500; font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-3); margin-top: 5px; }
 
-.nav { display: flex; align-items: center; gap: 4px; }
-.nav a:not(.btn) {
-  position: relative; padding: 8px 12px; border-radius: 999px; text-decoration: none;
-  font-size: .92rem; font-weight: 500; color: var(--ink-2);
+.nav { display: flex; align-items: center; gap: 2px; }
+.nav a {
+  padding: 9px 13px; border-radius: 999px; text-decoration: none;
+  font-size: .93rem; font-weight: 500; color: var(--ink-2);
   transition: color var(--d-fast) var(--ease-out), background-color var(--d-fast) var(--ease-out);
 }
-.nav a[aria-current="true"] { color: var(--ink); }
-@media (hover: hover) and (pointer: fine) { .nav a:not(.btn):hover { color: var(--ink); background: var(--surface-2); } }
-.nav .btn { height: 40px; padding: 0 18px; margin-left: 8px; font-size: .88rem; }
-.menu-toggle { display: none; }
+.nav a[aria-current="true"] { color: var(--ink); background: var(--surface-2); }
+@media (hover: hover) and (pointer: fine) { .nav a:hover { color: var(--ink); background: var(--surface-2); } }
+.header-cta { display: flex; align-items: center; gap: 8px; }
+.header-cta .btn { min-height: 42px; padding: 0 18px; font-size: .9rem; }
 
-@media (max-width: 900px) {
-  .menu-toggle { display: grid; width: 44px; height: 44px; }
+.status {
+  display: inline-flex; align-items: center; gap: 8px; font-size: .86rem; color: var(--ink-2); white-space: nowrap;
+}
+.status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-3); flex: none; position: relative; }
+.status[data-open="true"] .status-dot { background: var(--ok); }
+.status[data-open="true"] .status-dot::after {
+  content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 1.5px solid var(--ok); opacity: 0;
+  animation: ping 2.4s var(--ease-out) infinite;
+}
+@keyframes ping { 0% { transform: scale(.5); opacity: .7; } 70%, 100% { transform: scale(1.3); opacity: 0; } }
+
+.icon-btn {
+  display: none; place-items: center; width: 44px; height: 44px; flex: none;
+  border: 0; border-radius: 999px; background: transparent; color: inherit; cursor: pointer;
+  transition: transform var(--d-press) var(--ease-out), background-color var(--d-fast) var(--ease-out);
+}
+.icon-btn:active { transform: scale(.92); }
+.icon-btn svg { width: 22px; height: 22px; }
+.menu-toggle .l1, .menu-toggle .l2 { transition: transform var(--d-base) var(--ease-out); transform-origin: center; transform-box: fill-box; }
+.menu-toggle[aria-expanded="true"] .l1 { transform: translateY(4px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] .l2 { transform: translateY(-4px) rotate(-45deg); }
+
+@media (max-width: 1020px) {
+  .header-cta .status { display: none; }
+}
+@media (max-width: 860px) {
+  .icon-btn { display: grid; }
+  .header-cta { display: none; }
   .nav {
-    position: fixed; inset: 68px 12px auto 12px; flex-direction: column; align-items: stretch; gap: 2px;
-    padding: 10px; border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow), 0 0 0 1px var(--line);
-    /* Il menu nasce dal pulsante: origine in alto a destra, mai da scale(0) */
-    transform-origin: top right;
+    position: fixed; top: calc(var(--header-h) - 4px); left: 12px; right: 12px;
+    flex-direction: column; align-items: stretch; gap: 2px; padding: 10px;
+    border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow), 0 0 0 1px var(--line);
+    transform-origin: top right;    /* il menu nasce dal pulsante */
     opacity: 0; transform: scale(.96) translateY(-6px); visibility: hidden;
     transition: opacity var(--d-fast) var(--ease-out), transform var(--d-fast) var(--ease-out), visibility 0s linear var(--d-fast);
   }
   .nav.is-open { opacity: 1; transform: none; visibility: visible; transition-delay: 0s; }
-  .nav a:not(.btn) { padding: 14px 16px; font-size: 1rem; }
-  .nav .btn { margin: 8px 0 0; height: 48px; }
+  .nav a { padding: 15px 16px; font-size: 1.05rem; border-radius: 12px; }
 }
 
 /* ==========================================================================
-   Placeholder immagini: pattern a piastrelle sotto la foto.
-   Se la foto in /img manca, resta un segnaposto elegante e non un'icona rotta.
+   Superfici materiche (anteprime piastrelle)
+   --tw/--th = misura della singola piastrella in scala, le fughe sono reali.
    ========================================================================== */
-.media {
-  position: relative; overflow: hidden; background-color: var(--surface-2);
+.tile {
+  --grout: oklch(30% .01 80 / .2);
+  position: relative; overflow: hidden; isolation: isolate; background-color: #e9e3d8;
+}
+.tile::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 1;
   background-image:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 48px 48px;
+    linear-gradient(to right, var(--grout) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grout) 1px, transparent 1px);
+  background-size: var(--tw, 120px) var(--th, 120px);
 }
-.media img { width: 100%; height: 100%; object-fit: cover; }
-.media img.is-missing { visibility: hidden; }
-.media[data-label]::after {
-  content: attr(data-label); position: absolute; left: 14px; bottom: 12px;
-  font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3);
-  pointer-events: none;
+/* posa sfalsata (listoni legno, mattoncini) */
+.tile.is-staggered::after {
+  background-image:
+    linear-gradient(to bottom, var(--grout) 1px, transparent 1px),
+    conic-gradient(at 1px 50%, transparent 0 270deg, var(--grout) 0),
+    conic-gradient(at 1px 50%, transparent 0 270deg, var(--grout) 0);
+  background-size: var(--tw) var(--th), var(--tw) calc(var(--th) * 2), var(--tw) calc(var(--th) * 2);
+  background-position: 0 0, 0 0, calc(var(--tw) / 2) var(--th);
 }
-.media:has(img:not(.is-missing))::after { content: none; }
+/* riflesso: passa sulla superficie all'hover, come la luce su una lastra lucida */
+.tile::before {
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: linear-gradient(105deg, transparent 35%, rgb(255 255 255 / .28) 50%, transparent 65%);
+  transform: translateX(-110%);
+}
+.tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 3; }
+
+.t-calacatta { background: var(--tex-veins-warm), var(--tex-veins-grey), var(--tex-cloud) 0 0 / 520px, #ece7de; --grout: oklch(55% .01 80 / .22); }
+.t-marquinia { background: var(--tex-veins-white), var(--tex-mottle) 0 0 / 500px, #222226; --grout: oklch(0% 0 0 / .55); }
+.t-rovere { background: var(--tex-wood), var(--tex-mottle) 0 0 / 260px 900px, var(--tex-grain), #b58c62; --grout: oklch(25% .03 60 / .35); }
+.t-cemento { background: var(--tex-mottle) 0 0 / 700px, var(--tex-mottle) 40px 90px / 220px, var(--tex-grain), #bdb8b0; --grout: oklch(30% 0 0 / .22); }
+.t-travertino { background: var(--tex-bands), var(--tex-grain), var(--tex-mottle) 0 0 / 900px, #ddcfb6; --grout: oklch(45% .03 70 / .25); }
+.t-cotto { background: var(--tex-mottle) 0 0 / 220px, var(--tex-grain), #b8643f; --grout: oklch(90% .02 80 / .55); }
+.t-zellige { background: linear-gradient(160deg, rgb(255 255 255 / .18), transparent 45%), var(--tex-mottle) 0 0 / 80px, var(--tex-grain), #8fa690; --grout: oklch(95% .01 100 / .7); }
+.t-terrazzo {
+  --grout: oklch(40% .01 80 / .18);
+  background:
+    radial-gradient(circle at 30% 40%, #b8643f 0 3px, transparent 3.6px) 0 0 / 37px 41px,
+    radial-gradient(circle at 70% 20%, #3c5a94 0 2px, transparent 2.6px) 0 0 / 29px 31px,
+    radial-gradient(ellipse at 50% 60%, #8d847a 0 5px, transparent 5.6px) 0 0 / 53px 47px,
+    radial-gradient(circle at 10% 80%, #d8a647 0 2px, transparent 2.6px) 0 0 / 23px 43px,
+    radial-gradient(circle at 80% 70%, #f7f4ee 0 4px, transparent 4.6px) 0 0 / 41px 37px,
+    var(--tex-grain), #e7e0d4;
+}
+.t-maiolica {
+  --b: #24479a; --y: #e2a93b; --c: #f6f1e4; --s: 72px; --grout: oklch(85% .02 85 / .9);
+  background:
+    radial-gradient(circle, var(--y) 0 9%, transparent 10%) 0 0 / var(--s) var(--s),
+    radial-gradient(circle, transparent 0 20%, var(--b) 21% 26%, transparent 27%) 0 0 / var(--s) var(--s),
+    radial-gradient(circle at 0 0, var(--b) 0 16%, var(--y) 16.5% 19%, transparent 19.5%) 0 0 / var(--s) var(--s),
+    radial-gradient(circle at 100% 0, var(--b) 0 16%, var(--y) 16.5% 19%, transparent 19.5%) 0 0 / var(--s) var(--s),
+    radial-gradient(circle at 0 100%, var(--b) 0 16%, var(--y) 16.5% 19%, transparent 19.5%) 0 0 / var(--s) var(--s),
+    radial-gradient(circle at 100% 100%, var(--b) 0 16%, var(--y) 16.5% 19%, transparent 19.5%) 0 0 / var(--s) var(--s),
+    conic-gradient(from 45deg, var(--c) 0 25%, #ece4d1 0 50%, var(--c) 0 75%, #ece4d1 0) 0 0 / var(--s) var(--s),
+    var(--c);
+  --tw: var(--s); --th: var(--s);
+}
 
 /* ==========================================================================
    Hero
    ========================================================================== */
-.hero { padding-top: clamp(24px, 4vw, 40px); }
-.hero-card {
-  position: relative; isolation: isolate; overflow: hidden; border-radius: var(--radius-l);
-  min-height: min(78vh, 720px); display: flex; align-items: flex-end;
-  color: #fff; background: #2a231d;
-}
-.hero-card .media { position: absolute; inset: 0; z-index: -2; background-color: #3a2f26; --line: rgba(255,255,255,.07); }
-.hero-card .media[data-label]::after { color: rgba(255,255,255,.4); left: auto; right: 18px; top: 16px; bottom: auto; }
-.hero-card::before {
-  content: ""; position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(180deg, rgba(20,16,12,.05) 20%, rgba(20,16,12,.78) 100%);
-}
-.hero-content { padding: clamp(24px, 5vw, 56px); max-width: 760px; }
-.hero h1 { font-size: clamp(2.5rem, 6.2vw, 4.75rem); margin-bottom: 18px; }
-.hero h1 em { font-style: italic; color: #f2c3a9; }
-.hero p { font-size: clamp(1rem, 1.6vw, 1.15rem); color: rgba(255,255,255,.82); max-width: 560px; margin-bottom: 28px; }
-.hero-cta { display: flex; flex-wrap: wrap; gap: 10px; }
+.hero { padding-block: clamp(28px, 5vw, 56px) clamp(64px, 9vw, 112px); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 80px); align-items: center; }
+.hero h1 { font-size: clamp(2.9rem, 6.6vw, 5.6rem); line-height: .98; letter-spacing: -.025em; margin: 22px 0 26px; }
+.hero-lead { font-size: clamp(1.05rem, 1.5vw, 1.2rem); color: var(--ink-2); max-width: 48ch; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 34px; }
+@media (max-width: 560px) { .hero-cta .btn { flex: 1 1 100%; } }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--line); font-size: .9rem; color: var(--ink-2); }
+.hero-meta a { text-decoration: none; display: inline-flex; align-items: center; gap: 7px; }
+.hero-meta svg { width: 16px; height: 16px; color: var(--ink-3); }
+@media (hover: hover) and (pointer: fine) { .hero-meta a:hover { color: var(--ink); } }
 
-/* ==========================================================================
-   Chi siamo + numeri
-   ========================================================================== */
-.about { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(32px, 6vw, 88px); align-items: start; }
-.about-text p { color: var(--ink-2); font-size: 1.05rem; margin-top: 18px; }
-.about-text .btn { margin-top: 30px; }
-.about .media { aspect-ratio: 4/5; border-radius: var(--radius-l); }
-.stats {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: clamp(48px, 7vw, 80px);
-  background: var(--line); border-radius: var(--radius-l); overflow: hidden; border: 1px solid var(--line);
+/* Parete di campioni: griglia come un pannello espositivo dello showroom */
+.wall {
+  display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(6, 1fr);
+  gap: 8px; aspect-ratio: 5 / 6; max-height: 680px;
 }
-.stat { background: var(--surface); padding: 28px 24px; }
-.stat-value {
-  font-family: var(--font-serif); font-size: clamp(2.2rem, 4vw, 3rem); line-height: 1;
-  font-variant-numeric: tabular-nums; /* le cifre non "ballano" durante il conteggio */
+.wall .tile { border-radius: 6px; box-shadow: 0 0 0 1px var(--line); }
+.wall .w1 { grid-area: 1 / 1 / 5 / 4; }
+.wall .w2 { grid-area: 1 / 4 / 3 / 7; }
+.wall .w3 { grid-area: 3 / 4 / 5 / 6; }
+.wall .w4 { grid-area: 3 / 6 / 5 / 7; }
+.wall .w5 { grid-area: 5 / 1 / 7 / 3; }
+.wall .w6 { grid-area: 5 / 3 / 7 / 5; }
+.wall .w7 { grid-area: 5 / 5 / 7 / 7; }
+.wall-caption {
+  position: absolute; left: 12px; bottom: 12px; z-index: 4;
+  padding: 7px 11px; border-radius: 999px; font-size: .74rem; font-weight: 500; letter-spacing: .02em;
+  background: rgb(255 255 255 / .82); color: #1d2230; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
 }
-.stat-label { margin-top: 10px; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
+.t-marquinia .wall-caption { background: rgb(20 20 24 / .6); color: #f3efe8; }
 @media (max-width: 900px) {
-  .about { grid-template-columns: 1fr; }
-  .about .media { aspect-ratio: 16/10; order: -1; }
-  .stats { grid-template-columns: repeat(2, 1fr); }
+  .hero .wrap { grid-template-columns: 1fr; }
+  .wall { aspect-ratio: auto; height: 300px; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); }
+  .wall .w1 { grid-area: 1 / 1 / 3 / 3; }
+  .wall .w2 { grid-area: 1 / 3 / 2 / 5; }
+  .wall .w3 { grid-area: 2 / 3 / 3 / 4; }
+  .wall .w4 { grid-area: 2 / 4 / 3 / 5; }
+  .wall .w5, .wall .w6, .wall .w7 { display: none; }
 }
 
 /* ==========================================================================
-   Prodotti
+   Percorsi: privati / professionisti
    ========================================================================== */
-.products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.card {
-  display: flex; flex-direction: column; background: var(--surface); border-radius: var(--radius-l);
-  overflow: hidden; box-shadow: 0 0 0 1px var(--line); text-decoration: none;
-  transition: transform var(--d-base) var(--ease-out), box-shadow var(--d-base) var(--ease-out);
+.paths { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border-block: 1px solid var(--line); }
+.path {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center;
+  padding: clamp(28px, 4vw, 44px) clamp(4px, 2vw, 28px); background: var(--bg); text-decoration: none;
+  transition: background-color var(--d-base) var(--ease-out);
 }
-.card .media { aspect-ratio: 4/3; }
-.card .media img { transition: transform 600ms var(--ease-out); }
-.card-body { padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
-.card-body p { color: var(--ink-2); font-size: .95rem; }
-.card-link { margin-top: auto; padding-top: 8px; display: inline-flex; align-items: center; gap: 6px; font-weight: 500; font-size: .9rem; color: var(--accent); }
-.card-link svg { width: 16px; height: 16px; transition: transform var(--d-fast) var(--ease-out); }
+.path-num { font-family: var(--font-display); font-style: italic; font-size: 1.1rem; color: var(--ink-3); }
+.path h3 { font-size: clamp(1.5rem, 2.4vw, 2rem); }
+.path p { color: var(--ink-2); margin-top: 6px; font-size: .97rem; }
+.path-arrow { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; box-shadow: inset 0 0 0 1px var(--line-strong); transition: background-color var(--d-fast) var(--ease-out), color var(--d-fast) var(--ease-out), transform var(--d-base) var(--ease-out); }
+.path-arrow svg { width: 18px; height: 18px; }
+.path:active .path-arrow { transform: scale(.94); }
 @media (hover: hover) and (pointer: fine) {
-  .card:hover { transform: translateY(-3px); box-shadow: 0 0 0 1px var(--line), var(--shadow); }
-  .card:hover .media img { transform: scale(1.03); }
-  .card:hover .card-link svg { transform: translateX(3px); }
+  .path:hover { background: var(--surface); }
+  .path:hover .path-arrow { background: var(--ink); color: var(--bg); transform: translateX(4px); }
 }
-@media (max-width: 900px) { .products { grid-template-columns: 1fr; } .card .media { aspect-ratio: 16/9; } }
+@media (max-width: 760px) { .paths { grid-template-columns: 1fr; } }
 
 /* ==========================================================================
-   Servizi
+   Collezioni
    ========================================================================== */
-.services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.service { padding: 28px 24px; border-radius: var(--radius-l); background: var(--surface); box-shadow: 0 0 0 1px var(--line); }
-.service-icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); margin-bottom: 22px; }
-.service-icon svg { width: 22px; height: 22px; }
-.service h3 { font-size: 1.2rem; margin-bottom: 8px; }
-.service p { color: var(--ink-2); font-size: .95rem; }
-@media (max-width: 1000px) { .services { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .services { grid-template-columns: 1fr; } }
+.filters { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px 28px; padding: 2px 16px; scroll-snap-type: x proximity; }
+.filters::-webkit-scrollbar { display: none; }
+.chip {
+  flex: none; min-height: 40px; padding: 0 16px; border-radius: 999px; border: 0; cursor: pointer; scroll-snap-align: start;
+  background: transparent; color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line-strong);
+  font: 500 .9rem/1 var(--font-sans);
+  transition: background-color var(--d-fast) var(--ease-out), color var(--d-fast) var(--ease-out), box-shadow var(--d-fast) var(--ease-out), transform var(--d-press) var(--ease-out);
+}
+.chip:active { transform: scale(.96); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); box-shadow: none; }
+.chip .count { margin-left: 6px; font-variant-numeric: tabular-nums; opacity: .55; }
+@media (hover: hover) and (pointer: fine) { .chip[aria-pressed="false"]:hover { color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink-3); } }
+
+.products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 24px); }
+.product { display: flex; flex-direction: column; border-radius: var(--radius-l); background: var(--surface); box-shadow: 0 0 0 1px var(--line); overflow: hidden; transition: box-shadow var(--d-base) var(--ease-out); }
+.product[hidden] { display: none; }
+.product .tile { aspect-ratio: 4 / 3; }
+.product-body { display: flex; flex-direction: column; gap: 14px; padding: 22px 22px 22px; flex: 1; }
+.product-cat { font-size: .74rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+.product h3 { margin-top: -6px; }
+.specs { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; margin: 0; font-size: .9rem; }
+.specs dt { color: var(--ink-3); }
+.specs dd { margin: 0; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.product-actions { display: flex; gap: 8px; margin-top: auto; padding-top: 6px; }
+.product-actions .btn:first-child { flex: 1; }
+.wa-icon { color: var(--wa); }
+@media (hover: hover) and (pointer: fine) {
+  .product:hover { box-shadow: 0 0 0 1px var(--line-strong), var(--shadow); }
+  .product:hover .tile::before, .wall .tile:hover::before { transform: translateX(110%); transition: transform 900ms var(--ease-out); }
+}
+@media (max-width: 1000px) { .products { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .products { grid-template-columns: 1fr; } .product .tile { aspect-ratio: 16 / 10; } }
+.products-note { margin-top: 28px; color: var(--ink-2); font-size: .95rem; }
+.products-note a { color: var(--accent); text-underline-offset: 3px; }
+
+/* Filtro animato con View Transitions (dove supportate) */
+::view-transition-group(*) { animation-duration: 300ms; animation-timing-function: var(--ease-out); }
+::view-transition-old(*), ::view-transition-new(*) { animation-duration: 200ms; }
 
 /* ==========================================================================
-   Banner 3D
+   Come lavoriamo
    ========================================================================== */
-.feature {
-  display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; border-radius: var(--radius-l);
-  background: var(--ink); color: var(--bg);
-}
-.feature .media { min-height: 380px; background-color: #2c2620; --line: rgba(255,255,255,.07); }
-.feature-body { padding: clamp(32px, 5vw, 64px); display: flex; flex-direction: column; justify-content: center; gap: 18px; }
-.feature-body .eyebrow { margin: 0; color: #f2a984; }
-.feature-body p { color: color-mix(in srgb, var(--bg) 75%, transparent); font-size: 1.05rem; }
-.feature-body .btn { align-self: flex-start; margin-top: 10px; }
-@media (max-width: 900px) { .feature { grid-template-columns: 1fr; } .feature .media { min-height: 240px; } }
-
-/* ==========================================================================
-   Showroom (galleria + lightbox)
-   ========================================================================== */
-.gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 220px; gap: 12px; }
-.gallery button {
-  all: unset; cursor: zoom-in; border-radius: var(--radius); overflow: hidden; position: relative;
-  transition: transform var(--d-press) var(--ease-out);
-}
-.gallery button:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
-.gallery button:active { transform: scale(.98); }
-.gallery .media { width: 100%; height: 100%; }
-.gallery button:nth-child(1) { grid-column: span 2; grid-row: span 2; }
-.gallery button:nth-child(4) { grid-row: span 2; }
-.gallery button:nth-child(7) { grid-column: span 2; }
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); counter-reset: step; border-top: 1px solid var(--line); }
+.step { padding: 28px 28px 0 0; counter-increment: step; }
+.step + .step { padding-left: 28px; border-left: 1px solid var(--line); }
+.step::before { content: counter(step, decimal-leading-zero); display: block; font-family: var(--font-display); font-style: italic; font-size: 2.6rem; line-height: 1; color: var(--accent); margin-bottom: 26px; }
+.step h3 { font-size: 1.3rem; margin-bottom: 10px; }
+.step p { color: var(--ink-2); font-size: .96rem; }
 @media (max-width: 900px) {
-  .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
-  .gallery button:nth-child(4) { grid-row: auto; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .step:nth-child(3) { padding-left: 0; border-left: 0; }
+  .step:nth-child(n+3) { margin-top: 24px; border-top: 1px solid var(--line); }
+}
+@media (max-width: 560px) {
+  .steps { grid-template-columns: 1fr; }
+  .step, .step + .step { padding: 24px 0 0; border-left: 0; }
+  .step + .step { margin-top: 24px; border-top: 1px solid var(--line); }
+  .step::before { margin-bottom: 14px; font-size: 2rem; }
 }
 
-.lightbox {
-  border: 0; padding: 0; background: transparent; max-width: min(1100px, 100vw - 32px); max-height: 90vh; overflow: visible;
-  opacity: 0; transform: scale(.96);
-  transition: opacity var(--d-base) var(--ease-out), transform var(--d-base) var(--ease-out), overlay var(--d-base) allow-discrete, display var(--d-base) allow-discrete;
+/* ==========================================================================
+   Professionisti (fascia scura)
+   ========================================================================== */
+.band { background: var(--band); color: var(--band-ink); border-radius: clamp(0px, 2vw, 28px); margin-inline: clamp(0px, 1.5vw, 20px); }
+.band .wrap { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1fr); gap: clamp(40px, 7vw, 96px); align-items: start; }
+.band .eyebrow { color: oklch(80% .02 85); }
+.band h2 em { color: var(--ochre); }
+.band-lead { color: oklch(82% .012 85); font-size: 1.08rem; margin-top: 22px; max-width: 44ch; }
+.band .btn { margin-top: 34px; }
+.band .btn--light { --btn-bg: var(--band-ink); --btn-fg: var(--band); }
+.perks { list-style: none; margin: 0; padding: 0; }
+.perks li { display: grid; grid-template-columns: 26px 1fr; gap: 16px; padding: 22px 0; border-bottom: 1px solid oklch(95% .01 85 / .12); }
+.perks li:first-child { padding-top: 4px; }
+.perks svg { width: 22px; height: 22px; color: var(--ochre); margin-top: 2px; }
+.perks strong { display: block; font-weight: 600; font-size: 1.04rem; margin-bottom: 4px; }
+.perks span { color: oklch(78% .012 85); font-size: .95rem; }
+@media (max-width: 900px) { .band .wrap { grid-template-columns: 1fr; } }
+
+/* ==========================================================================
+   Showroom
+   ========================================================================== */
+.showroom { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(24px, 4vw, 48px); align-items: stretch; }
+.visit { display: flex; flex-direction: column; gap: 28px; padding: clamp(24px, 3vw, 36px); border-radius: var(--radius-l); background: var(--surface); box-shadow: 0 0 0 1px var(--line); }
+.visit .status { font-size: .95rem; font-weight: 500; color: var(--ink); }
+.visit address { font-style: normal; font-family: var(--font-display); font-size: 1.6rem; line-height: 1.2; }
+.hours { width: 100%; border-collapse: collapse; font-size: .95rem; font-variant-numeric: tabular-nums; }
+.hours th { text-align: left; font-weight: 400; color: var(--ink-2); padding: 9px 0; }
+.hours td { text-align: right; padding: 9px 0; }
+.hours tr + tr > * { border-top: 1px solid var(--line); }
+.hours tr.is-today > * { font-weight: 600; color: var(--ink); }
+.hours tr.is-today th::after { content: "oggi"; margin-left: 8px; padding: 2px 8px; border-radius: 999px; font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; background: var(--accent-soft); color: var(--accent); vertical-align: 1px; }
+.visit-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+.contact-list { display: grid; gap: 6px; font-size: .97rem; }
+.contact-list a { text-decoration: none; color: var(--ink-2); display: inline-flex; align-items: center; gap: 10px; }
+.contact-list svg { width: 17px; height: 17px; color: var(--ink-3); flex: none; }
+@media (hover: hover) and (pointer: fine) { .contact-list a:hover { color: var(--ink); } }
+
+.photos { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1.4fr 1fr; gap: 10px; min-height: 520px; }
+.photo { position: relative; border-radius: var(--radius); overflow: hidden; }
+.photo:first-child { grid-column: 1 / -1; }
+.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.photo img.is-missing { visibility: hidden; }
+.photo figcaption { position: absolute; left: 12px; bottom: 12px; z-index: 1; padding: 6px 10px; border-radius: 999px; font-size: .74rem; font-weight: 500; background: rgb(255 255 255 / .85); color: #1d2230; }
+@media (max-width: 900px) { .showroom { grid-template-columns: 1fr; } .photos { min-height: 380px; } }
+
+/* ==========================================================================
+   Preventivo
+   ========================================================================== */
+.quote { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(32px, 6vw, 88px); align-items: start; }
+.quote-aside { position: sticky; top: calc(var(--header-h) + 32px); }
+.quote-aside p { color: var(--ink-2); font-size: 1.06rem; margin-top: 20px; max-width: 40ch; }
+.reassure { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 12px; font-size: .95rem; color: var(--ink-2); }
+.reassure li { display: flex; gap: 10px; align-items: flex-start; }
+.reassure svg { width: 18px; height: 18px; color: var(--ok); flex: none; margin-top: 3px; }
+@media (max-width: 900px) { .quote { grid-template-columns: 1fr; } .quote-aside { position: static; } }
+
+.form { display: grid; gap: 18px; padding: clamp(20px, 3vw, 36px); border-radius: var(--radius-l); background: var(--surface); box-shadow: 0 0 0 1px var(--line); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
+.field { display: grid; gap: 7px; align-content: start; }
+.field > label, .legend { font-size: .86rem; font-weight: 500; color: var(--ink-2); }
+.legend { padding: 0; margin-bottom: 9px; }
+.opt { font-weight: 400; color: var(--ink-3); }
+.field input, .field textarea, .field select {
+  width: 100%; min-height: 50px; padding: 0 15px; border-radius: 12px; border: 0;
+  background: var(--bg); color: var(--ink); font: 400 1rem var(--font-sans); /* 16px: niente zoom su iOS */
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+  transition: box-shadow var(--d-fast) var(--ease-out), background-color var(--d-fast) var(--ease-out);
 }
-.lightbox[open] { opacity: 1; transform: none; }
-@starting-style { .lightbox[open] { opacity: 0; transform: scale(.96); } }
-.lightbox::backdrop { background: rgba(15,12,9,0); backdrop-filter: blur(0); transition: background var(--d-base) var(--ease-out), backdrop-filter var(--d-base) var(--ease-out), overlay var(--d-base) allow-discrete, display var(--d-base) allow-discrete; }
-.lightbox[open]::backdrop { background: rgba(15,12,9,.82); backdrop-filter: blur(6px); }
-@starting-style { .lightbox[open]::backdrop { background: rgba(15,12,9,0); backdrop-filter: blur(0); } }
-.lightbox .media { width: min(1100px, 100vw - 32px); aspect-ratio: 3/2; max-height: 82vh; border-radius: var(--radius); --line: rgba(255,255,255,.08); background-color: #2a231d; }
-.lightbox .icon-btn { position: absolute; top: -48px; right: 0; color: #fff; }
+.field select { appearance: none; -webkit-appearance: none; padding-right: 40px; background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23778' stroke-width='2' stroke-linecap='round'><path d='M7 10l5 5 5-5'/></svg>"); background-repeat: no-repeat; background-position: right 12px center; background-size: 20px; }
+.field textarea { min-height: 110px; padding: 13px 15px; resize: vertical; line-height: 1.5; }
+.field input::placeholder, .field textarea::placeholder { color: var(--ink-3); }
+.field input:focus, .field textarea:focus, .field select:focus { outline: none; background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--accent), 0 0 0 4px color-mix(in oklch, var(--accent) 16%, transparent); }
+.field [aria-invalid="true"] { box-shadow: inset 0 0 0 1.5px var(--danger); }
+.field-error { font-size: .84rem; color: var(--danger); display: none; }
+.field:has([aria-invalid="true"]) .field-error { display: block; }
+.field.is-flash input { animation: flash 900ms var(--ease-out); }
+@keyframes flash { 0% { box-shadow: inset 0 0 0 1.5px var(--accent), 0 0 0 6px color-mix(in oklch, var(--accent) 25%, transparent); } }
+fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
 
-/* ==========================================================================
-   Marchi
-   ========================================================================== */
-.brands { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
-.brand {
-  height: 92px; border-radius: var(--radius); background: var(--surface); box-shadow: 0 0 0 1px var(--line);
-  display: grid; place-items: center; padding: 18px; color: var(--ink-3); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase;
+/* Controllo segmentato: il cursore scivola fra le opzioni */
+.seg { position: relative; display: grid; grid-template-columns: 1fr 1fr; padding: 4px; border-radius: 14px; background: var(--bg); box-shadow: inset 0 0 0 1px var(--line-strong); }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label { position: relative; z-index: 1; display: grid; place-items: center; min-height: 44px; border-radius: 10px; cursor: pointer; font-weight: 500; font-size: .95rem; color: var(--ink-2); transition: color var(--d-base) var(--ease-out); }
+.seg input:checked + label { color: var(--ink); }
+.seg input:focus-visible + label { outline: 2px solid var(--accent); outline-offset: 2px; }
+.seg-thumb { position: absolute; top: 4px; bottom: 4px; left: 4px; width: calc(50% - 4px); border-radius: 10px; background: var(--surface); box-shadow: 0 1px 2px oklch(23% .025 258 / .08), 0 2px 8px -2px oklch(23% .025 258 / .16); transition: transform var(--d-base) var(--ease-out); }
+.seg:has(input[value="Professionista"]:checked) .seg-thumb { transform: translateX(100%); }
+
+/* Campi extra per professionisti: altezza animata, interrompibile */
+.pro-only { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--d-base) var(--ease-out); }
+.pro-only > div { overflow: hidden; min-height: 0; }
+.pro-only .form-row { opacity: 0; transition: opacity var(--d-fast) var(--ease-out); padding: 2px; margin: -2px; }
+.form:has(input[value="Professionista"]:checked) .pro-only { grid-template-rows: 1fr; }
+.form:has(input[value="Professionista"]:checked) .pro-only .form-row { opacity: 1; transition-delay: 60ms; }
+.form:not(:has(input[value="Professionista"]:checked)) .pro-only { margin-top: -18px; }
+
+.checks { display: flex; flex-wrap: wrap; gap: 8px; }
+.check-chip input { position: absolute; opacity: 0; pointer-events: none; }
+.check-chip span {
+  display: inline-flex; align-items: center; gap: 7px; min-height: 40px; padding: 0 14px; border-radius: 999px; cursor: pointer;
+  font-size: .92rem; color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line-strong); background: var(--bg);
+  transition: background-color var(--d-fast) var(--ease-out), color var(--d-fast) var(--ease-out), box-shadow var(--d-fast) var(--ease-out), transform var(--d-press) var(--ease-out);
+  user-select: none; -webkit-user-select: none;
 }
-.brand img { max-height: 40px; width: auto; filter: grayscale(1); opacity: .7; transition: filter var(--d-base) var(--ease-out), opacity var(--d-base) var(--ease-out); }
-@media (hover: hover) and (pointer: fine) { .brand:hover img { filter: none; opacity: 1; } }
-@media (max-width: 900px) { .brands { grid-template-columns: repeat(3, 1fr); } }
+.check-chip span::before { content: ""; width: 14px; height: 14px; border-radius: 4px; box-shadow: inset 0 0 0 1.5px currentColor; opacity: .55; transition: background-color var(--d-fast) var(--ease-out), opacity var(--d-fast) var(--ease-out); }
+.check-chip span:active { transform: scale(.96); }
+.check-chip input:checked + span { background: var(--accent-soft); color: var(--accent); box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--accent) 45%, transparent); }
+.check-chip input:checked + span::before { background: currentColor url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 12.5l4 4 8-9'/></svg>") center / 12px no-repeat; opacity: 1; box-shadow: none; }
+.check-chip input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.consent { display: flex; gap: 10px; align-items: flex-start; font-size: .86rem; color: var(--ink-2); cursor: pointer; }
+.consent input { margin-top: 3px; accent-color: var(--accent); width: 18px; height: 18px; flex: none; }
+.consent a { color: inherit; text-underline-offset: 3px; }
+.consent-wrap .field-error { margin-top: 6px; }
+.consent-wrap:has([aria-invalid="true"]) .field-error { display: block; }
+.submit-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding-top: 4px; }
+.submit-row small { color: var(--ink-3); font-size: .82rem; flex-basis: 100%; }
+@media (max-width: 560px) { .submit-row .btn { flex: 1 1 100%; } }
 
 /* ==========================================================================
-   Recensioni
+   FAQ — altezza animata (grid 0fr → 1fr), interrompibile
    ========================================================================== */
-.reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.review { margin: 0; padding: 30px 28px; border-radius: var(--radius-l); background: var(--surface); box-shadow: 0 0 0 1px var(--line); display: flex; flex-direction: column; gap: 18px; }
-.stars { display: flex; gap: 2px; color: #d99a2b; }
-.stars svg { width: 16px; height: 16px; }
-.review blockquote { margin: 0; font-family: var(--font-serif); font-size: 1.15rem; line-height: 1.5; letter-spacing: -.005em; }
-.review figcaption { margin-top: auto; font-size: .9rem; color: var(--ink-2); }
-.review figcaption strong { display: block; color: var(--ink); font-weight: 600; }
-@media (max-width: 900px) { .reviews { grid-template-columns: 1fr; } }
-
-/* ==========================================================================
-   FAQ — accordion con altezza animata (grid 0fr → 1fr, interrompibile)
-   ========================================================================== */
-.faq-layout { display: grid; grid-template-columns: 1fr 1.5fr; gap: clamp(32px, 6vw, 88px); }
+.faq-layout { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(32px, 6vw, 88px); }
+.faq-layout p.lead { color: var(--ink-2); margin-top: 18px; }
+.faq-layout p.lead a { color: var(--accent); text-underline-offset: 3px; }
 .faq { border-top: 1px solid var(--line); }
 .faq-item { border-bottom: 1px solid var(--line); }
 .faq-q {
   all: unset; box-sizing: border-box; width: 100%; cursor: pointer;
-  display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0;
-  font-weight: 500; font-size: 1.05rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 24px 0;
+  font-weight: 500; font-size: 1.07rem;
 }
-.faq-q:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
-.faq-q .plus { position: relative; width: 14px; height: 14px; flex: none; color: var(--ink-3); }
-.faq-q .plus::before, .faq-q .plus::after {
-  content: ""; position: absolute; inset: 6px 0 auto; height: 2px; border-radius: 2px; background: currentColor;
-  transition: transform var(--d-base) var(--ease-out);
-}
-.faq-q .plus::after { transform: rotate(90deg); }
+.faq-q:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.plus { position: relative; width: 14px; height: 14px; flex: none; color: var(--ink-3); }
+.plus::before, .plus::after { content: ""; position: absolute; inset: 6px 0 auto; height: 2px; border-radius: 2px; background: currentColor; transition: transform var(--d-base) var(--ease-out); }
+.plus::after { transform: rotate(90deg); }
 .faq-q[aria-expanded="true"] .plus::after { transform: rotate(0deg); }
 .faq-a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--d-base) var(--ease-out); }
 .faq-a > div { overflow: hidden; }
-.faq-a p { padding-bottom: 22px; color: var(--ink-2); max-width: 60ch; opacity: 0; transition: opacity var(--d-fast) var(--ease-out); }
+.faq-a p { padding-bottom: 24px; color: var(--ink-2); max-width: 62ch; opacity: 0; transition: opacity var(--d-fast) var(--ease-out); }
 .faq-q[aria-expanded="true"] + .faq-a { grid-template-rows: 1fr; }
 .faq-q[aria-expanded="true"] + .faq-a p { opacity: 1; transition-delay: 60ms; }
 @media (max-width: 900px) { .faq-layout { grid-template-columns: 1fr; } }
 
 /* ==========================================================================
-   Form
-   ========================================================================== */
-.quote { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(28px, 5vw, 64px); align-items: center; padding: clamp(28px, 5vw, 56px); border-radius: var(--radius-l); background: var(--accent-soft); }
-.quote h2 { margin-bottom: 12px; }
-.quote > div > p { color: var(--ink-2); }
-.form { display: grid; gap: 12px; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.field { display: grid; gap: 6px; }
-.field label { font-size: .82rem; font-weight: 500; color: var(--ink-2); }
-.field input, .field textarea, .field select {
-  width: 100%; height: 50px; padding: 0 16px; border-radius: 12px; border: 0;
-  background: var(--surface); color: var(--ink); font: 400 1rem var(--font-sans); /* 16px: niente zoom su iOS */
-  box-shadow: inset 0 0 0 1px var(--line);
-  transition: box-shadow var(--d-fast) var(--ease-out);
-}
-.field textarea { height: 120px; padding: 14px 16px; resize: vertical; }
-.field input:focus, .field textarea:focus, .field select:focus { outline: none; box-shadow: inset 0 0 0 1.5px var(--accent), 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent); }
-.field input[aria-invalid="true"] { box-shadow: inset 0 0 0 1.5px #c0392b; }
-.check { display: flex; gap: 10px; align-items: flex-start; font-size: .82rem; color: var(--ink-2); }
-.check input { margin-top: 3px; accent-color: var(--accent); width: 16px; height: 16px; flex: none; }
-.form .btn { justify-self: start; margin-top: 4px; }
-@media (max-width: 900px) { .quote { grid-template-columns: 1fr; } }
-@media (max-width: 520px) { .form-row { grid-template-columns: 1fr; } .form .btn { justify-self: stretch; } }
-
-/* ==========================================================================
-   Contatti
-   ========================================================================== */
-.contact { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.contact-info { display: grid; gap: 0; padding: 8px 28px; border-radius: var(--radius-l); background: var(--surface); box-shadow: 0 0 0 1px var(--line); }
-.contact-row { display: grid; grid-template-columns: 120px 1fr; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--line); }
-.contact-row:last-child { border-bottom: 0; }
-.contact-row dt { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); padding-top: 3px; }
-.contact-row dd { margin: 0; }
-.contact-row a { text-underline-offset: 3px; text-decoration-color: var(--line); transition: text-decoration-color var(--d-fast) var(--ease-out); }
-@media (hover: hover) and (pointer: fine) { .contact-row a:hover { text-decoration-color: currentColor; } }
-.map { position: relative; border-radius: var(--radius-l); overflow: hidden; min-height: 420px; background: var(--surface-2); box-shadow: 0 0 0 1px var(--line); }
-.map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-.map-consent { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 14px; padding: 24px; text-align: center; color: var(--ink-2); font-size: .92rem; }
-.map-consent p { max-width: 34ch; }
-@media (max-width: 900px) { .contact { grid-template-columns: 1fr; } .contact-row { grid-template-columns: 1fr; gap: 4px; } .map { min-height: 320px; } }
-
-/* ==========================================================================
    Footer
    ========================================================================== */
-.footer { padding-block: 56px 40px; border-top: 1px solid var(--line); margin-top: clamp(72px, 10vw, 128px); }
-.footer .wrap { display: grid; gap: 28px; }
-.footer-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; align-items: center; }
-.footer-nav { display: flex; flex-wrap: wrap; gap: 6px 22px; }
-.footer-nav a { text-decoration: none; color: var(--ink-2); font-size: .92rem; }
-@media (hover: hover) and (pointer: fine) { .footer-nav a:hover { color: var(--ink); } }
-.footer small { color: var(--ink-3); font-size: .82rem; line-height: 1.7; }
+.footer { padding-block: 64px 40px; border-top: 1px solid var(--line); }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+.footer h4 { margin: 0 0 14px; font-size: .74rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+.footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: .95rem; }
+.footer a { color: var(--ink-2); text-decoration: none; }
+@media (hover: hover) and (pointer: fine) { .footer a:hover { color: var(--ink); } }
+.footer-brand p { color: var(--ink-2); margin-top: 16px; max-width: 34ch; font-size: .95rem; }
+.footer-legal { margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--ink-3); font-size: .82rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+@media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
 
 /* ==========================================================================
-   Banner cookie + toast + WhatsApp
+   WhatsApp flottante (desktop) + barra azioni (mobile) + toast
    ========================================================================== */
-.cookie {
-  position: fixed; left: 16px; bottom: 16px; z-index: 60; width: min(420px, 100% - 32px);
-  padding: 18px 18px 16px; border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow), 0 0 0 1px var(--line);
-  font-size: .88rem; color: var(--ink-2);
-  transform: translateY(calc(100% + 24px)); opacity: 0; visibility: hidden;
-  transition: transform 420ms var(--ease-drawer), opacity var(--d-fast) var(--ease-out), visibility 0s linear 420ms;
+.wa-float {
+  position: fixed; right: 20px; bottom: 20px; z-index: 55;
+  display: flex; align-items: center; gap: 10px; height: 56px; padding: 0 20px 0 16px; border-radius: 999px;
+  background: var(--wa); color: #fff; text-decoration: none; font-weight: 500; font-size: .95rem;
+  box-shadow: 0 12px 28px -10px rgb(0 0 0 / .45);
+  transition: transform var(--d-press) var(--ease-out), box-shadow var(--d-fast) var(--ease-out), opacity var(--d-base) var(--ease-out), translate var(--d-base) var(--ease-out);
 }
-.cookie.is-visible { transform: none; opacity: 1; visibility: visible; transition-delay: 0s; }
-.cookie-actions { display: flex; gap: 8px; margin-top: 14px; }
-.cookie .btn { height: 40px; padding: 0 18px; font-size: .85rem; }
+.wa-float svg { width: 26px; height: 26px; }
+.wa-float:active { transform: scale(.96); }
+.wa-float.is-hidden { opacity: 0; translate: 0 12px; pointer-events: none; }
+@media (hover: hover) and (pointer: fine) { .wa-float:hover { box-shadow: 0 16px 34px -10px rgb(0 0 0 / .5); } }
+
+.actionbar { display: none; }
+@media (max-width: 760px) {
+  .wa-float { display: none; }
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+  .actionbar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 55;
+    display: grid; grid-template-columns: 1fr 1fr 1.25fr; gap: 8px;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: color-mix(in oklch, var(--surface) 90%, transparent);
+    backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px);
+    border-top: 1px solid var(--line);
+  }
+  .actionbar .btn { min-height: 48px; padding: 0 10px; font-size: .9rem; gap: 7px; }
+}
 
 .toast {
   position: fixed; left: 50%; bottom: 24px; z-index: 70; translate: -50% 0;
-  display: flex; align-items: center; gap: 10px; padding: 12px 16px 12px 14px; border-radius: 14px;
-  background: var(--ink); color: var(--bg); font-size: .9rem; box-shadow: var(--shadow);
+  display: flex; align-items: center; gap: 10px; max-width: calc(100% - 32px); padding: 13px 18px 13px 14px; border-radius: 14px;
+  background: var(--ink); color: var(--bg); font-size: .93rem; box-shadow: var(--shadow);
   transform: translateY(16px) scale(.97); opacity: 0; pointer-events: none;
   transition: transform var(--d-base) var(--ease-out), opacity var(--d-fast) var(--ease-out);
 }
 .toast.is-visible { transform: none; opacity: 1; }
-.toast svg { width: 18px; height: 18px; color: #7bd88f; flex: none; }
-
-.wa {
-  position: fixed; right: 16px; bottom: 16px; z-index: 55; width: 56px; height: 56px; border-radius: 999px;
-  display: grid; place-items: center; background: #25d366; color: #fff; box-shadow: 0 10px 24px -8px rgba(0,0,0,.4);
-  transition: transform var(--d-press) var(--ease-out);
-}
-.wa:active { transform: scale(.94); }
-.wa svg { width: 28px; height: 28px; }
+.toast svg { width: 18px; height: 18px; color: oklch(78% .14 152); flex: none; }
+@media (max-width: 760px) { .toast { bottom: calc(84px + env(safe-area-inset-bottom)); } }
 
 /* ==========================================================================
-   Entrata al primo scroll: piccola traslazione + blur, mai da opacity 0 → 100px.
-   Senza JS il contenuto è sempre visibile.
+   Entrate allo scroll: piccole, una volta sola. Senza JS tutto è visibile.
    ========================================================================== */
 .js [data-reveal] {
-  opacity: 0; transform: translateY(12px); filter: blur(4px);
-  transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out), filter 600ms var(--ease-out);
-  transition-delay: calc(var(--i, 0) * 60ms);
+  opacity: 0; transform: translateY(14px);
+  transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 70ms);
 }
-.js [data-reveal].is-in { opacity: 1; transform: none; filter: none; }
+.js [data-reveal].is-in { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { transition-duration: 1ms !important; animation-duration: 1ms !important; transition-delay: 0s !important; }
-  .js [data-reveal] { opacity: 1; transform: none; filter: none; }
-  .btn:active, .icon-btn:active, .wa:active, .gallery button:active { transform: none; }
+  *, *::before, *::after { transition-duration: 1ms !important; animation: none !important; transition-delay: 0s !important; }
+  .js [data-reveal] { opacity: 1; transform: none; }
+  .btn:active, .chip:active, .icon-btn:active, .wa-float:active, .check-chip span:active { transform: none; }
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
 }
 </style>
 </head>
 <body>
 <script>document.documentElement.classList.add('js')</script>
+<a class="skip" href="#main">Vai al contenuto</a>
 
-<a class="sr-only" href="#main">Vai al contenuto</a>
-
-<!-- Barra annunci -->
-<div class="announce" id="announce" role="region" aria-label="Novità">
-  <div>
-    <div class="wrap">
-      <p><strong>Novità:</strong> nuova collezione grandi formati in esposizione — <a href="#showroom">vieni a vederla in showroom</a>. <span class="announce-offer">Offerta: [inserire promozione corrente]</span></p>
-      <button class="icon-btn" type="button" data-dismiss-announce aria-label="Chiudi avviso">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
-    </div>
-  </div>
-</div>
+<!-- Icone riutilizzate -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.3-1.7-.1-.2 0-.4.1-.5l.4-.5.3-.5v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3c-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3 1.8.7 2.5.8 3.4.7.6-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+</svg>
 
 <header class="header" id="header">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="Euroceramiche Niscemi — home">
+    <a class="logo" href="#top" aria-label="Euroceramiche Niscemi — inizio pagina">
       <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-      <span class="logo-text">Euroceramiche<small>Niscemi</small></span>
+      <span class="logo-text">Euroceramiche<small>Niscemi · Sicilia</small></span>
     </a>
-    <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Apri menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
-    </button>
     <nav class="nav" id="nav" aria-label="Principale">
-      <a href="#chi-siamo">Chi siamo</a>
-      <a href="#prodotti">Prodotti</a>
-      <a href="#servizi">Servizi</a>
+      <a href="#collezioni">Collezioni</a>
+      <a href="#professionisti">Professionisti</a>
       <a href="#showroom">Showroom</a>
-      <a href="#contatti">Contatti</a>
-      <a class="btn btn--accent" href="#preventivo">Preventivo gratuito</a>
+      <a href="#preventivo">Preventivo</a>
+      <a href="#faq">FAQ</a>
     </nav>
+    <div class="header-cta">
+      <span class="status" data-status><span class="status-dot"></span><span data-status-text>Orari showroom</span></span>
+      <a class="btn btn--accent" href="#preventivo">Preventivo gratuito</a>
+    </div>
+    <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Apri menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="l1" d="M4 8h16"/><path class="l2" d="M4 16h16"/></svg>
+    </button>
   </div>
 </header>
 
@@ -526,294 +706,376 @@ p { margin: 0; text-wrap: pretty; }
   <!-- HERO -->
   <section class="hero" id="top">
     <div class="wrap">
-      <div class="hero-card">
-        <div class="media" data-label="img/hero.jpg"><img src="img/hero.jpg" alt="" fetchpriority="high"></div>
-        <div class="hero-content">
-          <h1 data-reveal>Progettare insieme <em>la vostra casa</em></h1>
-          <p data-reveal style="--i:1">Pavimenti, rivestimenti e arredo bagno a Niscemi e nella provincia di Caltanissetta. Qualità, consulenza e progettazione su misura.</p>
-          <div class="hero-cta" data-reveal style="--i:2">
-            <a class="btn btn--light" href="#prodotti">Scopri i prodotti <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a class="btn btn--glass" href="#preventivo">Preventivo in 1 minuto</a>
-          </div>
+      <div>
+        <span class="eyebrow" data-reveal>Showroom a Niscemi · Piastrelle e ceramiche</span>
+        <h1 data-reveal style="--i:1">Superfici da scegliere <em>con le mani.</em></h1>
+        <p class="hero-lead" data-reveal style="--i:2">Gres porcellanato, marmi, legni e maioliche dei migliori produttori italiani. Vi aiutiamo a scegliere in showroom, vi facciamo il preventivo e consegniamo fino al cantiere.</p>
+        <div class="hero-cta" data-reveal style="--i:3">
+          <a class="btn btn--accent" href="#preventivo">Richiedi un preventivo <svg class="arrow"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--ghost" href="https://wa.me/390000000000" data-wa="Buongiorno, vorrei qualche informazione sulle vostre piastrelle." target="_blank" rel="noopener"><svg class="wa-icon"><use href="#i-wa"/></svg> Scrivici su WhatsApp</a>
         </div>
+        <div class="hero-meta" data-reveal style="--i:4">
+          <span class="status" data-status><span class="status-dot"></span><span data-status-text>Orari showroom</span></span>
+          <a href="#showroom"><svg><use href="#i-pin"/></svg><span data-fill="addressShort">Niscemi (CL)</span></a>
+        </div>
+      </div>
+
+      <div class="wall" aria-label="Alcuni materiali in esposizione" role="img" data-reveal style="--i:2">
+        <div class="tile t-calacatta w1" style="--tw:120px;--th:240px"><span class="wall-caption">Effetto marmo · 120×280</span></div>
+        <div class="tile t-rovere is-staggered w2" style="--tw:150px;--th:30px"></div>
+        <div class="tile t-maiolica w3"></div>
+        <div class="tile t-zellige w4" style="--tw:22px;--th:44px"></div>
+        <div class="tile t-cotto w5" style="--tw:60px;--th:60px"></div>
+        <div class="tile t-marquinia w6" style="--tw:110px;--th:110px"></div>
+        <div class="tile t-travertino w7" style="--tw:90px;--th:180px"></div>
       </div>
     </div>
   </section>
 
-  <!-- CHI SIAMO -->
-  <section class="section" id="chi-siamo">
-    <div class="wrap">
-      <div class="about">
-        <div class="about-text" data-reveal>
-          <span class="eyebrow">Chi siamo</span>
-          <h2>Un unico riferimento, dalla scelta alla posa</h2>
-          <p>Da oltre [ANNO] anni Euroceramiche Niscemi è il punto di riferimento per pavimenti, rivestimenti e arredo bagno a Niscemi, Gela e in tutta la provincia di Caltanissetta.</p>
-          <p>Nel nostro showroom trovate gres porcellanato, ceramiche, sanitari e rubinetteria dei migliori marchi italiani, con consulenza e progettazione gratuite. Seguiamo ogni fase del vostro cantiere con professionalità e puntualità.</p>
-          <a class="btn btn--ghost" href="#contatti">Vieni a trovarci <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-        <div class="media" data-label="img/chi-siamo.jpg" data-reveal style="--i:1"><img src="img/chi-siamo.jpg" alt="Lo showroom Euroceramiche a Niscemi" loading="lazy"></div>
-      </div>
-
-      <!-- Valori: sostituire i data-count con i numeri reali. Il testo dentro .stat-value è il fallback senza JS. -->
-      <div class="stats" data-reveal>
-        <div class="stat"><div class="stat-value" data-count="30" data-suffix="+">30+</div><div class="stat-label">Anni di esperienza</div></div>
-        <div class="stat"><div class="stat-value" data-count="5000" data-suffix="+">5.000+</div><div class="stat-label">Clienti soddisfatti</div></div>
-        <div class="stat"><div class="stat-value" data-count="40" data-suffix="+">40+</div><div class="stat-label">Marchi trattati</div></div>
-        <div class="stat"><div class="stat-value" data-count="800" data-suffix=" m²">800 m²</div><div class="stat-label">Di showroom</div></div>
-      </div>
+  <!-- PERCORSI -->
+  <div class="wrap">
+    <div class="paths" data-reveal>
+      <a class="path" href="#collezioni">
+        <span class="path-num">01</span>
+        <div><h3>Per la vostra casa</h3><p>Ristrutturate il bagno, la cucina o tutta casa? Partite dalle collezioni.</p></div>
+        <span class="path-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="path" href="#professionisti">
+        <span class="path-num">02</span>
+        <div><h3>Per il cantiere</h3><p>Posatori, imprese e progettisti: condizioni e servizi dedicati.</p></div>
+        <span class="path-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+      </a>
     </div>
-  </section>
+  </div>
 
-  <!-- PRODOTTI -->
-  <section class="section" id="prodotti" style="padding-top:0">
+  <!-- COLLEZIONI
+       Per aggiungere una foto reale a un prodotto: dentro .tile inserire
+       <img src="img/collezioni/nome.jpg" alt="" loading="lazy" width="800" height="600">
+       I nomi sono esempi di tipologie: sostituirli con le collezioni realmente trattate. -->
+  <section class="section" id="collezioni">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <span class="eyebrow">Prodotti</span>
-        <h2>Tutto per la casa, in un solo showroom</h2>
+        <span class="eyebrow">Collezioni</span>
+        <h2>Materia, formato, <em>finitura.</em></h2>
+        <p>Una selezione di ciò che trovate in showroom. Ogni anteprima mostra la piastrella in scala, con le fughe nel formato reale.</p>
       </div>
-      <div class="products">
-        <a class="card" href="#preventivo" data-reveal>
-          <div class="media" data-label="img/pavimenti.jpg"><img src="img/pavimenti.jpg" alt="Pavimento in gres porcellanato effetto pietra" loading="lazy"></div>
-          <div class="card-body">
-            <h3>Pavimenti e rivestimenti</h3>
-            <p>Gres porcellanato, ceramica, marmo e materiali effetto legno, pietra e cemento. Grandi formati e soluzioni per interni ed esterni.</p>
-            <span class="card-link">Richiedi informazioni <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </div>
-        </a>
-        <a class="card" href="#preventivo" data-reveal style="--i:1">
-          <div class="media" data-label="img/arredo-bagno.jpg"><img src="img/arredo-bagno.jpg" alt="Bagno con mobile sospeso e doccia walk-in" loading="lazy"></div>
-          <div class="card-body">
-            <h3>Arredo bagno</h3>
-            <p>Mobili bagno, sanitari, box doccia, rubinetteria e accessori. Progettiamo il vostro bagno su misura, dal rendering alla posa.</p>
-            <span class="card-link">Richiedi informazioni <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </div>
-        </a>
-        <a class="card" href="#preventivo" data-reveal style="--i:2">
-          <div class="media" data-label="img/materiale-edile.jpg"><img src="img/materiale-edile.jpg" alt="Sacchi di collante e materiale per la posa" loading="lazy"></div>
-          <div class="card-body">
-            <h3>Materiale edile</h3>
-            <p>Collanti, stucchi, impermeabilizzanti e materiali complementari per posatori e cantieri, con consegna rapida in zona.</p>
-            <span class="card-link">Richiedi informazioni <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </div>
-        </a>
+
+      <div class="filters" role="toolbar" aria-label="Filtra per tipologia" data-reveal>
+        <button class="chip" type="button" aria-pressed="true" data-filter="tutti">Tutti<span class="count"></span></button>
+        <button class="chip" type="button" aria-pressed="false" data-filter="marmo">Effetto marmo<span class="count"></span></button>
+        <button class="chip" type="button" aria-pressed="false" data-filter="legno">Effetto legno<span class="count"></span></button>
+        <button class="chip" type="button" aria-pressed="false" data-filter="pietra">Pietra e cemento<span class="count"></span></button>
+        <button class="chip" type="button" aria-pressed="false" data-filter="rivestimenti">Rivestimenti e decori<span class="count"></span></button>
+        <button class="chip" type="button" aria-pressed="false" data-filter="esterni">Esterni<span class="count"></span></button>
       </div>
+
+      <div class="products" id="products" aria-live="polite">
+        <article class="product" data-cat="marmo">
+          <div class="tile t-calacatta" style="--tw:72px;--th:168px"></div>
+          <div class="product-body">
+            <p class="product-cat">Gres effetto marmo</p>
+            <h3>Calacatta Oro</h3>
+            <dl class="specs"><dt>Formati</dt><dd>60×120 · 120×280 cm</dd><dt>Finitura</dt><dd>Lucida, naturale</dd><dt>Uso</dt><dd>Pavimento, rivestimento</dd></dl>
+            <div class="product-actions">
+              <button class="btn btn--sm btn--ghost" type="button" data-quote="Calacatta Oro">Chiedi un preventivo</button>
+              <a class="btn btn--sm btn--ghost btn--icon" href="https://wa.me/390000000000" data-wa-product="Calacatta Oro" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Calacatta Oro"><svg class="wa-icon"><use href="#i-wa"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product" data-cat="marmo">
+          <div class="tile t-marquinia" style="--tw:120px;--th:120px"></div>
+          <div class="product-body">
+            <p class="product-cat">Gres effetto marmo</p>
+            <h3>Nero Marquinia</h3>
+            <dl class="specs"><dt>Formati</dt><dd>60×60 · 120×120 cm</dd><dt>Finitura</dt><dd>Lucida</dd><dt>Uso</dt><dd>Pavimento, bagno, top</dd></dl>
+            <div class="product-actions">
+              <button class="btn btn--sm btn--ghost" type="button" data-quote="Nero Marquinia">Chiedi un preventivo</button>
+              <a class="btn btn--sm btn--ghost btn--icon" href="https://wa.me/390000000000" data-wa-product="Nero Marquinia" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Nero Marquinia"><svg class="wa-icon"><use href="#i-wa"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product" data-cat="legno esterni">
+          <div class="tile t-rovere is-staggered" style="--tw:190px;--th:30px"></div>
+          <div class="product-body">
+            <p class="product-cat">Gres effetto legno</p>
+            <h3>Rovere Naturale</h3>
+            <dl class="specs"><dt>Formati</dt><dd>20×120 · 26×160 cm</dd><dt>Finitura</dt><dd>Naturale, R10 / R11</dd><dt>Uso</dt><dd>Interni ed esterni</dd></dl>
+            <div class="product-actions">
+              <button class="btn btn--sm btn--ghost" type="button" data-quote="Rovere Naturale">Chiedi un preventivo</button>
+              <a class="btn btn--sm btn--ghost btn--icon" href="https://wa.me/390000000000" data-wa-product="Rovere Naturale" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Rovere Naturale"><svg class="wa-icon"><use href="#i-wa"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product" data-cat="pietra">
+          <div class="tile t-cemento" style="--tw:150px;--th:150px"></div>
+          <div class="product-body">
+            <p class="product-cat">Gres effetto cemento</p>
+            <h3>Cemento Spatolato</h3>
+            <dl class="specs"><dt>Formati</dt><dd>60×60 · 120×120 cm</dd><dt>Finitura</dt><dd>Matt</dd><dt>Uso</dt><dd>Living, open space, negozi</dd></dl>
+            <div class="product-actions">
+              <button class="btn btn--sm btn--ghost" type="button" data-quote="Cemento Spatolato">Chiedi un preventivo</button>
+              <a class="btn btn--sm btn--ghost btn--icon" href="https://wa.me/390000000000" data-wa-product="Cemento Spatolato" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Cemento Spatolato"><svg class="wa-icon"><use href="#i-wa"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product" data-cat="pietra esterni">
+          <div class="tile t-travertino" style="--tw:90px;--th:180px"></div>
+          <div class="product-body">
+            <p class="product-cat">Gres effetto pietra</p>
+            <h3>Travertino Classico</h3>
+            <dl class="specs"><dt>Formati</dt><dd>60×120 cm · 2 cm per esterni</dd><dt>Finitura</dt><dd>Naturale, antiscivolo R11</dd><dt>Uso</dt><dd>Terrazze, bordo piscina</dd></dl>
+            <div class="product-actions">
+              <button class="btn btn--sm btn--ghost" type="button" data-quote="Travertino Classico">Chiedi un preventivo</button>
+              <a class="btn btn--sm btn--ghost btn--icon" href="https://wa.me/390000000000" data-wa-product="Travertino Classico" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Travertino Classico"><svg class="wa-icon"><use href="#i-wa"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product" data-cat="esterni">
+          <div class="tile t-cotto" style="--tw:72px;--th:72px"></div>
+          <div class="product-body">
+            <p class="product-cat">Cotto</p>
+            <h3>Cotto Siciliano</h3>
+            <dl class="specs"><dt>Formati</dt><dd>30×30 · 40×40 cm</dd><dt>Finitura</dt><dd>Naturale, da trattare</dd><dt>Uso</dt><dd>Esterni, case di campagna</dd></dl>
+            <div class="product-actions">
+              <button class="btn btn--sm btn--ghost" type="button" data-quote="Cotto Siciliano">Chiedi un preventivo</button>
+              <a class="btn btn--sm btn--ghost btn--icon" href="https://wa.me/390000000000" data-wa-product="Cotto Siciliano" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Cotto Siciliano"><svg class="wa-icon"><use href="#i-wa"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product" data-cat="rivestimenti">
+          <div class="tile t-maiolica"></div>
+          <div class="product-body">
+            <p class="product-cat">Decoro in maiolica</p>
+            <h3>Maiolica Mediterranea</h3>
+            <dl class="specs"><dt>Formati</dt><dd>20×20 cm</dd><dt>Finitura</dt><dd>Smaltata, lucida</dd><dt>Uso</dt><dd>Cucine, bagni, fasce decorative</dd></dl>
+            <div class="product-actions">
+              <button class="btn btn--sm btn--ghost" type="button" data-quote="Maiolica Mediterranea">Chiedi un preventivo</button>
+              <a class="btn btn--sm btn--ghost btn--icon" href="https://wa.me/390000000000" data-wa-product="Maiolica Mediterranea" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Maiolica Mediterranea"><svg class="wa-icon"><use href="#i-wa"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product" data-cat="rivestimenti">
+          <div class="tile t-zellige" style="--tw:30px;--th:60px"></div>
+          <div class="product-body">
+            <p class="product-cat">Rivestimento</p>
+            <h3>Zellige Verde Salvia</h3>
+            <dl class="specs"><dt>Formati</dt><dd>7,5×15 cm</dd><dt>Finitura</dt><dd>Lucida, superficie irregolare</dd><dt>Uso</dt><dd>Docce, paraschizzi cucina</dd></dl>
+            <div class="product-actions">
+              <button class="btn btn--sm btn--ghost" type="button" data-quote="Zellige Verde Salvia">Chiedi un preventivo</button>
+              <a class="btn btn--sm btn--ghost btn--icon" href="https://wa.me/390000000000" data-wa-product="Zellige Verde Salvia" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Zellige Verde Salvia"><svg class="wa-icon"><use href="#i-wa"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product" data-cat="pietra">
+          <div class="tile t-terrazzo" style="--tw:150px;--th:150px"></div>
+          <div class="product-body">
+            <p class="product-cat">Gres effetto terrazzo</p>
+            <h3>Terrazzo Veneziano</h3>
+            <dl class="specs"><dt>Formati</dt><dd>60×60 · 90×90 cm</dd><dt>Finitura</dt><dd>Matt, levigata</dd><dt>Uso</dt><dd>Pavimenti, locali commerciali</dd></dl>
+            <div class="product-actions">
+              <button class="btn btn--sm btn--ghost" type="button" data-quote="Terrazzo Veneziano">Chiedi un preventivo</button>
+              <a class="btn btn--sm btn--ghost btn--icon" href="https://wa.me/390000000000" data-wa-product="Terrazzo Veneziano" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Terrazzo Veneziano"><svg class="wa-icon"><use href="#i-wa"/></svg></a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="products-note" data-reveal>In showroom trovate centinaia di altre collezioni, sanitari, rubinetteria e mobili bagno. Cercate qualcosa di preciso? <a href="https://wa.me/390000000000" data-wa="Buongiorno, sto cercando una piastrella specifica: " target="_blank" rel="noopener">Mandateci una foto su WhatsApp</a>.</p>
     </div>
   </section>
 
-  <!-- SERVIZI -->
+  <!-- COME LAVORIAMO -->
   <section class="section" id="servizi" style="padding-top:0">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <span class="eyebrow">Servizi</span>
-        <h2>Vi seguiamo in ogni fase del cantiere</h2>
+        <span class="eyebrow">Come lavoriamo</span>
+        <h2>Dalla prima idea <em>alla posa.</em></h2>
+        <p>Un solo interlocutore per tutto il lavoro: niente rimbalzi fra fornitore, progettista e posatore.</p>
       </div>
-      <div class="services">
-        <div class="service" data-reveal>
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div>
-          <h3>Consegna a domicilio</h3>
-          <p>A Niscemi, Gela e in tutta la provincia, con tempi rapidi e imballi protetti.</p>
-        </div>
-        <div class="service" data-reveal style="--i:1">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></div>
-          <h3>Progettazione gratuita</h3>
-          <p>Studio dell'ambiente e rendering 3D per vedere il risultato prima dell'acquisto.</p>
-        </div>
-        <div class="service" data-reveal style="--i:2">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M5 20V10l7-5 7 5v10"/><path d="M10 20v-5h4v5"/></svg></div>
-          <h3>Sopralluogo</h3>
-          <p>Misurazioni e sopralluogo gratuiti al vostro cantiere o abitazione, su appuntamento.</p>
-        </div>
-        <div class="service" data-reveal style="--i:3">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></div>
-          <h3>Posa in opera</h3>
-          <p>Rete di posatori qualificati per un risultato a regola d'arte, con garanzia sul lavoro.</p>
-        </div>
-      </div>
+      <ol class="steps" style="list-style:none;margin:0;padding:0">
+        <li class="step" data-reveal><h3>Visita in showroom</h3><p>Toccate i materiali dal vivo, con un consulente che conosce ogni collezione. Su richiesta portiamo i campioni a casa.</p></li>
+        <li class="step" data-reveal style="--i:1"><h3>Progetto 3D</h3><p>Rendering gratuito del vostro ambiente: vedete il risultato prima di decidere.</p></li>
+        <li class="step" data-reveal style="--i:2"><h3>Preventivo chiaro</h3><p>Materiali, sfridi e accessori di posa voce per voce. Nessuna sorpresa a fine lavoro.</p></li>
+        <li class="step" data-reveal style="--i:3"><h3>Consegna e posa</h3><p>Consegna a domicilio o in cantiere e posatori di fiducia per un lavoro a regola d'arte.</p></li>
+      </ol>
     </div>
   </section>
 
-  <!-- PROGETTAZIONE 3D -->
-  <section class="section" style="padding-top:0">
+  <!-- PROFESSIONISTI -->
+  <section class="section band" id="professionisti">
     <div class="wrap">
-      <div class="feature" data-reveal>
-        <div class="media" data-label="img/rendering-3d.jpg"><img src="img/rendering-3d.jpg" alt="Rendering 3D di un bagno progettato in showroom" loading="lazy"></div>
-        <div class="feature-body">
-          <span class="eyebrow">Progettazione 3D</span>
-          <h2>Vedi il tuo bagno prima di realizzarlo</h2>
-          <p>Scegli piastrelle, mobili e sanitari guardando un'anteprima fotorealistica del tuo ambiente. Servizio gratuito per i clienti dello showroom.</p>
-          <a class="btn btn--accent" href="#preventivo">Prenota la consulenza <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
+      <div data-reveal>
+        <span class="eyebrow">Professionisti</span>
+        <h2 style="margin-top:18px">Il vostro magazzino <em>a pochi minuti</em> dal cantiere.</h2>
+        <p class="band-lead">Lavoriamo ogni giorno con posatori, imprese edili, architetti e geometri della zona. Materiale disponibile, tempi certi e un referente che risponde al telefono.</p>
+        <a class="btn btn--light" href="#preventivo" data-pro>Richiedi condizioni dedicate <svg class="arrow"><use href="#i-arrow"/></svg></a>
       </div>
+      <ul class="perks" data-reveal style="--i:1">
+        <li><svg><use href="#i-check"/></svg><div><strong>Listino riservato</strong><span>Condizioni dedicate per partite IVA e forniture continuative.</span></div></li>
+        <li><svg><use href="#i-check"/></svg><div><strong>Consegna in cantiere</strong><span>Con mezzi propri a Niscemi, Gela, Caltagirone e provincia.</span></div></li>
+        <li><svg><use href="#i-check"/></svg><div><strong>Campionature per i vostri clienti</strong><span>Campioni e schede tecniche per presentare il progetto.</span></div></li>
+        <li><svg><use href="#i-check"/></svg><div><strong>Collanti, stucchi e sistemi di posa</strong><span>Tutto il necessario per finire il lavoro, nello stesso ordine.</span></div></li>
+      </ul>
     </div>
   </section>
 
   <!-- SHOWROOM -->
-  <section class="section" id="showroom" style="padding-top:0">
+  <section class="section" id="showroom">
     <div class="wrap">
       <div class="section-head" data-reveal>
         <span class="eyebrow">Showroom</span>
-        <h2>Toccate i materiali dal vivo</h2>
-        <p>Ambienti allestiti, campioni di tutte le collezioni e un consulente al vostro fianco.</p>
+        <h2>Venite a <em>trovarci.</em></h2>
+        <p>Ambienti allestiti e campioni di tutte le collezioni. Il sabato mattina c'è più calma: è il momento ideale per un progetto completo.</p>
       </div>
-      <div class="gallery" data-reveal>
-        <button type="button" aria-label="Ingrandisci foto 1"><div class="media" data-label="img/showroom-1.jpg"><img src="img/showroom-1.jpg" alt="Showroom, area pavimenti" loading="lazy"></div></button>
-        <button type="button" aria-label="Ingrandisci foto 2"><div class="media" data-label="img/showroom-2.jpg"><img src="img/showroom-2.jpg" alt="Showroom, esposizione grandi formati" loading="lazy"></div></button>
-        <button type="button" aria-label="Ingrandisci foto 3"><div class="media" data-label="img/showroom-3.jpg"><img src="img/showroom-3.jpg" alt="Showroom, ambiente bagno" loading="lazy"></div></button>
-        <button type="button" aria-label="Ingrandisci foto 4"><div class="media" data-label="img/showroom-4.jpg"><img src="img/showroom-4.jpg" alt="Showroom, rubinetteria" loading="lazy"></div></button>
-        <button type="button" aria-label="Ingrandisci foto 5"><div class="media" data-label="img/showroom-5.jpg"><img src="img/showroom-5.jpg" alt="Showroom, box doccia" loading="lazy"></div></button>
-        <button type="button" aria-label="Ingrandisci foto 6"><div class="media" data-label="img/showroom-6.jpg"><img src="img/showroom-6.jpg" alt="Showroom, campionario" loading="lazy"></div></button>
-        <button type="button" aria-label="Ingrandisci foto 7"><div class="media" data-label="img/showroom-7.jpg"><img src="img/showroom-7.jpg" alt="Showroom, effetto legno" loading="lazy"></div></button>
+      <div class="showroom">
+        <div class="visit" data-reveal>
+          <span class="status" data-status><span class="status-dot"></span><span data-status-text>Orari showroom</span></span>
+          <address><span data-fill="street">[Via e numero civico]</span><br>93015 Niscemi (CL)</address>
+          <!-- Orari: unica fonte di verità. Formato data-hours: "HH:MM-HH:MM,HH:MM-HH:MM" (vuoto = chiuso). -->
+          <table class="hours" aria-label="Orari di apertura">
+            <tr data-day="1" data-hours="08:30-13:00,15:30-19:30"><th scope="row">Lunedì</th><td>8:30–13:00 · 15:30–19:30</td></tr>
+            <tr data-day="2" data-hours="08:30-13:00,15:30-19:30"><th scope="row">Martedì</th><td>8:30–13:00 · 15:30–19:30</td></tr>
+            <tr data-day="3" data-hours="08:30-13:00,15:30-19:30"><th scope="row">Mercoledì</th><td>8:30–13:00 · 15:30–19:30</td></tr>
+            <tr data-day="4" data-hours="08:30-13:00,15:30-19:30"><th scope="row">Giovedì</th><td>8:30–13:00 · 15:30–19:30</td></tr>
+            <tr data-day="5" data-hours="08:30-13:00,15:30-19:30"><th scope="row">Venerdì</th><td>8:30–13:00 · 15:30–19:30</td></tr>
+            <tr data-day="6" data-hours="08:30-13:00"><th scope="row">Sabato</th><td>8:30–13:00</td></tr>
+            <tr data-day="0" data-hours=""><th scope="row">Domenica</th><td>Chiuso</td></tr>
+          </table>
+          <div class="contact-list">
+            <a href="tel:+390000000000" data-href="tel"><svg><use href="#i-phone"/></svg><span data-fill="phone">[+39 000 000 0000]</span></a>
+            <a href="mailto:info@euroceramiche-niscemi.it" data-href="mail"><svg><use href="#i-mail"/></svg><span data-fill="email">info@euroceramiche-niscemi.it</span></a>
+          </div>
+          <div class="visit-actions">
+            <a class="btn btn--accent" href="https://www.google.com/maps/dir/?api=1&destination=Euroceramiche+Niscemi" data-href="maps" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg> Indicazioni stradali</a>
+            <a class="btn btn--ghost" href="https://wa.me/390000000000" data-wa="Buongiorno, vorrei prendere un appuntamento in showroom." target="_blank" rel="noopener"><svg class="wa-icon"><use href="#i-wa"/></svg> Prenota una visita</a>
+          </div>
+        </div>
+        <!-- Foto dello showroom: salvarle in img/ con questi nomi (consigliati 1600px, WebP o JPG ~200 KB). -->
+        <div class="photos" data-reveal style="--i:1">
+          <figure class="photo tile t-calacatta" style="--tw:160px;--th:320px;margin:0"><img src="img/showroom-1.jpg" alt="L'esposizione di grandi lastre nello showroom" loading="lazy" decoding="async"><figcaption>Grandi lastre</figcaption></figure>
+          <figure class="photo tile t-rovere is-staggered" style="--tw:180px;--th:34px;margin:0"><img src="img/showroom-2.jpg" alt="Ambiente bagno allestito in showroom" loading="lazy" decoding="async"><figcaption>Ambienti bagno</figcaption></figure>
+          <figure class="photo tile t-terrazzo" style="--tw:120px;--th:120px;margin:0"><img src="img/showroom-3.jpg" alt="Il campionario delle collezioni" loading="lazy" decoding="async"><figcaption>Campionario</figcaption></figure>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- MARCHI -->
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Marchi</span>
-        <h2>Solo produttori di cui ci fidiamo</h2>
-        <p>Selezioniamo i migliori produttori italiani ed europei di ceramica, arredo bagno e rubinetteria.</p>
+  <!-- PREVENTIVO
+       Nessun server necessario: la richiesta parte su WhatsApp o via email.
+       Per ricevere i dati su un servizio (Formspree, Netlify Forms…) impostare CONFIG.formEndpoint. -->
+  <section class="section" id="preventivo" style="padding-top:0">
+    <div class="wrap quote">
+      <div class="quote-aside" data-reveal>
+        <span class="eyebrow">Preventivo gratuito</span>
+        <h2 style="margin-top:18px">Diteci cosa avete <em>in mente.</em></h2>
+        <p>Bastano pochi dati: vi ricontattiamo con un preventivo indicativo e, se volete, fissiamo un sopralluogo.</p>
+        <ul class="reassure">
+          <li><svg><use href="#i-check"/></svg>Risposta entro un giorno lavorativo</li>
+          <li><svg><use href="#i-check"/></svg>Gratuito e senza impegno</li>
+          <li><svg><use href="#i-check"/></svg>Sopralluogo e misure su appuntamento</li>
+        </ul>
       </div>
-      <!-- Sostituire con i loghi reali: <img src="img/marchi/nome.svg" alt="Nome marchio"> -->
-      <div class="brands" data-reveal>
-        <div class="brand">[Marchio 1]</div>
-        <div class="brand">[Marchio 2]</div>
-        <div class="brand">[Marchio 3]</div>
-        <div class="brand">[Marchio 4]</div>
-        <div class="brand">[Marchio 5]</div>
-        <div class="brand">[Marchio 6]</div>
-      </div>
-    </div>
-  </section>
 
-  <!-- RECENSIONI -->
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Recensioni</span>
-        <h2>Cosa dicono i clienti</h2>
-      </div>
-      <div class="reviews">
-        <figure class="review" data-reveal>
-          <div class="stars" role="img" aria-label="5 stelle su 5"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg></div>
-          <blockquote>«Personale gentilissimo e competente. Mi hanno progettato il bagno in 3D e il risultato finale è identico al rendering. Prezzi ottimi.»</blockquote>
-          <figcaption><strong>Maria G.</strong>Niscemi</figcaption>
-        </figure>
-        <figure class="review" data-reveal style="--i:1">
-          <div class="stars" role="img" aria-label="5 stelle su 5"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg></div>
-          <blockquote>«Ho ristrutturato tutta casa con loro: pavimenti, rivestimenti e sanitari. Consegna puntuale e materiale di prima qualità. Consigliatissimi.»</blockquote>
-          <figcaption><strong>Giuseppe L.</strong>Gela</figcaption>
-        </figure>
-        <figure class="review" data-reveal style="--i:2">
-          <div class="stars" role="img" aria-label="5 stelle su 5"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg></div>
-          <blockquote>«Da anni mi servo da Euroceramiche per i miei cantieri. Professionalità, disponibilità e un magazzino sempre fornito.»</blockquote>
-          <figcaption><strong>Salvatore R.</strong>Posatore edile</figcaption>
-        </figure>
-      </div>
+      <form class="form" id="quote-form" novalidate data-reveal style="--i:1">
+        <fieldset>
+          <legend class="legend">Siete</legend>
+          <div class="seg">
+            <span class="seg-thumb" aria-hidden="true"></span>
+            <input type="radio" name="cliente" id="c-priv" value="Privato" checked><label for="c-priv">Privato</label>
+            <input type="radio" name="cliente" id="c-pro" value="Professionista"><label for="c-pro">Professionista</label>
+          </div>
+        </fieldset>
+
+        <div class="pro-only"><div>
+          <div class="form-row">
+            <div class="field"><label for="q-azienda">Azienda <span class="opt">(facoltativo)</span></label><input id="q-azienda" name="azienda" autocomplete="organization"></div>
+            <div class="field"><label for="q-ruolo">Attività</label>
+              <select id="q-ruolo" name="attivita"><option>Posatore</option><option>Impresa edile</option><option>Architetto / geometra</option><option>Altro</option></select>
+            </div>
+          </div>
+        </div></div>
+
+        <div class="form-row">
+          <div class="field"><label for="q-nome">Nome e cognome</label><input id="q-nome" name="nome" autocomplete="name" required aria-describedby="e-nome"><span class="field-error" id="e-nome">Inserite il vostro nome.</span></div>
+          <div class="field"><label for="q-tel">Telefono</label><input id="q-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="e-tel" pattern="[0-9+ ]{6,}"><span class="field-error" id="e-tel">Inserite un numero valido.</span></div>
+        </div>
+
+        <fieldset>
+          <legend class="legend">Ambienti</legend>
+          <div class="checks">
+            <label class="check-chip"><input type="checkbox" name="ambienti" value="Bagno"><span>Bagno</span></label>
+            <label class="check-chip"><input type="checkbox" name="ambienti" value="Cucina"><span>Cucina</span></label>
+            <label class="check-chip"><input type="checkbox" name="ambienti" value="Living"><span>Living</span></label>
+            <label class="check-chip"><input type="checkbox" name="ambienti" value="Camere"><span>Camere</span></label>
+            <label class="check-chip"><input type="checkbox" name="ambienti" value="Esterni"><span>Esterni</span></label>
+            <label class="check-chip"><input type="checkbox" name="ambienti" value="Tutta la casa"><span>Tutta la casa</span></label>
+          </div>
+        </fieldset>
+
+        <div class="form-row">
+          <div class="field"><label for="q-mq">Metri quadri <span class="opt">(circa)</span></label><input id="q-mq" name="mq" inputmode="decimal" placeholder="es. 45"></div>
+          <div class="field"><label for="q-comune">Comune</label><input id="q-comune" name="comune" autocomplete="address-level2" placeholder="es. Niscemi"></div>
+        </div>
+
+        <div class="form-row">
+          <div class="field" id="f-prodotto"><label for="q-prodotto">Prodotto di interesse <span class="opt">(facoltativo)</span></label><input id="q-prodotto" name="prodotto" placeholder="es. effetto legno chiaro"></div>
+          <div class="field"><label for="q-quando">Quando</label>
+            <select id="q-quando" name="quando"><option>Il prima possibile</option><option>Entro 3 mesi</option><option>Entro 6 mesi</option><option>Sto solo valutando</option></select>
+          </div>
+        </div>
+
+        <div class="field"><label for="q-note">Note <span class="opt">(facoltativo)</span></label><textarea id="q-note" name="note" placeholder="Raccontateci il progetto: stile, colori, budget indicativo…"></textarea></div>
+
+        <div class="consent-wrap">
+          <label class="consent"><input type="checkbox" name="privacy" id="q-privacy" required aria-describedby="e-privacy"> <span>Acconsento al trattamento dei dati per essere ricontattato, come descritto nell'<a href="privacy.html">informativa privacy</a>.</span></label>
+          <span class="field-error" id="e-privacy">Serve il consenso per potervi ricontattare.</span>
+        </div>
+
+        <div class="submit-row">
+          <button class="btn btn--wa" type="submit" value="whatsapp"><svg><use href="#i-wa"/></svg> Invia su WhatsApp</button>
+          <button class="btn btn--ghost" type="submit" value="email"><svg><use href="#i-mail"/></svg> Invia via email</button>
+          <small>WhatsApp ed email si aprono con il messaggio già compilato: basta premere invia.</small>
+        </div>
+      </form>
     </div>
   </section>
 
   <!-- FAQ -->
   <section class="section" id="faq" style="padding-top:0">
     <div class="wrap faq-layout">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">FAQ</span>
-        <h2>Domande frequenti</h2>
-        <p>Non trovate la risposta? <a href="#contatti">Scriveteci</a>, rispondiamo in giornata.</p>
+      <div data-reveal>
+        <span class="eyebrow">Domande frequenti</span>
+        <h2 style="margin-top:18px">Prima di <em>chiedere.</em></h2>
+        <p class="lead">Non trovate la risposta? <a href="https://wa.me/390000000000" data-wa="Buongiorno, avrei una domanda: " target="_blank" rel="noopener">Scriveteci su WhatsApp</a>, rispondiamo in giornata.</p>
       </div>
-      <div class="faq" data-reveal>
+      <div class="faq" data-reveal style="--i:1">
         <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" id="q1" aria-controls="a1">Consegnate a domicilio?<span class="plus" aria-hidden="true"></span></button>
-          <div class="faq-a" id="a1" role="region" aria-labelledby="q1"><div><p>Sì, consegniamo a Niscemi, Gela e in tutta la provincia di Caltanissetta. Per quantitativi grandi il sopralluogo è gratuito.</p></div></div>
+          <button class="faq-q" type="button" aria-expanded="false" id="q1" aria-controls="a1">Il preventivo è davvero gratuito?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a" id="a1" role="region" aria-labelledby="q1"><div><p>Sì, sempre e senza impegno. Per lavori importanti facciamo anche il sopralluogo con le misure, gratuitamente e su appuntamento.</p></div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" id="q2" aria-controls="a2">La progettazione 3D è davvero gratuita?<span class="plus" aria-hidden="true"></span></button>
-          <div class="faq-a" id="a2" role="region" aria-labelledby="q2"><div><p>Sì, la consulenza e il rendering 3D sono gratuiti per i clienti che acquistano i materiali presso il nostro showroom.</p></div></div>
+          <button class="faq-q" type="button" aria-expanded="false" id="q2" aria-controls="a2">Consegnate a domicilio o in cantiere?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a" id="a2" role="region" aria-labelledby="q2"><div><p>Sì, a Niscemi, Gela, Caltagirone e in tutta la provincia, con mezzi nostri e imballi protetti. Vi confermiamo giorno e fascia oraria.</p></div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" id="q3" aria-controls="a3">Posso vedere un campione prima dell'acquisto?<span class="plus" aria-hidden="true"></span></button>
-          <div class="faq-a" id="a3" role="region" aria-labelledby="q3"><div><p>Certo: in showroom sono esposti campioni di tutte le collezioni e, su richiesta, portiamo i campioni direttamente a casa vostra.</p></div></div>
+          <button class="faq-q" type="button" aria-expanded="false" id="q3" aria-controls="a3">Posso vedere un campione prima di comprare?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a" id="a3" role="region" aria-labelledby="q3"><div><p>Certo. In showroom sono esposte tutte le collezioni e, su richiesta, vi lasciamo i campioni da provare a casa con la vostra luce.</p></div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" id="q4" aria-controls="a4">Effettuate anche la posa in opera?<span class="plus" aria-hidden="true"></span></button>
-          <div class="faq-a" id="a4" role="region" aria-labelledby="q4"><div><p>Collaboriamo con posatori qualificati della zona e possiamo curare l'intero lavoro chiavi in mano, dal sopralluogo alla posa.</p></div></div>
+          <button class="faq-q" type="button" aria-expanded="false" id="q4" aria-controls="a4">Quanto materiale devo ordinare in più?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a" id="a4" role="region" aria-labelledby="q4"><div><p>Di solito dal 5 al 10% per tagli e sfridi, di più per posa in diagonale o formati grandi. Lo calcoliamo noi nel preventivo, ambiente per ambiente.</p></div></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" type="button" aria-expanded="false" id="q5" aria-controls="a5">Che tempi di consegna avete?<span class="plus" aria-hidden="true"></span></button>
-          <div class="faq-a" id="a5" role="region" aria-labelledby="q5"><div><p>Il materiale a magazzino viene consegnato in pochi giorni; le collezioni su ordinazione in genere entro 1–2 settimane. Vi diamo sempre conferma scritta dei tempi.</p></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PREVENTIVO -->
-  <section class="section" id="preventivo" style="padding-top:0">
-    <div class="wrap">
-      <div class="quote" data-reveal>
-        <div>
-          <span class="eyebrow">Preventivo gratuito</span>
-          <h2>Preventivo in 1 minuto</h2>
-          <p>Lasciaci nome, telefono e metri quadri: ti richiamiamo noi con un preventivo gratuito, senza impegno.</p>
-        </div>
-        <form class="form" data-form="preventivo" novalidate>
-          <div class="form-row">
-            <div class="field"><label for="p-nome">Nome</label><input id="p-nome" name="nome" autocomplete="name" required></div>
-            <div class="field"><label for="p-tel">Telefono</label><input id="p-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required></div>
-          </div>
-          <div class="form-row">
-            <div class="field"><label for="p-mq">Metri quadri</label><input id="p-mq" name="metri_quadri" inputmode="decimal" placeholder="es. 60"></div>
-            <div class="field"><label for="p-tipo">Mi interessa</label>
-              <select id="p-tipo" name="interesse">
-                <option>Pavimenti e rivestimenti</option>
-                <option>Arredo bagno</option>
-                <option>Materiale edile</option>
-                <option>Ristrutturazione completa</option>
-              </select>
-            </div>
-          </div>
-          <label class="check"><input type="checkbox" name="privacy" required> Acconsento al trattamento dei dati per essere ricontattato, secondo l'informativa privacy.</label>
-          <button class="btn btn--accent" type="submit">Richiedi ora <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTATTI -->
-  <section class="section" id="contatti" style="padding-top:0">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Contatti</span>
-        <h2>Passate in showroom</h2>
-      </div>
-      <div class="contact">
-        <div data-reveal>
-          <dl class="contact-info">
-            <div class="contact-row"><dt>Indirizzo</dt><dd>[Via e numero civico]<br>93015 Niscemi (CL), Sicilia</dd></div>
-            <div class="contact-row"><dt>Telefono</dt><dd><a href="tel:+390000000000">[+39 000 000 0000]</a></dd></div>
-            <div class="contact-row"><dt>WhatsApp</dt><dd><a href="https://wa.me/390000000000" target="_blank" rel="noopener">Scrivici su WhatsApp</a></dd></div>
-            <div class="contact-row"><dt>Email</dt><dd><a href="mailto:info@euroceramiche-niscemi.it">info@euroceramiche-niscemi.it</a></dd></div>
-            <div class="contact-row"><dt>Orari</dt><dd>Lun–Ven [9:00–13:00 / 16:00–19:30]<br>Sab [9:00–13:00]</dd></div>
-          </dl>
-
-          <form class="form" data-form="contatti" novalidate style="margin-top:20px">
-            <div class="form-row">
-              <div class="field"><label for="c-nome">Nome</label><input id="c-nome" name="nome" autocomplete="name" required></div>
-              <div class="field"><label for="c-email">Email o telefono</label><input id="c-email" name="contatto" autocomplete="email" required></div>
-            </div>
-            <div class="field"><label for="c-msg">Messaggio</label><textarea id="c-msg" name="messaggio" required></textarea></div>
-            <label class="check"><input type="checkbox" name="privacy" required> Acconsento al trattamento dei dati secondo l'informativa privacy.</label>
-            <button class="btn" type="submit">Invia richiesta</button>
-          </form>
-        </div>
-
-        <div class="map" data-reveal style="--i:1">
-          <!-- La mappa Google viene caricata solo dopo il consenso (GDPR). Sostituire l'URL con l'embed reale. -->
-          <div class="map-consent" data-map-consent>
-            <p>La mappa è fornita da Google Maps e utilizza cookie di terze parti.</p>
-            <button class="btn btn--ghost" type="button" data-load-map>Mostra la mappa</button>
-          </div>
-          <template id="map-tpl"><iframe title="Mappa Euroceramiche Niscemi" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Niscemi%20CL&output=embed"></iframe></template>
+          <div class="faq-a" id="a5" role="region" aria-labelledby="q5"><div><p>Il materiale a magazzino arriva in pochi giorni; le collezioni su ordinazione di solito in 1–3 settimane. I tempi ve li confermiamo per iscritto.</p></div></div>
         </div>
       </div>
     </div>
@@ -822,73 +1084,118 @@ p { margin: 0; text-wrap: pretty; }
 
 <footer class="footer">
   <div class="wrap">
-    <div class="footer-top">
-      <a class="logo" href="#top" aria-label="Torna su">
-        <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-        <span class="logo-text">Euroceramiche<small>Progettare insieme</small></span>
-      </a>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="#chi-siamo">Chi siamo</a><a href="#prodotti">Prodotti</a><a href="#servizi">Servizi</a><a href="#showroom">Showroom</a><a href="#faq">FAQ</a><a href="#contatti">Contatti</a>
-      </nav>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#top" aria-label="Torna all'inizio">
+          <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="logo-text">Euroceramiche<small>Niscemi · Sicilia</small></span>
+        </a>
+        <p>Piastrelle, ceramiche e arredo bagno. Showroom e consulenza a due passi da Caltagirone, terra della maiolica.</p>
+      </div>
+      <div>
+        <h4>Sito</h4>
+        <ul><li><a href="#collezioni">Collezioni</a></li><li><a href="#professionisti">Professionisti</a></li><li><a href="#showroom">Showroom</a></li><li><a href="#preventivo">Preventivo</a></li></ul>
+      </div>
+      <div>
+        <h4>Contatti</h4>
+        <ul>
+          <li><a href="tel:+390000000000" data-href="tel" data-fill="phone">[+39 000 000 0000]</a></li>
+          <li><a href="https://wa.me/390000000000" data-wa="Buongiorno!" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:info@euroceramiche-niscemi.it" data-href="mail" data-fill="email">info@euroceramiche-niscemi.it</a></li>
+        </ul>
+      </div>
     </div>
-    <small>[Via e numero civico], 93015 Niscemi (CL) · Tel. [+39 000 000 0000] · info@euroceramiche-niscemi.it<br>© <span data-year>2026</span> Euroceramiche Niscemi · P.IVA [00000000000] · <a href="#" data-open-cookie>Preferenze cookie</a></small>
+    <div class="footer-legal">
+      <span>© <span data-year>2026</span> Euroceramiche Niscemi · <span data-fill="street">[Via e numero civico]</span>, 93015 Niscemi (CL) · P.IVA <span data-fill="vat">[00000000000]</span></span>
+      <span><a href="privacy.html">Privacy</a> · Nessun cookie di profilazione</span>
+    </div>
   </div>
 </footer>
 
-<a class="wa" href="https://wa.me/390000000000" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.3-1.7-.1-.2 0-.4.1-.5l.4-.5.3-.5v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3c-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3 1.8.7 2.5.8 3.4.7.6-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg>
-</a>
+<a class="wa-float" href="https://wa.me/390000000000" data-wa="Buongiorno, vorrei qualche informazione." target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp"><svg><use href="#i-wa"/></svg><span>Scrivici</span></a>
 
-<div class="cookie" id="cookie" role="dialog" aria-live="polite" aria-label="Cookie">
-  <p>Usiamo cookie tecnici e, solo con il tuo consenso, cookie di terze parti (Google Maps).</p>
-  <div class="cookie-actions">
-    <button class="btn" type="button" data-cookie="accept">Accetta</button>
-    <button class="btn btn--ghost" type="button" data-cookie="reject">Solo tecnici</button>
-  </div>
-</div>
+<nav class="actionbar" aria-label="Azioni rapide">
+  <a class="btn btn--ghost" href="tel:+390000000000" data-href="tel"><svg><use href="#i-phone"/></svg> Chiama</a>
+  <a class="btn btn--wa" href="https://wa.me/390000000000" data-wa="Buongiorno, vorrei qualche informazione." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> WhatsApp</a>
+  <a class="btn btn--accent" href="#preventivo">Preventivo</a>
+</nav>
 
-<div class="toast" id="toast" role="status" aria-live="polite">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
-  <span data-toast-text></span>
-</div>
-
-<dialog class="lightbox" id="lightbox" aria-label="Foto showroom">
-  <button class="icon-btn" type="button" data-close-lightbox aria-label="Chiudi">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-  </button>
-  <div class="media"><img alt=""></div>
-</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"><svg><use href="#i-check"/></svg><span data-toast-text></span></div>
 
 <script>
+/* ==========================================================================
+   CONFIG — l'unico punto da modificare con i dati reali.
+   ========================================================================== */
+const CONFIG = {
+  whatsapp: '390000000000',               // numero WhatsApp Business: prefisso 39, senza + né spazi
+  phone: '+39 000 000 0000',              // telefono mostrato e usato per "Chiama"
+  email: 'info@euroceramiche-niscemi.it',
+  street: '[Via e numero civico]',
+  vat: '[00000000000]',
+  mapsQuery: 'Euroceramiche Niscemi',     // oppure l'indirizzo completo
+  formEndpoint: ''                        // opzionale: URL Formspree/Netlify per ricevere anche i dati via POST
+};
+
 (() => {
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-  const store = {
-    get: k => { try { return localStorage.getItem(k); } catch { return null; } },
-    set: (k, v) => { try { localStorage.setItem(k, v); } catch {} }
-  };
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const waUrl = text => `https://wa.me/${CONFIG.whatsapp}${text ? '?text=' + encodeURIComponent(text) : ''}`;
 
-  /* Foto mancanti → resta il pattern segnaposto */
-  const markMissing = img => img.classList.add('is-missing');
-  $$('.media img').forEach(img => {
-    if (img.complete && img.naturalWidth === 0 && img.getAttribute('src')) markMissing(img);
-    img.addEventListener('error', () => markMissing(img));
+  /* Dati di contatto da CONFIG */
+  const fills = { phone: CONFIG.phone, email: CONFIG.email, street: CONFIG.street, vat: CONFIG.vat, addressShort: `${CONFIG.street.startsWith('[') ? '' : CONFIG.street + ', '}Niscemi (CL)` };
+  $$('[data-fill]').forEach(el => { const v = fills[el.dataset.fill]; if (v) el.textContent = v; });
+  $$('[data-href="tel"]').forEach(a => a.href = 'tel:' + CONFIG.phone.replace(/\s/g, ''));
+  $$('[data-href="mail"]').forEach(a => a.href = 'mailto:' + CONFIG.email);
+  $$('[data-href="maps"]').forEach(a => a.href = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(CONFIG.mapsQuery));
+  $$('[data-wa]').forEach(a => a.href = waUrl(a.dataset.wa));
+  $$('[data-wa-product]').forEach(a => a.href = waUrl(`Buongiorno, vorrei informazioni e disponibilità per "${a.dataset.waProduct}".`));
+  $$('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
+
+  /* Foto mancanti → resta la texture sotto */
+  $$('.photo img').forEach(img => {
+    const miss = () => img.classList.add('is-missing');
+    if (img.complete && img.naturalWidth === 0) miss();
+    img.addEventListener('error', miss);
     img.addEventListener('load', () => img.classList.remove('is-missing'));
   });
 
-  /* Anno corrente */
-  $$('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
-
-  /* Barra annunci (chiusura ricordata) */
-  const announce = $('#announce');
-  if (store.get('announce-dismissed') === '1') announce.hidden = true;
-  $('[data-dismiss-announce]').addEventListener('click', () => {
-    announce.classList.add('is-hidden');
-    store.set('announce-dismissed', '1');
+  /* Aperto / chiuso — calcolato sull'ora italiana, ovunque si trovi il visitatore */
+  const DAYS = ['domenica', 'lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato'];
+  const toMin = t => { const [h, m] = t.split(':').map(Number); return h * 60 + m; };
+  const fmt = m => `${Math.floor(m / 60)}:${String(m % 60).padStart(2, '0')}`;
+  const schedule = {};
+  $$('.hours tr[data-day]').forEach(tr => {
+    schedule[tr.dataset.day] = tr.dataset.hours ? tr.dataset.hours.split(',').map(r => r.split('-').map(toMin)) : [];
   });
+  const romeNow = () => {
+    const p = Object.fromEntries(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Rome', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
+      .formatToParts(new Date()).map(x => [x.type, x.value]));
+    return { day: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday), min: +p.hour * 60 + +p.minute };
+  };
+  const updateStatus = () => {
+    const { day, min } = romeNow();
+    const today = schedule[day] || [];
+    const slot = today.find(([a, b]) => min >= a && min < b);
+    let text, open = !!slot;
+    if (slot) {
+      text = slot[1] - min <= 30 ? `Aperto · chiude alle ${fmt(slot[1])}` : `Aperto ora · fino alle ${fmt(slot[1])}`;
+    } else {
+      const later = today.find(([a]) => a > min);
+      if (later) text = `Chiuso · riapre alle ${fmt(later[0])}`;
+      else {
+        for (let i = 1; i <= 7; i++) {
+          const d = (day + i) % 7, s = schedule[d];
+          if (s && s.length) { text = `Chiuso · riapre ${i === 1 ? 'domani' : DAYS[d]} alle ${fmt(s[0][0])}`; break; }
+        }
+      }
+    }
+    $$('[data-status]').forEach(el => { el.dataset.open = open; $('[data-status-text]', el).textContent = text || 'Orari showroom'; });
+    $$('.hours tr').forEach(tr => tr.classList.toggle('is-today', +tr.dataset.day === day));
+  };
+  updateStatus(); setInterval(updateStatus, 60000);
 
-  /* Header: bordo solo dopo lo scroll */
+  /* Header */
   const header = $('#header');
   const onScroll = () => header.classList.toggle('is-scrolled', scrollY > 8);
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
@@ -906,41 +1213,47 @@ p { margin: 0; text-wrap: pretty; }
   document.addEventListener('click', e => { if (!e.target.closest('#nav, .menu-toggle')) setMenu(false); });
 
   /* Voce di menu attiva */
-  const links = $$('.nav a[href^="#"]:not(.btn)');
-  const spy = new IntersectionObserver(entries => {
-    entries.forEach(en => {
-      if (!en.isIntersecting) return;
-      links.forEach(a => a.toggleAttribute('aria-current', a.getAttribute('href') === '#' + en.target.id));
-      links.forEach(a => a.hasAttribute('aria-current') && a.setAttribute('aria-current', 'true'));
-    });
-  }, { rootMargin: '-45% 0px -50% 0px' });
+  const links = $$('.nav a[href^="#"]');
+  const spy = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) links.forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === '#' + en.target.id));
+  }), { rootMargin: '-45% 0px -50% 0px' });
   links.forEach(a => { const s = $(a.getAttribute('href')); s && spy.observe(s); });
 
-  /* Contatori: ease-out, ~1.2s, solo quando entrano in vista */
-  const fmt = n => n.toLocaleString('it-IT');
-  const runCount = el => {
-    const target = +el.dataset.count, suffix = el.dataset.suffix || '';
-    if (reduceMotion) return;
-    const t0 = performance.now(), dur = 1200;
-    const step = now => {
-      const p = Math.min((now - t0) / dur, 1);
-      const e = 1 - Math.pow(1 - p, 4);
-      el.textContent = fmt(Math.round(target * e)) + suffix;
-      if (p < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  };
-
-  /* Entrate allo scroll (una sola volta) */
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(en => {
-      if (!en.isIntersecting) return;
-      en.target.classList.add('is-in');
-      $$('[data-count]', en.target).forEach(runCount);
-      io.unobserve(en.target);
-    });
-  }, { rootMargin: '0px 0px -8% 0px' });
+  /* Entrate allo scroll */
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (!en.isIntersecting) return;
+    en.target.classList.add('is-in'); io.unobserve(en.target);
+  }), { rootMargin: '0px 0px -8% 0px' });
   $$('[data-reveal]').forEach(el => io.observe(el));
+
+  /* Filtro collezioni (View Transitions dove supportate) */
+  const products = $$('.product');
+  products.forEach((p, i) => p.style.viewTransitionName = 'p' + i);
+  $$('[data-filter]').forEach(chip => {
+    const f = chip.dataset.filter;
+    $('.count', chip).textContent = f === 'tutti' ? products.length : products.filter(p => p.dataset.cat.split(' ').includes(f)).length;
+    chip.addEventListener('click', () => {
+      if (chip.getAttribute('aria-pressed') === 'true') return;
+      const apply = () => {
+        $$('[data-filter]').forEach(c => c.setAttribute('aria-pressed', c === chip));
+        products.forEach(p => p.hidden = f !== 'tutti' && !p.dataset.cat.split(' ').includes(f));
+      };
+      if (document.startViewTransition && !reduceMotion) document.startViewTransition(apply); else apply();
+    });
+  });
+
+  /* Dal prodotto al form, con il campo già compilato */
+  const form = $('#quote-form');
+  const goToForm = () => {
+    $('#preventivo').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+    setTimeout(() => $('#q-nome').focus({ preventScroll: true }), reduceMotion ? 0 : 500);
+  };
+  $$('[data-quote]').forEach(b => b.addEventListener('click', () => {
+    $('#q-prodotto').value = b.dataset.quote;
+    const f = $('#f-prodotto'); f.classList.remove('is-flash'); void f.offsetWidth; f.classList.add('is-flash');
+    goToForm();
+  }));
+  $('[data-pro]').addEventListener('click', () => { $('#c-pro').checked = true; });
 
   /* FAQ: una risposta aperta alla volta */
   $$('.faq-q').forEach(q => q.addEventListener('click', () => {
@@ -949,63 +1262,71 @@ p { margin: 0; text-wrap: pretty; }
     q.setAttribute('aria-expanded', String(!open));
   }));
 
-  /* Lightbox galleria */
-  const lb = $('#lightbox'), lbImg = $('img', lb);
-  $$('.gallery button').forEach(b => b.addEventListener('click', () => {
-    const img = $('img', b);
-    lbImg.classList.toggle('is-missing', img.classList.contains('is-missing'));
-    lbImg.src = img.src; lbImg.alt = img.alt;
-    lb.showModal();
-  }));
-  $('[data-close-lightbox]').addEventListener('click', () => lb.close());
-  lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
-
   /* Toast */
   const toast = $('#toast'); let toastTimer;
   const showToast = msg => {
     $('[data-toast-text]', toast).textContent = msg;
     toast.classList.add('is-visible');
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 4000);
+    toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 4200);
   };
 
-  /* Form: validazione leggera, poi apre l'email precompilata.
-     Per inviare a un backend (Formspree, Netlify Forms…) sostituire il blocco mailto. */
-  $$('form[data-form]').forEach(form => form.addEventListener('submit', e => {
-    e.preventDefault();
-    let firstInvalid = null;
-    $$('[required]', form).forEach(f => {
-      const bad = f.type === 'checkbox' ? !f.checked : !f.value.trim();
-      f.setAttribute('aria-invalid', bad);
-      if (bad && !firstInvalid) firstInvalid = f;
+  /* Pulsante WhatsApp flottante: si fa da parte quando il form è in vista */
+  const waFloat = $('.wa-float');
+  new IntersectionObserver(([en]) => waFloat.classList.toggle('is-hidden', en.isIntersecting), { threshold: .25 }).observe(form);
+
+  /* Invio preventivo: validazione, poi WhatsApp o email con messaggio pronto */
+  const validators = {
+    nome: v => v.trim().length > 1,
+    telefono: v => /^[0-9+ ]{6,}$/.test(v.trim()),
+    privacy: (_, el) => el.checked
+  };
+  const validate = () => {
+    let first = null;
+    Object.entries(validators).forEach(([name, ok]) => {
+      const el = form.elements[name];
+      const bad = !ok(el.value, el);
+      el.setAttribute('aria-invalid', bad);
+      if (bad && !first) first = el;
     });
-    if (firstInvalid) { firstInvalid.focus(); showToast('Compila i campi richiesti'); return; }
-    const data = new FormData(form);
-    const body = [...data].filter(([k]) => k !== 'privacy').map(([k, v]) => `${k.replace('_', ' ')}: ${v}`).join('\n');
-    const subject = form.dataset.form === 'preventivo' ? 'Richiesta preventivo' : 'Richiesta informazioni';
-    location.href = `mailto:info@euroceramiche-niscemi.it?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    form.reset();
-    showToast('Grazie! Ti ricontatteremo al più presto.');
-  }));
-  $$('form [required]').forEach(f => f.addEventListener('input', () => f.removeAttribute('aria-invalid')));
-
-  /* Cookie + mappa */
-  const cookie = $('#cookie');
-  const loadMap = () => {
-    const wrap = $('.map'); if ($('iframe', wrap)) return;
-    wrap.appendChild($('#map-tpl').content.cloneNode(true));
-    $('[data-map-consent]').remove();
+    return first;
   };
-  const consent = store.get('cookie-consent');
-  if (consent === 'accept') loadMap();
-  if (!consent) setTimeout(() => cookie.classList.add('is-visible'), 800);
-  $$('[data-cookie]').forEach(b => b.addEventListener('click', () => {
-    store.set('cookie-consent', b.dataset.cookie);
-    cookie.classList.remove('is-visible');
-    if (b.dataset.cookie === 'accept') loadMap();
-  }));
-  $('[data-load-map]').addEventListener('click', () => { store.set('cookie-consent', 'accept'); cookie.classList.remove('is-visible'); loadMap(); });
-  $('[data-open-cookie]').addEventListener('click', e => { e.preventDefault(); cookie.classList.add('is-visible'); });
+  $$('input, select, textarea', form).forEach(el => el.addEventListener('input', () => el.removeAttribute('aria-invalid')));
+  $$('input[type=checkbox]', form).forEach(el => el.addEventListener('change', () => el.removeAttribute('aria-invalid')));
+
+  const buildMessage = () => {
+    const d = new FormData(form);
+    const pro = d.get('cliente') === 'Professionista';
+    const rows = [
+      ['Cliente', pro ? `Professionista (${d.get('attivita')})` : 'Privato'],
+      pro && ['Azienda', d.get('azienda')],
+      ['Nome', d.get('nome')],
+      ['Telefono', d.get('telefono')],
+      ['Comune', d.get('comune')],
+      ['Ambienti', d.getAll('ambienti').join(', ')],
+      ['Superficie', d.get('mq') && d.get('mq') + ' m²'],
+      ['Prodotto', d.get('prodotto')],
+      ['Quando', d.get('quando')],
+      ['Note', d.get('note')]
+    ].filter(r => r && r[1] && String(r[1]).trim());
+    return 'Buongiorno, vorrei un preventivo.\n\n' + rows.map(([k, v]) => `${k}: ${String(v).trim()}`).join('\n');
+  };
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const bad = validate();
+    if (bad) { bad.focus(); showToast('Controllate i campi evidenziati'); return; }
+    const msg = buildMessage();
+    if (CONFIG.formEndpoint) {
+      fetch(CONFIG.formEndpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } }).catch(() => {});
+    }
+    if (e.submitter && e.submitter.value === 'email') {
+      location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent('Richiesta preventivo dal sito')}&body=${encodeURIComponent(msg)}`;
+    } else {
+      window.open(waUrl(msg), '_blank', 'noopener');
+    }
+    showToast('Perfetto: inviate il messaggio e vi ricontattiamo al più presto.');
+  });
 })();
 </script>
 </body>
