@@ -27,3 +27,7 @@ Il modulo apre WhatsApp o l'email con il messaggio già compilato: non serve un 
 ## Pubblicazione
 
 Qualsiasi hosting statico: GitHub Pages, Netlify, Cloudflare Pages o il proprio spazio web (caricare la cartella così com'è).
+
+## File unico da condividere
+
+`python3 tools/bundle.py . anteprima/euroceramiche-sito.html` crea un solo file HTML con foto e font incorporati (≈1,1 MB), comodo da inviare o aprire sul telefono.
