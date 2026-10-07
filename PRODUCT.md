@@ -66,7 +66,9 @@ pulsanti brevi ("Scrivici su WhatsApp").
 - Transizioni interrompibili (CSS transitions, non keyframe) per ciò che
   l'utente può invertire.
 - Filtro collezioni con View Transitions dove supportate.
-- Effetti "wow" misurati: hero con pavimento 3D di lastre che si posano e luce
+- Effetti "wow" su base chiara: intro col logo che si compone, parete 3D di
+  campioni che si assemblano in volo su un pavimento di marmo, pulsanti magnetici,
+  piastrelle che si posano entrando nello schermo. Hero con pavimento 3D e luce
   che segue il cursore, sezione materiali bloccata allo scroll con lastra 3D,
   titoli rivelati parola per parola, schede con inclinazione 3D.
 - `prefers-reduced-motion` rispettato ovunque.
