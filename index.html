@@ -218,7 +218,6 @@ p { margin: 0; text-wrap: pretty; }
 .jt:not(.is-active) .split { visibility: hidden; transition: visibility 0s linear 600ms; }
 .jt.is-active .split { visibility: visible; transition: none; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; margin-top: 30px; }
-html:not(.js) .jt + .jt { display: none; }
 html:not(.js) .jt .label, html:not(.js) .jt-sub, html:not(.js) .jt .hero-cta { opacity: 1; transform: none; }
 
 .journey-index { position: absolute; right: var(--gutter); top: 50%; z-index: 2; translate: 0 -50%; display: grid; gap: 14px; justify-items: end; font-family: var(--font-display); font-style: italic; font-size: .95rem; color: rgb(244 241 236 / .4); }
@@ -739,6 +738,62 @@ html:not(.js) .jt-k, html:not(.js) .jt .tags { opacity: 1; transform: none; }
   .actionbar { background: rgb(28 27 25 / .9); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 12px 30px -8px rgb(0 0 0 / .6), inset 0 0 0 1px rgb(255 255 255 / .08); }
   .actionbar .main { background: var(--amber); color: var(--amber-ink); }
 }
+
+html:not(.js) .jt + .jt { display: none; }
+html:not(.js) .jt .split { visibility: visible; }
+/* ==========================================================================
+   Effetti anche SENZA JavaScript (anteprime di WhatsApp/File, ecc.):
+   animazioni CSS legate allo scroll, dove il browser le supporta.
+   Con JavaScript attivo questo blocco non si applica.
+   ========================================================================== */
+@supports (animation-timeline: view()) {
+  html:not(.js) .journey { height: calc(100vh * 4.45); height: calc(100svh * 4.45); view-timeline: --j block; }
+  html:not(.js) .jt + .jt { display: block; }
+  html:not(.js) .jt { pointer-events: auto; }
+  html:not(.js) .jt .split { visibility: visible; }
+  html:not(.js) .jt { opacity: 0; }
+  html:not(.js) .jt:first-child { opacity: 1; }
+  /* ingresso delle scene: porta che si apre (0→1 = 10–33%, 1→2 = 43–67%, 2→3 = 77–100%) */
+  html:not(.js) .scene + .scene { animation: jDoor linear both, jPush linear both; animation-timeline: --j, --j; }
+  html:not(.js) .scene:nth-child(2) { animation-range: contain 10% contain 33.3%, contain 43.3% contain 66.7%; }
+  html:not(.js) .scene:nth-child(3) { animation-range: contain 43.3% contain 66.7%, contain 76.7% contain 100%; }
+  html:not(.js) .scene:nth-child(4) { animation-range: contain 76.7% contain 100%, contain 200% contain 201%; }
+  html:not(.js) .scene:first-child { animation: jPush linear both; animation-timeline: --j; animation-range: contain 10% contain 33.3%; }
+  html:not(.js) .scene + .scene img { animation: jSettle linear both; animation-timeline: --j; }
+  html:not(.js) .scene:nth-child(2) img { animation-range: contain 10% contain 33.3%; }
+  html:not(.js) .scene:nth-child(3) img { animation-range: contain 43.3% contain 66.7%; }
+  html:not(.js) .scene:nth-child(4) img { animation-range: contain 76.7% contain 100%; }
+  html:not(.js) .scene .veil { animation: jDim linear both; animation-timeline: --j; }
+  html:not(.js) .scene:nth-child(1) .veil { animation-range: contain 10% contain 33.3%; }
+  html:not(.js) .scene:nth-child(2) .veil { animation-range: contain 43.3% contain 66.7%; }
+  html:not(.js) .scene:nth-child(3) .veil { animation-range: contain 76.7% contain 100%; }
+  html:not(.js) .scene:nth-child(4) .veil { animation: none; }
+  /* testi: entrano ed escono a metà di ogni passaggio */
+  html:not(.js) .jt + .jt { animation: jIn linear both; animation-timeline: --j; }
+  html:not(.js) .jt:nth-child(2) { animation-range: contain 19% contain 24%; }
+  html:not(.js) .jt:nth-child(3) { animation-range: contain 52% contain 57%; }
+  html:not(.js) .jt:nth-child(4) { animation-range: contain 85.5% contain 90.5%; }
+  html:not(.js) .jt > * { animation: jOut linear both; animation-timeline: --j; }
+  html:not(.js) .jt:nth-child(1) > * { animation-range: contain 15% contain 20%; }
+  html:not(.js) .jt:nth-child(2) > * { animation-range: contain 48% contain 53%; }
+  html:not(.js) .jt:nth-child(3) > * { animation-range: contain 81.5% contain 86.5%; }
+  html:not(.js) .jt:nth-child(4) > * { animation: none; }
+  html:not(.js) .ji-label, html:not(.js) .ji-num { display: none; }
+  html:not(.js) .ji-bar i { animation: jBar linear both; animation-timeline: --j; animation-range: contain 0% contain 100%; }
+  /* foto che si svelano entrando nello schermo */
+  html:not(.js) [data-clip] { animation: jClip linear both; animation-timeline: view(); animation-range: entry 0% entry 90%; }
+  html:not(.js) [data-reveal] { animation: jReveal linear both; animation-timeline: view(); animation-range: entry 0% entry 70%; }
+}
+@keyframes jDoor { 0% { clip-path: inset(50% 50% 50% 50%); } .1% { clip-path: inset(16% 47% 16% 47% round 6px); } 100% { clip-path: inset(0 0 0 0 round 0); } }
+@keyframes jPush { from { transform: scale(1); } to { transform: scale(1.35); } }
+@keyframes jSettle { from { transform: scale(1.25); } to { transform: scale(1); } }
+@keyframes jDim { from { opacity: 0; } to { opacity: .72; } }
+@keyframes jIn { from { opacity: 0; transform: translateY(40px); visibility: hidden; } to { opacity: 1; transform: none; visibility: visible; } }
+@keyframes jOut { from { opacity: 1; transform: none; visibility: visible; } to { opacity: 0; transform: translateY(-40px); visibility: hidden; } }
+@keyframes jBar { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes jClip { from { clip-path: inset(100% 0 0 0 round var(--r-img)); } to { clip-path: inset(0 0 0 0 round var(--r-img)); } }
+@keyframes jReveal { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+@media (max-width: 760px) { @keyframes jDoor { 0% { clip-path: inset(50% 50% 50% 50%); } .1% { clip-path: inset(20% 43% 20% 43% round 6px); } 100% { clip-path: inset(0 0 0 0 round 0); } } }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 1ms !important; animation: none !important; transition-delay: 0s !important; }
