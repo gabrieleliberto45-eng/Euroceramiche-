@@ -6,6 +6,8 @@ def uri(path, mime):
 # niente preload/srcset: un solo file per immagine
 s = re.sub(r'<link rel="preload"[^>]*>\n?', '', s)
 s = re.sub(r'\s(?:srcset|sizes)="[^"]*"', '', s)
+# nel file unico le foto sono già dentro: niente caricamento differito (alcune anteprime non lo eseguono)
+s = s.replace(' loading="lazy"', '')
 s = re.sub(r'url\((fonts/[^)]+\.woff2)\)', lambda m: f'url({uri(m.group(1), "font/woff2")})', s)
 s = re.sub(r'src="(img/[^"]+\.webp)"', lambda m: f'src="{uri(m.group(1), "image/webp")}"', s)
 s = s.replace('<meta property="og:image" content="img/hero.webp">', '')
