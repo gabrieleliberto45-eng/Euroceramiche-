@@ -188,30 +188,57 @@ p { margin: 0; text-wrap: pretty; }
 }
 
 /* ==========================================================================
-   Hero — fotografia a tutto schermo, zoom lento all'apertura, parallasse
+   Viaggio iniziale: sezione bloccata, la camera "entra" nelle foto e passa
+   alla scena successiva attraverso una finestra ad arco che si allarga.
    ========================================================================== */
-.hero { --p: 0; position: relative; height: 100vh; height: 100svh; min-height: 640px; overflow: hidden; color: #f4f1ec; background: #2a2620; }
-.hero-media { position: absolute; inset: 0; animation: heroZoom 2600ms var(--ease-out) both; }
-.hero-media img { width: 100%; height: 100%; object-fit: cover; transform: translateY(calc(var(--p) * 18%)) scale(calc(1 + var(--p) * .06)); will-change: transform; }
-@keyframes heroZoom { from { transform: scale(1.14); filter: brightness(.6); } }
-.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgb(18 15 12 / .78) 0%, rgb(18 15 12 / .2) 55%, rgb(18 15 12 / .35) 100%); pointer-events: none; }
-.hero-content {
-  position: absolute; inset: auto 0 0 0; z-index: 1; padding-bottom: clamp(36px, 6vw, 72px);
-  opacity: calc(1 - var(--p) * 1.6); transform: translateY(calc(var(--p) * -60px));
-}
-.hero-content .wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 40px; align-items: end; }
-.hero .label { color: rgb(244 241 236 / .8); }
-.hero h1 { font-size: clamp(3.3rem, 9vw, 8.6rem); line-height: .92; letter-spacing: -.035em; margin: 24px 0 36px; max-width: 10ch; }
-.hero-cta { display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; }
-.hero-side { display: grid; gap: 14px; justify-items: end; text-align: right; font-size: .9rem; color: rgb(244 241 236 / .82); padding-bottom: 8px; }
-.hero-side a { text-decoration: none; }
-.scroll-line { position: absolute; left: 50%; bottom: 0; z-index: 1; width: 1px; height: 64px; background: rgb(244 241 236 / .25); overflow: hidden; opacity: calc(1 - var(--p) * 5); }
+.journey { position: relative; height: 100vh; height: 100svh; background: #1d1915; color: #f4f1ec; }
+.journey-sticky { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
+.scene { position: absolute; inset: 0; overflow: hidden; background: #1d1915; }
+.scene + .scene { clip-path: inset(50% 50% 50% 50%); }
+.scene img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(var(--s, 1)); will-change: transform; }
+.scene-zoom { position: absolute; inset: 0; animation: heroZoom 2600ms var(--ease-out) both; }
+@keyframes heroZoom { from { transform: scale(1.14); filter: brightness(.55); } }
+.scene::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, rgb(24 19 15 / .78) 0%, rgb(24 19 15 / .18) 55%, rgb(24 19 15 / .35) 100%); }
+
+.journey-text { position: absolute; inset: auto 0 0 0; z-index: 2; padding-bottom: clamp(40px, 7vw, 80px); }
+.journey-text .wrap { display: grid; }
+.jt { grid-area: 1 / 1; align-self: end; pointer-events: none; }
+.jt.is-active { pointer-events: auto; }
+.jt .label { color: rgb(244 241 236 / .8); }
+.jt-h { font-family: var(--font-display); font-weight: 400; font-size: clamp(3rem, 8.4vw, 8.2rem); line-height: .92; letter-spacing: -.035em; margin: 22px 0 24px; max-width: 11ch; text-wrap: balance; }
+.jt-h em { font-style: italic; }
+.jt-sub { font-size: clamp(1rem, 1.4vw, 1.15rem); color: rgb(244 241 236 / .82); max-width: 40ch; }
+.jt .label, .jt-sub, .jt .hero-cta { opacity: 0; transform: translateY(14px); transition: opacity 700ms var(--ease-out), transform 900ms var(--ease-out); }
+.jt.is-active .label, .jt.is-active .jt-sub, .jt.is-active .hero-cta { opacity: 1; transform: none; transition-delay: 250ms; }
+.jt.is-active .jt-sub { transition-delay: 380ms; }
+.jt.is-active .hero-cta { transition-delay: 500ms; }
+.jt .split .w > span { transition-duration: 900ms; }
+.jt:not(.is-active) .split .w > span { transform: translateY(-140%); transition-duration: 600ms; transition-delay: 0ms; }
+.jt .split .w { padding-top: .08em; margin-top: -.08em; }
+.jt:not(.is-active) .split:not(.was-in) .w > span { transform: translateY(140%); }
+.jt:not(.is-active) .split { visibility: hidden; transition: visibility 0s linear 600ms; }
+.jt.is-active .split { visibility: visible; transition: none; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; margin-top: 30px; }
+html:not(.js) .jt + .jt { display: none; }
+html:not(.js) .jt .label, html:not(.js) .jt-sub, html:not(.js) .jt .hero-cta { opacity: 1; transform: none; }
+
+.journey-index { position: absolute; right: var(--gutter); top: 50%; z-index: 2; translate: 0 -50%; display: grid; gap: 14px; justify-items: end; font-family: var(--font-display); font-style: italic; font-size: .95rem; color: rgb(244 241 236 / .4); }
+.journey-index span { transition: color 500ms var(--ease-out); display: flex; align-items: center; gap: 12px; }
+.journey-index span::before { content: ""; width: 0; height: 1px; background: currentColor; transition: width 600ms var(--ease-out); }
+.journey-index span.is-active { color: #f4f1ec; }
+.journey-index span.is-active::before { width: 28px; }
+.journey-meta { position: absolute; right: var(--gutter); bottom: clamp(40px, 7vw, 80px); z-index: 2; display: grid; gap: 12px; justify-items: end; font-size: .88rem; color: rgb(244 241 236 / .8); }
+.journey-meta a { text-decoration: none; }
+.scroll-line { position: absolute; left: 50%; bottom: 0; z-index: 2; width: 1px; height: 64px; background: rgb(244 241 236 / .25); overflow: hidden; transition: opacity 500ms var(--ease-out); }
 .scroll-line::after { content: ""; position: absolute; inset: 0; background: #f4f1ec; animation: scrollLine 2.4s var(--ease-lux) infinite; }
+.journey.is-moving .scroll-line { opacity: 0; }
 @keyframes scrollLine { from { transform: translateY(-100%); } to { transform: translateY(100%); } }
 @media (max-width: 760px) {
-  .hero-content .wrap { grid-template-columns: 1fr; }
-  .hero-side { justify-items: start; text-align: left; }
+  .journey-index { top: auto; bottom: auto; top: calc(var(--header-h) + 20px); translate: 0; flex-direction: row; display: flex; gap: 10px; font-size: .85rem; }
+  .journey-index span::before { display: none; }
+  .journey-meta { display: none; }
   .scroll-line { display: none; }
+  .journey-text { padding-bottom: calc(96px + env(safe-area-inset-bottom)); }
   .hero-cta .btn { flex: 1 1 100%; }
 }
 
@@ -649,28 +676,53 @@ fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
 
 <main id="main">
 
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="hero-media">
-      <img src="img/hero.webp" srcset="img/hero-1000.webp 1000w, img/hero.webp 2000w" sizes="100vw" alt="Bagno con rivestimento in marmo, vasca e illuminazione calda" width="2000" height="1125" fetchpriority="high">
-    </div>
-    <div class="hero-content">
-      <div class="wrap">
-        <div>
-          <span class="label" data-reveal style="--i:2">Showroom · Niscemi, Sicilia</span>
-          <h1 class="split" data-split style="--base:300ms">Superfici da scegliere <em>con le mani.</em></h1>
-          <div class="hero-cta" data-reveal style="--i:6">
-            <a class="btn btn--light" href="#preventivo">Richiedi un preventivo <svg class="arrow"><use href="#i-arrow"/></svg></a>
-            <a class="link" href="https://wa.me/390000000000" data-wa="Buongiorno, vorrei qualche informazione sulle vostre collezioni." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> Scrivici su WhatsApp</a>
+  <!-- VIAGGIO INIZIALE: 4 scene guidate dallo scroll -->
+  <section class="journey" id="top" aria-label="Euroceramiche Niscemi">
+    <div class="journey-sticky">
+      <div class="scene"><div class="scene-zoom"><img src="img/hero.webp" srcset="img/hero-1000.webp 1000w, img/hero.webp 2000w" sizes="100vw" alt="Bagno con rivestimento in marmo, vasca e illuminazione calda" width="2000" height="1125" fetchpriority="high"></div></div>
+      <div class="scene"><img src="img/marmo-bianco.webp" alt="Lastra di marmo bianco con venature grigie" width="1400" height="934" decoding="async"></div>
+      <div class="scene"><img src="img/living-marmo.webp" srcset="img/living-marmo-900.webp 900w, img/living-marmo.webp 1600w" sizes="100vw" alt="Soggiorno con parete in grandi lastre effetto marmo" width="1600" height="1067" decoding="async"></div>
+      <div class="scene"><img src="img/campioni.webp" srcset="img/campioni-800.webp 800w, img/campioni.webp 1400w" sizes="100vw" alt="Mani che confrontano campioni di marmo" width="1400" height="934" decoding="async"></div>
+
+      <div class="journey-text">
+        <div class="wrap">
+          <div class="jt is-active">
+            <span class="label">Showroom · Niscemi, Sicilia</span>
+            <h1 class="jt-h split" data-jsplit>Superfici da scegliere <em>con le mani.</em></h1>
+            <div class="hero-cta">
+              <a class="btn btn--light" href="#preventivo">Richiedi un preventivo <svg class="arrow"><use href="#i-arrow"/></svg></a>
+              <a class="link" href="https://wa.me/390000000000" data-wa="Buongiorno, vorrei qualche informazione sulle vostre collezioni." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> Scrivici su WhatsApp</a>
+            </div>
+          </div>
+          <div class="jt" aria-hidden="true">
+            <span class="label">La materia</span>
+            <p class="jt-h split" data-jsplit>La verità è <em>nella materia.</em></p>
+            <p class="jt-sub">Venature, grana, riflessi: dal vivo si capisce tutto. Per questo vi facciamo toccare ogni lastra.</p>
+          </div>
+          <div class="jt" aria-hidden="true">
+            <span class="label">Gli spazi</span>
+            <p class="jt-h split" data-jsplit>Grandi lastre, <em>nessun confine.</em></p>
+            <p class="jt-sub">Pareti e pavimenti continui fino a 120×280 cm, per ambienti che respirano.</p>
+          </div>
+          <div class="jt" aria-hidden="true">
+            <span class="label">L'esperienza</span>
+            <p class="jt-h split" data-jsplit>Venite a <em>toccarle.</em></p>
+            <p class="jt-sub">Il nostro showroom vi aspetta a Niscemi, con un consulente al vostro fianco.</p>
+            <div class="hero-cta">
+              <a class="btn btn--light" href="#showroom">Orari e indicazioni <svg class="arrow"><use href="#i-arrow"/></svg></a>
+              <a class="link" href="#preventivo">Preventivo gratuito <svg><use href="#i-arrow"/></svg></a>
+            </div>
           </div>
         </div>
-        <div class="hero-side" data-reveal style="--i:7">
-          <span class="status" data-status><span class="status-dot"></span><span data-status-text>Orari showroom</span></span>
-          <a href="#showroom"><span data-fill="addressShort">Niscemi (CL)</span></a>
-        </div>
       </div>
+
+      <div class="journey-index" aria-hidden="true"><span class="is-active">01</span><span>02</span><span>03</span><span>04</span></div>
+      <div class="journey-meta">
+        <span class="status" data-status><span class="status-dot"></span><span data-status-text>Orari showroom</span></span>
+        <a href="#showroom"><span data-fill="addressShort">Niscemi (CL)</span></a>
+      </div>
+      <span class="scroll-line" aria-hidden="true"></span>
     </div>
-    <span class="scroll-line" aria-hidden="true"></span>
   </section>
 
   <!-- MANIFESTO -->
@@ -1158,7 +1210,7 @@ const CONFIG = {
   links.forEach(a => { const s = $(a.getAttribute('href')); s && spy.observe(s); });
 
   /* Titoli parola per parola */
-  $$('[data-split]').forEach(el => {
+  $$('[data-split], [data-jsplit]').forEach(el => {
     let i = 0;
     const label = el.textContent.replace(/\s+/g, ' ').trim();
     const wrap = node => [...node.childNodes].forEach(n => {
@@ -1206,13 +1258,61 @@ const CONFIG = {
   };
 
   /* Un solo ciclo rAF per tutto ciò che dipende dallo scroll */
-  const hero = $('.hero'), bar = $('.progress'), speeds = $$('[data-speed]');
+  const bar = $('.progress'), speeds = $$('[data-speed]');
   let lastY = -1, prevY = 0;
+  /* Viaggio iniziale: scroll → zoom e finestre ad arco fra le scene */
+  const journey = $('.journey'), scenes = $$('.scene'), jtexts = $$('.jt'), jdots = $$('.journey-index span');
+  const N = scenes.length, SEG = 1.15;              // ogni scena occupa ~1,15 schermi di scroll
+  let jvh = document.documentElement.clientHeight, jw = innerWidth, jActive = 0;
+  const sizeJourney = () => {
+    jvh = document.documentElement.clientHeight;
+    journey.style.height = reduceMotion ? '' : (jvh * (1 + (N - 1) * SEG)) + 'px';
+  };
+  sizeJourney();
+  addEventListener('resize', () => { if (innerWidth !== jw) { jw = innerWidth; sizeJourney(); lastY = -1; } });
+  const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  const clamp01 = v => Math.min(1, Math.max(0, v));
+  const setJText = a => {
+    if (a === jActive) return;
+    jtexts.forEach((t, i) => {
+      const on = i === a, h = $('.split', t);
+      if (!on && t.classList.contains('is-active')) h.classList.add('was-in');
+      t.classList.toggle('is-active', on); t.toggleAttribute('aria-hidden', !on);
+      if (on) { h.classList.remove('was-in'); h.classList.remove('is-in'); void h.offsetWidth; h.classList.add('is-in'); }
+    });
+    jdots.forEach((d, i) => d.classList.toggle('is-active', i === a));
+    jActive = a;
+  };
+  const updateJourney = () => {
+    if (reduceMotion) return;
+    const r = journey.getBoundingClientRect();
+    if (r.bottom < 0) return;
+    const P = clamp01(-r.top / (r.height - jvh)) * (N - 1);
+    journey.classList.toggle('is-moving', P > .02);
+    const narrow = innerWidth < 760;
+    const L = narrow ? .26 : .38, T = narrow ? .3 : .26, B = narrow ? .3 : .22;   // finestra ad arco iniziale
+    const W = innerWidth, H = jvh;
+    const tr = i => i <= 0 ? 1 : ease(clamp01((P - (i - 1) - .3) / .7));          // ingresso della scena i
+    scenes.forEach((sc, i) => {
+      const tin = tr(i), tout = i < N - 1 ? tr(i + 1) : 0;
+      const img = $('img', sc);
+      img.style.setProperty('--s', ((i ? 1.35 - .35 * tin : 1) * (1 + .5 * tout)).toFixed(4));
+      if (!i) return;
+      if (tin <= 0) { sc.style.clipPath = 'inset(50% 50% 50% 50%)'; return; }
+      const k = 1 - tin, ww = W * (1 - 2 * L * k);
+      const top = (H * T * k).toFixed(1), side = (W * L * k).toFixed(1), bot = (H * B * k).toFixed(1);
+      const rt = (ww / 2 * k).toFixed(1), rb = (18 * k).toFixed(1);
+      sc.style.clipPath = `inset(${top}px ${side}px ${bot}px ${side}px round ${rt}px ${rt}px ${rb}px ${rb}px)`;
+    });
+    setJText(Math.min(N - 1, Math.floor(P + .35)));
+  };
+  setTimeout(() => $('.split', jtexts[0]).classList.add('is-in'), reduceMotion ? 0 : 350);
+
   addEventListener('resize', sizeRooms); addEventListener('load', sizeRooms); sizeRooms();
   const tick = () => {
     const y = scrollY;
     if (y !== lastY) {
-      const vh = innerHeight, heroH = hero.offsetHeight;
+      const vh = innerHeight, heroH = journey.offsetHeight - jvh * .15;
       // header: trasparente sulla foto, solido dopo; si nasconde scendendo e riappare salendo
       const over = y < heroH - 80;
       header.classList.toggle('is-over', over);
@@ -1221,8 +1321,7 @@ const CONFIG = {
         header.classList.toggle('is-hidden', y > prevY && y > heroH && !nav.classList.contains('is-open'));
         prevY = y;
       }
-      // hero
-      if (!reduceMotion && y < heroH) hero.style.setProperty('--p', (y / heroH).toFixed(4));
+      updateJourney();
       // parallasse leggera
       if (!reduceMotion) speeds.forEach(el => {
         const r = el.getBoundingClientRect();

@@ -60,8 +60,11 @@ pulsanti brevi ("Scrivici su WhatsApp").
 - Lento e misurato: rivelazioni a sipario delle foto (clip-path + leggero
   zoom che si assesta), titoli che salgono parola per parola, testo del
   manifesto che si "accende" leggendo, parallasse leggera.
-- Un solo momento scenografico: la galleria "Ambienti" orizzontale bloccata
-  durante lo scroll (su mobile diventa uno scorrimento a scatto).
+- Apertura cinematografica: "viaggio" di 4 scene bloccato durante lo scroll; la
+  foto fa zoom in avanti e la scena successiva entra da una finestra ad arco che
+  si allarga fino a tutto schermo. Solo transform e clip-path: fluido anche su iPhone.
+- Galleria "Ambienti" orizzontale bloccata durante lo scroll (su mobile diventa
+  uno scorrimento a scatto).
 - Header trasparente sulla foto, solido dopo; si nasconde scendendo e riappare
   salendo.
 - Hover solo su dispositivi con puntatore fine; feedback alla pressione discreto.
