@@ -43,17 +43,18 @@ pulsanti brevi ("Scrivici su WhatsApp").
 
 ## Direzione visiva
 
-- **Fotografia prima di tutto**: hero a tutto schermo, ambienti e dettagli di
-  materia. Le foto attuali sono stock Pexels (licenza gratuita anche commerciale)
-  e vanno sostituite con quelle dello showroom e delle collezioni reali.
-- **Palette**: sabbia calda (sfondo), crema e pietra/cappuccino per alternare le
-  sezioni, caffè per le parti scure, oro tenue nei dettagli. Mai bianco puro.
-- **Tipografia**: *Bodoni Moda* regular per i titoli, grandi e con corsivo come
-  accento; *Hanken Grotesk* per il testo; etichette in maiuscoletto spaziato
-  con numerazione di sezione (01, 02…). Font self-hosted.
-- **Forme morbide**: sezioni come pannelli arrotondati, foto con angoli morbidi
-  e alcune ad arco (richiamo mediterraneo), pulsanti e filtri a pillola, campi
-  del modulo pieni e arrotondati. Griglia a 12 colonne, collage asimmetrici.
+**Scuro cinematografico** (dal 8/10/2026; la versione chiara precedente è in
+`versione-chiara.html`).
+
+- **Fotografia protagonista** a tutto schermo, su fondo nero caldo.
+- **Palette**: nero caldo, superfici antracite, testo avorio, grigio per la
+  seconda metà dei titoli, **ambra** come unico accento (pulsanti, voce attiva,
+  indicatori). Mai bianco puro come sfondo.
+- **Tipografia**: *Hanken Grotesk* per tutto; titoli in semibold con spaziatura
+  stretta, etichette in maiuscolo spaziato con numerazione "01 / 04".
+- **Elementi**: navigazione a pillola di vetro al centro con voce attiva ambra,
+  pulsanti ambra a pillola, tag a pillola sottili, foto con angoli morbidi e
+  alcune ad arco, sezioni come pannelli arrotondati.
 
 ## Principi di interazione (motion)
 
@@ -61,8 +62,8 @@ pulsanti brevi ("Scrivici su WhatsApp").
   zoom che si assesta), titoli che salgono parola per parola, testo del
   manifesto che si "accende" leggendo, parallasse leggera.
 - Apertura cinematografica: "viaggio" di 4 scene bloccato durante lo scroll; la
-  foto fa zoom in avanti e la scena successiva entra da una finestra ad arco che
-  si allarga fino a tutto schermo. Solo transform e clip-path: fluido anche su iPhone.
+  foto fa zoom in avanti, si scurisce, e la scena successiva entra da una
+  "porta" che si apre fino a tutto schermo; indicatore di avanzamento laterale. Solo transform e clip-path: fluido anche su iPhone.
 - Galleria "Ambienti" orizzontale bloccata durante lo scroll (su mobile diventa
   uno scorrimento a scatto).
 - Header trasparente sulla foto, solido dopo; si nasconde scendendo e riappare

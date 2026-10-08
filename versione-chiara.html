@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Euroceramiche Niscemi — Piastrelle, ceramiche e arredo bagno · Showroom a Niscemi (CL)</title>
 <meta name="description" content="Piastrelle, gres porcellanato, marmi e arredo bagno di qualità a Niscemi. Showroom con campionario completo, preventivi gratuiti, progettazione e consegna in cantiere per privati e professionisti.">
-<meta name="theme-color" content="#0d0d0c">
+<meta name="theme-color" content="#f4f1ec">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta property="og:title" content="Euroceramiche Niscemi — Superfici da scegliere con le mani">
 <meta property="og:description" content="Showroom a Niscemi (CL). Collezioni, preventivi gratuiti, consulenza su WhatsApp.">
 <meta property="og:image" content="img/hero.webp">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231c1a17'/><text x='16' y='23' font-family='Georgia,serif' font-size='19' text-anchor='middle' fill='%23f4f1ec'>E</text></svg>">
+<link rel="preload" href="fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="img/hero.webp" imagesrcset="img/hero-1000.webp 1000w, img/hero.webp 2000w" imagesizes="100vw" fetchpriority="high">
 
@@ -36,29 +37,29 @@
 </script>
 
 <style>
-@font-face { font-family: "Hanken Grotesk"; src: url(fonts/hanken-grotesk.woff2) format("woff2"); font-weight: 400 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Bodoni Moda"; src: url(fonts/bodoni-moda.woff2) format("woff2"); font-weight: 400 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Bodoni Moda"; src: url(fonts/bodoni-moda-italic.woff2) format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Hanken Grotesk"; src: url(fonts/hanken-grotesk.woff2) format("woff2"); font-weight: 400 600; font-style: normal; font-display: swap; }
 
 /* ==========================================================================
    Token — carta calda, inchiostro, un solo accento discreto
    ========================================================================== */
 :root {
-  --bg: oklch(14.5% .004 70);            /* nero caldo */
-  --surface: oklch(18.5% .005 70);
-  --surface-2: oklch(22.5% .006 70);
-  --ink: oklch(95.5% .006 85);
-  --ink-2: oklch(76% .008 80);
-  --ink-3: oklch(60% .008 80);
-  --line: oklch(95% .006 85 / .1);
-  --line-strong: oklch(95% .006 85 / .2);
-  --accent: oklch(79% .12 72);           /* ambra */
-  --gold: oklch(79% .12 72);
-  --amber: oklch(79% .12 72);
-  --amber-ink: oklch(20% .03 60);
+  --bg: oklch(92.6% .022 76);            /* sabbia calda */
+  --surface: oklch(95.6% .016 78);       /* crema */
+  --surface-2: oklch(87.5% .03 70);      /* pietra / cappuccino */
+  --ink: oklch(20% .008 70);
+  --ink-2: oklch(40% .01 70);
+  --ink-3: oklch(54% .01 70);
+  --line: oklch(20% .008 70 / .12);
+  --line-strong: oklch(20% .008 70 / .24);
+  --accent: oklch(40% .11 262);          /* cobalto della maiolica, solo nei dettagli */
+  --gold: oklch(74% .09 75);
   --ok: oklch(56% .12 152);
   --danger: oklch(50% .16 28);
   --wa: #1fae5b;
-  --dark: oklch(11% .004 70);
-  --dark-ink: oklch(95.5% .006 85);
+  --dark: oklch(24% .022 55);            /* caffè */
+  --dark-ink: oklch(94% .016 78);
 
   --radius: 999px;                        /* pulsanti a pillola */
   --r-img: clamp(18px, 2.2vw, 28px);     /* foto e riquadri morbidi */
@@ -70,7 +71,7 @@
   --d-fast: 200ms;
   --d-base: 300ms;
 
-  --font-display: "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
   --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --wrap: 1320px;
   --gutter: clamp(16px, 4vw, 56px);
@@ -631,115 +632,6 @@ fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
   .form { padding: 20px 16px; }
 }
 
-/* ==========================================================================
-   Tema scuro cinematografico
-   ========================================================================== */
-h1, h2, h3, .jt-h { font-weight: 600; letter-spacing: -.045em; }
-h2 { font-size: clamp(2.3rem, 4.8vw, 4.2rem); line-height: 1.02; }
-h3 { letter-spacing: -.03em; }
-h1 em, h2 em, .jt-h em { font-style: normal; color: var(--ink-3); }
-.label .n, .step .n, .room .n, .chip .count, .hours tr.is-today th::after { font-family: var(--font-sans); font-style: normal; font-weight: 600; }
-.label { color: var(--ink-3); }
-.label .n { color: var(--amber); font-size: .72rem; letter-spacing: .1em; }
-.statement p.big { font-weight: 500; letter-spacing: -.035em; line-height: 1.15; }
-.footer-big { font-weight: 600; letter-spacing: -.05em; }
-.footer-big a { font-style: normal; color: var(--amber); }
-.stat-n { font-weight: 600; letter-spacing: -.05em; }
-.stat-n small { font-style: normal; font-weight: 500; }
-.faq-q { font-family: var(--font-sans); font-weight: 500; letter-spacing: -.01em; }
-.visit address { font-weight: 500; letter-spacing: -.03em; }
-.logo b { font-family: var(--font-sans); font-weight: 700; font-size: .88rem; letter-spacing: .22em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 10px; }
-.logo b::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--amber); }
-.logo small { margin-left: 17px; letter-spacing: .26em; font-size: .56rem; }
-::selection { background: var(--amber); color: var(--amber-ink); }
-
-/* pulsanti: ambra pieno, pillola */
-.btn, .btn--light { --btn-bg: var(--amber); --btn-fg: var(--amber-ink); font-weight: 600; letter-spacing: .02em; text-transform: none; font-size: .9rem; min-height: 50px; }
-.btn--line, .btn--line-light { --btn-bg: transparent; --btn-fg: var(--ink); box-shadow: inset 0 0 0 1px var(--line-strong); }
-.btn--wa { --btn-bg: var(--wa); --btn-fg: #fff; }
-@media (hover: hover) and (pointer: fine) {
-  .btn:hover, .btn--light:hover { --btn-bg: oklch(84% .11 75); }
-  .btn--line:hover, .btn--line-light:hover { --btn-bg: var(--ink); --btn-fg: var(--bg); }
-  .btn--wa:hover { --btn-bg: #1a9a50; }
-}
-.link { text-transform: none; letter-spacing: 0; font-size: .9rem; font-weight: 500; }
-.consent input { accent-color: var(--amber); }
-
-/* header: logo, navigazione a pillola di vetro al centro, CTA ambra */
-.header .wrap { gap: 20px; }
-.logo { margin-right: 0; flex: 1; }
-.header-cta { flex: 1; justify-content: flex-end; }
-.header-cta .btn { min-height: 40px; padding: 0 18px; font-size: .8rem; }
-.header.is-over .header-cta .btn { --btn-bg: var(--amber); --btn-fg: var(--amber-ink); }
-.header.is-solid { background: rgb(13 13 12 / .72); box-shadow: 0 1px 0 var(--line); }
-@media (min-width: 901px) {
-  .nav { gap: 2px; padding: 4px; border-radius: 999px; background: rgb(255 255 255 / .06); box-shadow: inset 0 0 0 1px rgb(255 255 255 / .1); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
-  .nav a { padding: 8px 16px; border-radius: 999px; font-size: .8rem; font-weight: 500; letter-spacing: 0; text-transform: none; color: rgb(244 241 236 / .75); transition: background-color 400ms var(--ease-out), color 400ms var(--ease-out); }
-  .nav a::after { display: none; }
-  .nav a[aria-current="true"] { background: var(--amber); color: var(--amber-ink); }
-}
-@media (min-width: 901px) and (hover: hover) and (pointer: fine) { .nav a:not([aria-current="true"]):hover { color: #fff; background: rgb(255 255 255 / .08); } }
-@media (max-width: 900px) { .nav a { font-family: var(--font-sans); font-weight: 600; letter-spacing: -.04em; font-size: 2.4rem; } .logo { flex: 0 1 auto; margin-right: auto; } }
-
-/* viaggio: testo a sinistra su velo scuro, come in una sala buia */
-.journey, .scene { background: #0a0a09; }
-.scene { isolation: isolate; }
-.veil { position: absolute; inset: 0; z-index: 1; background: #050505; opacity: var(--dim, 0); pointer-events: none; }
-.scene::after { z-index: 1; background: linear-gradient(to right, rgb(8 8 7 / .88) 0%, rgb(8 8 7 / .55) 38%, rgb(8 8 7 / .05) 70%), linear-gradient(to top, rgb(8 8 7 / .7), transparent 40%); }
-.journey-text { inset: 0; display: flex; align-items: center; padding: var(--header-h) 0 0; }
-.journey-text .wrap { width: min(var(--wrap), 100% - 2 * var(--gutter)); }
-.jt { align-self: center; max-width: 560px; }
-.jt-k { display: block; font-size: .72rem; font-weight: 600; letter-spacing: .14em; color: rgb(244 241 236 / .55); margin-bottom: 10px; }
-.jt .label { font-size: .68rem; letter-spacing: .2em; color: rgb(244 241 236 / .8); }
-.jt-h { font-size: clamp(2.6rem, 5.4vw, 5.2rem); line-height: 1; margin: 18px 0 20px; max-width: 12ch; }
-.jt-h em { color: rgb(244 241 236 / .55); }
-.jt-sub { font-size: clamp(.95rem, 1.2vw, 1.05rem); color: rgb(244 241 236 / .72); max-width: 42ch; }
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
-.tags span { padding: 6px 13px; border-radius: 999px; font-size: .74rem; font-weight: 500; color: rgb(244 241 236 / .85); background: rgb(255 255 255 / .05); box-shadow: inset 0 0 0 1px rgb(255 255 255 / .16); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
-.jt-k, .jt .tags { opacity: 0; transform: translateY(14px); transition: opacity 700ms var(--ease-out), transform 900ms var(--ease-out); }
-.jt.is-active .jt-k, .jt.is-active .tags { opacity: 1; transform: none; transition-delay: 450ms; }
-.jt.is-active .jt-k { transition-delay: 150ms; }
-html:not(.js) .jt-k, html:not(.js) .jt .tags { opacity: 1; transform: none; }
-.hero-cta { margin-top: 28px; gap: 12px 24px; }
-.journey-index { text-shadow: 0 1px 12px rgb(0 0 0 / .6); right: var(--gutter); top: 50%; translate: 0 -50%; display: grid; justify-items: end; gap: 14px; font-family: var(--font-sans); font-style: normal; font-size: .72rem; color: rgb(244 241 236 / .6); }
-.ji-label { font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #f4f1ec; }
-.ji-bar { position: relative; width: 2px; height: 120px; border-radius: 2px; background: rgb(255 255 255 / .15); overflow: hidden; }
-.ji-bar i { position: absolute; inset: 0; background: var(--amber); transform-origin: top; transform: scaleY(0); }
-.ji-num b { color: #f4f1ec; font-weight: 600; }
-.journey-meta { bottom: 32px; }
-@media (max-width: 760px) {
-  .journey-text { align-items: flex-end; padding: 0 0 calc(96px + env(safe-area-inset-bottom)); }
-  .scene::after { background: linear-gradient(to top, rgb(8 8 7 / .92) 0%, rgb(8 8 7 / .6) 45%, rgb(8 8 7 / .15) 75%); }
-  .jt-h { font-size: clamp(2.3rem, 11vw, 3.2rem); margin: 12px 0 14px; }
-  .journey-index { top: calc(var(--header-h) + 16px); translate: 0; grid-auto-flow: column; align-items: center; gap: 10px; }
-  .ji-bar { width: 60px; height: 2px; }
-  .ji-bar i { transform-origin: left; }
-  .tags { margin-top: 16px; }
-}
-
-/* sezioni: superfici scure, foto morbide */
-.panel--cream, .showroom, .form { background: var(--surface); }
-.stats { background: var(--surface); }
-.stat + .stat { border-left-color: var(--line); }
-.rooms, .pro, .footer { background: var(--dark); }
-.room .n { color: var(--amber); }
-.check-chip span, .chip, .seg { background: var(--surface-2); }
-.chip[aria-pressed="true"], .check-chip input:checked + span { background: var(--amber); color: var(--amber-ink); }
-.seg-thumb { background: var(--amber); }
-.seg input:checked + label { color: var(--amber-ink); }
-.field input, .field textarea, .field select { background-color: var(--surface-2); }
-.field input:focus, .field textarea:focus, .field select:focus { background-color: var(--surface-2); box-shadow: 0 0 0 1.5px var(--amber); }
-.steps::before { background: var(--amber); }
-.step .n { color: var(--amber); }
-.frame { background: var(--surface-2); }
-.hours tr.is-today th::after { color: var(--amber); }
-.progress { background: var(--amber); }
-.toast { background: var(--amber); color: var(--amber-ink); }
-@media (max-width: 760px) {
-  .actionbar { background: rgb(28 27 25 / .9); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 12px 30px -8px rgb(0 0 0 / .6), inset 0 0 0 1px rgb(255 255 255 / .08); }
-  .actionbar .main { background: var(--amber); color: var(--amber-ink); }
-}
-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 1ms !important; animation: none !important; transition-delay: 0s !important; }
   .js [data-reveal], .js [data-clip], .js .frame.arch[data-clip], .js .frame.round[data-clip], .step { opacity: 1; transform: none; }
@@ -787,59 +679,47 @@ html:not(.js) .jt-k, html:not(.js) .jt .tags { opacity: 1; transform: none; }
   <!-- VIAGGIO INIZIALE: 4 scene guidate dallo scroll -->
   <section class="journey" id="top" aria-label="Euroceramiche Niscemi">
     <div class="journey-sticky">
-      <div class="scene"><i class="veil"></i><div class="scene-zoom"><img src="img/hero.webp" srcset="img/hero-1000.webp 1000w, img/hero.webp 2000w" sizes="100vw" alt="Bagno con rivestimento in marmo, vasca e illuminazione calda" width="2000" height="1125" fetchpriority="high"></div></div>
-      <div class="scene"><i class="veil"></i><img src="img/marmo-bianco.webp" alt="Lastra di marmo bianco con venature grigie" width="1400" height="934" decoding="async"></div>
-      <div class="scene"><i class="veil"></i><img src="img/living-marmo.webp" srcset="img/living-marmo-900.webp 900w, img/living-marmo.webp 1600w" sizes="100vw" alt="Soggiorno con parete in grandi lastre effetto marmo" width="1600" height="1067" decoding="async"></div>
-      <div class="scene"><i class="veil"></i><img src="img/campioni.webp" srcset="img/campioni-800.webp 800w, img/campioni.webp 1400w" sizes="100vw" alt="Mani che confrontano campioni di marmo" width="1400" height="934" decoding="async"></div>
+      <div class="scene"><div class="scene-zoom"><img src="img/hero.webp" srcset="img/hero-1000.webp 1000w, img/hero.webp 2000w" sizes="100vw" alt="Bagno con rivestimento in marmo, vasca e illuminazione calda" width="2000" height="1125" fetchpriority="high"></div></div>
+      <div class="scene"><img src="img/marmo-bianco.webp" alt="Lastra di marmo bianco con venature grigie" width="1400" height="934" decoding="async"></div>
+      <div class="scene"><img src="img/living-marmo.webp" srcset="img/living-marmo-900.webp 900w, img/living-marmo.webp 1600w" sizes="100vw" alt="Soggiorno con parete in grandi lastre effetto marmo" width="1600" height="1067" decoding="async"></div>
+      <div class="scene"><img src="img/campioni.webp" srcset="img/campioni-800.webp 800w, img/campioni.webp 1400w" sizes="100vw" alt="Mani che confrontano campioni di marmo" width="1400" height="934" decoding="async"></div>
 
       <div class="journey-text">
         <div class="wrap">
           <div class="jt is-active">
-            <span class="jt-k">01 / 04</span>
-            <span class="label">Showroom — Niscemi, Sicilia</span>
+            <span class="label">Showroom · Niscemi, Sicilia</span>
             <h1 class="jt-h split" data-jsplit>Superfici da scegliere <em>con le mani.</em></h1>
-            <p class="jt-sub">Ceramiche, gres e pietre dei migliori produttori italiani. Consulenza, preventivo e consegna fino al cantiere.</p>
-            <div class="tags"><span data-fill-stat="years">30 anni</span><span data-fill-stat="clients">5.000+ clienti</span><span>Privati e professionisti</span></div>
             <div class="hero-cta">
-              <a class="btn" href="#preventivo">Richiedi un preventivo</a>
-              <a class="link" href="https://wa.me/390000000000" data-wa="Buongiorno, vorrei qualche informazione sulle vostre collezioni." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> WhatsApp</a>
+              <a class="btn btn--light" href="#preventivo">Richiedi un preventivo <svg class="arrow"><use href="#i-arrow"/></svg></a>
+              <a class="link" href="https://wa.me/390000000000" data-wa="Buongiorno, vorrei qualche informazione sulle vostre collezioni." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> Scrivici su WhatsApp</a>
             </div>
           </div>
           <div class="jt" aria-hidden="true">
-            <span class="jt-k">02 / 04</span>
-            <span class="label">La materia — 02 / 04</span>
+            <span class="label">La materia</span>
             <p class="jt-h split" data-jsplit>La verità è <em>nella materia.</em></p>
             <p class="jt-sub">Venature, grana, riflessi: dal vivo si capisce tutto. Per questo vi facciamo toccare ogni lastra.</p>
-            <div class="tags"><span>Marmo</span><span>Pietra</span><span>Legno</span><span>Cemento</span></div>
           </div>
           <div class="jt" aria-hidden="true">
-            <span class="jt-k">03 / 04</span>
-            <span class="label">Gli spazi — 03 / 04</span>
+            <span class="label">Gli spazi</span>
             <p class="jt-h split" data-jsplit>Grandi lastre, <em>nessun confine.</em></p>
             <p class="jt-sub">Pareti e pavimenti continui fino a 120×280 cm, per ambienti che respirano.</p>
-            <div class="tags"><span>Bagno</span><span>Cucina</span><span>Zona giorno</span><span>Esterni</span></div>
           </div>
           <div class="jt" aria-hidden="true">
-            <span class="jt-k">04 / 04</span>
-            <span class="label">L'esperienza — 04 / 04</span>
-            <p class="jt-h split" data-jsplit>Entrate nello <em>showroom.</em></p>
-            <p class="jt-sub">Prenotate una visita: un consulente vi guida tra materiali, ambienti allestiti e campionature.</p>
-            <div class="tags"><span>Niscemi</span><span>Gela</span><span>Caltagirone</span></div>
+            <span class="label">L'esperienza</span>
+            <p class="jt-h split" data-jsplit>Venite a <em>toccarle.</em></p>
+            <p class="jt-sub">Il nostro showroom vi aspetta a Niscemi, con un consulente al vostro fianco.</p>
             <div class="hero-cta">
-              <a class="btn" href="https://wa.me/390000000000" data-wa="Buongiorno, vorrei prenotare una visita in showroom." target="_blank" rel="noopener">Prenota una visita</a>
-              <a class="link" href="#collezioni">Vedi le collezioni <svg><use href="#i-arrow"/></svg></a>
+              <a class="btn btn--light" href="#showroom">Orari e indicazioni <svg class="arrow"><use href="#i-arrow"/></svg></a>
+              <a class="link" href="#preventivo">Preventivo gratuito <svg><use href="#i-arrow"/></svg></a>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="journey-index" aria-hidden="true">
-        <span class="ji-label" data-ji-label>Showroom</span>
-        <span class="ji-bar"><i></i></span>
-        <span class="ji-num"><b data-ji-num>01</b> / 04</span>
-      </div>
+      <div class="journey-index" aria-hidden="true"><span class="is-active">01</span><span>02</span><span>03</span><span>04</span></div>
       <div class="journey-meta">
         <span class="status" data-status><span class="status-dot"></span><span data-status-text>Orari showroom</span></span>
+        <a href="#showroom"><span data-fill="addressShort">Niscemi (CL)</span></a>
       </div>
       <span class="scroll-line" aria-hidden="true"></span>
     </div>
@@ -1270,8 +1150,6 @@ const CONFIG = {
   const counters = $$('[data-count]');
   counters.forEach(el => setCount(el, statValues[el.dataset.count]));
   $$('[data-fill="founded"]').forEach(el => el.textContent = CONFIG.stats.foundedYear);
-  $$('[data-fill-stat="years"]').forEach(el => el.textContent = statValues.years + ' anni');
-  $$('[data-fill-stat="clients"]').forEach(el => el.textContent = fmtNum(statValues.clients, 0) + '+ clienti');
   const runCounters = () => counters.forEach(el => {
     const target = statValues[el.dataset.count], t0 = performance.now(), dur = 2000;
     const step = now => {
@@ -1383,8 +1261,7 @@ const CONFIG = {
   const bar = $('.progress'), speeds = $$('[data-speed]');
   let lastY = -1, prevY = 0;
   /* Viaggio iniziale: scroll → zoom e finestre ad arco fra le scene */
-  const journey = $('.journey'), scenes = $$('.scene'), jtexts = $$('.jt'), jnum = $('[data-ji-num]'), jlabel = $('[data-ji-label]'), jbar = $('.ji-bar i');
-  const JLABELS = ['Showroom', 'Materia', 'Spazi', 'Esperienza'];
+  const journey = $('.journey'), scenes = $$('.scene'), jtexts = $$('.jt'), jdots = $$('.journey-index span');
   const N = scenes.length, SEG = 1.15;              // ogni scena occupa ~1,15 schermi di scroll
   let jvh = document.documentElement.clientHeight, jw = innerWidth, jActive = 0;
   const sizeJourney = () => {
@@ -1403,8 +1280,7 @@ const CONFIG = {
       t.classList.toggle('is-active', on); t.toggleAttribute('aria-hidden', !on);
       if (on) { h.classList.remove('was-in'); h.classList.remove('is-in'); void h.offsetWidth; h.classList.add('is-in'); }
     });
-    jnum.textContent = String(a + 1).padStart(2, '0');
-    jlabel.textContent = JLABELS[a];
+    jdots.forEach((d, i) => d.classList.toggle('is-active', i === a));
     jActive = a;
   };
   const updateJourney = () => {
@@ -1414,23 +1290,21 @@ const CONFIG = {
     const P = clamp01(-r.top / (r.height - jvh)) * (N - 1);
     journey.classList.toggle('is-moving', P > .02);
     const narrow = innerWidth < 760;
-    const L = narrow ? .43 : .47, T = narrow ? .2 : .16, B = narrow ? .2 : .16;   // porta iniziale: fessura verticale
+    const L = narrow ? .26 : .38, T = narrow ? .3 : .26, B = narrow ? .3 : .22;   // finestra ad arco iniziale
     const W = innerWidth, H = jvh;
     const tr = i => i <= 0 ? 1 : ease(clamp01((P - (i - 1) - .3) / .7));          // ingresso della scena i
     scenes.forEach((sc, i) => {
       const tin = tr(i), tout = i < N - 1 ? tr(i + 1) : 0;
       const img = $('img', sc);
-      img.style.setProperty('--s', ((i ? 1.25 - .25 * tin : 1) * (1 + .35 * tout)).toFixed(4));
-      sc.style.setProperty('--dim', (.72 * tout).toFixed(3));
+      img.style.setProperty('--s', ((i ? 1.35 - .35 * tin : 1) * (1 + .5 * tout)).toFixed(4));
       if (!i) return;
       if (tin <= 0) { sc.style.clipPath = 'inset(50% 50% 50% 50%)'; return; }
       const k = 1 - tin, ww = W * (1 - 2 * L * k);
       const top = (H * T * k).toFixed(1), side = (W * L * k).toFixed(1), bot = (H * B * k).toFixed(1);
-      const rt = (6 * k).toFixed(1), rb = rt;
+      const rt = (ww / 2 * k).toFixed(1), rb = (18 * k).toFixed(1);
       sc.style.clipPath = `inset(${top}px ${side}px ${bot}px ${side}px round ${rt}px ${rt}px ${rb}px ${rb}px)`;
     });
     setJText(Math.min(N - 1, Math.floor(P + .35)));
-    jbar.style.transform = `scaleY(${(P / (N - 1)).toFixed(4)})`;
   };
   setTimeout(() => $('.split', jtexts[0]).classList.add('is-in'), reduceMotion ? 0 : 350);
 

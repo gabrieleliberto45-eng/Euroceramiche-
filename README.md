@@ -7,6 +7,7 @@ Sito a pagina singola, statico, senza dipendenze né build. Brief di brand e pri
 ```
 index.html      pagina principale (CSS e JS inline)
 privacy.html    informativa privacy (modello da completare)
+versione-chiara.html  versione precedente, chiara (per confronto)
 fonts/          Bodoni Moda + Hanken Grotesk, self-hosted (licenza SIL OFL)
 img/            foto WebP (provvisorie, da Pexels: vedi sotto)
 ```
