@@ -40,30 +40,35 @@ const CONFIG = {
   addEventListener('keydown', e => { if (e.key === 'Escape' && nav?.classList.contains('is-open')) { setMenu(false); btn.focus(); } });
   matchMedia('(min-width: 1081px)').addEventListener('change', () => setMenu(false));
 
-  /* Slider dell'hero: frecce, pausa, stop su hover/focus, niente autoplay con riduzione movimento */
+  /* Slider dell'hero: scorre da solo, barre di avanzamento, stop su hover/focus e scheda nascosta, swipe su touch */
   const slider = $('[data-slider]');
   if (slider) {
-    const slides = $$('.slide', slider), num = $('[data-slide-num]', slider), pauseBtn = $('[data-slide-pause]', slider);
-    let i = 0, timer = null, paused = reduce, hold = false;
+    const slides = $$('.slide', slider), bars = $$('.slides-bars i', slider), wait = 5000;
+    let i = 0, timer = null, hold = false;
     const show = n => {
       i = (n + slides.length) % slides.length;
       slides.forEach((s, k) => { s.classList.toggle('is-active', k === i); s.setAttribute('aria-hidden', k !== i); });
-      num.textContent = String(i + 1).padStart(2, '0');
-    };
-    const tick = () => { clearInterval(timer); if (!paused && !hold) timer = setInterval(() => show(i + 1), 6000); };
-    const setPaused = p => {
-      paused = p;
-      pauseBtn.setAttribute('aria-label', p ? 'Avvia la presentazione' : 'Metti in pausa la presentazione');
-      pauseBtn.innerHTML = p ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>' : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z" fill="currentColor"/></svg>';
       tick();
     };
-    $('[data-slide-prev]', slider).addEventListener('click', () => { show(i - 1); tick(); });
-    $('[data-slide-next]', slider).addEventListener('click', () => { show(i + 1); tick(); });
-    pauseBtn.addEventListener('click', () => setPaused(!paused));
+    const tick = () => {
+      clearTimeout(timer);
+      bars.forEach((b, k) => { b.classList.remove('is-run'); b.classList.toggle('is-done', k < i); });
+      if (hold) return;
+      void slider.offsetWidth;
+      bars[i]?.classList.add('is-run');
+      timer = setTimeout(() => show(i + 1), wait);
+    };
     ['mouseenter', 'focusin'].forEach(ev => slider.addEventListener(ev, () => { hold = true; tick(); }));
     ['mouseleave', 'focusout'].forEach(ev => slider.addEventListener(ev, () => { hold = false; tick(); }));
     document.addEventListener('visibilitychange', () => { hold = document.hidden; tick(); });
-    show(0); setPaused(paused);
+    let x0 = null;
+    slider.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+    slider.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - x0;
+      if (x0 !== null && Math.abs(dx) > 40) show(i + (dx < 0 ? 1 : -1));
+      x0 = null;
+    }, { passive: true });
+    show(0);
   }
 
   /* Orari: aperto/chiuso sull'ora italiana */

@@ -251,12 +251,7 @@ def home():
     </div>
     <div class="slides" data-slider aria-roledescription="carosello" aria-label="Le nostre collezioni">
       {sl}
-      <div class="slides-ui">
-        <button type="button" data-slide-prev aria-label="Immagine precedente">{ic('prev')}</button>
-        <span class="slides-count"><b data-slide-num>01</b> <span>/ 03</span></span>
-        <button type="button" data-slide-next aria-label="Immagine successiva">{ic('next')}</button>
-        <button type="button" data-slide-pause aria-label="Metti in pausa la presentazione">{ic('pause')}</button>
-      </div>
+      <div class="slides-bars" aria-hidden="true"><i></i><i></i><i></i></div>
     </div>
   </section>
 
