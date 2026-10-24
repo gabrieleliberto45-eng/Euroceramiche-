@@ -41,20 +41,21 @@ Parliamo come un consulente esperto: diretto, cordiale, senza superlativi vuoti.
 Il registro è il **voi** di cortesia per i testi generali, il **tu** solo nei
 pulsanti brevi ("Scrivici su WhatsApp").
 
-## Direzione visiva
+## Direzione visiva (versione attuale, 24/10/2026)
 
-**Scuro cinematografico** (dal 8/10/2026; la versione chiara precedente è in
-`versione-chiara.html`).
+Rifacimento del **sito originale** euroceramiche-niscemi.it migliorato con la skill
+UI/UX Pro Max (vedi `design-system/euroceramiche/`). Le versioni precedenti sono in `archivio/`.
 
-- **Fotografia protagonista** a tutto schermo, su fondo nero caldo.
-- **Palette**: nero caldo, superfici antracite, testo avorio, grigio per la
-  seconda metà dei titoli, **ambra** come unico accento (pulsanti, voce attiva,
-  indicatori). Mai bianco puro come sfondo.
-- **Tipografia**: *Hanken Grotesk* per tutto; titoli in semibold con spaziatura
-  stretta, etichette in maiuscolo spaziato con numerazione "01 / 04".
-- **Elementi**: navigazione a pillola di vetro al centro con voce attiva ambra,
-  pulsanti ambra a pillola, tag a pillola sottili, foto con angoli morbidi e
-  alcune ad arco, sezioni come pannelli arrotondati.
+- **Identità dell'originale mantenuta**: bianco e nero, logo a cubo, motto "progettare
+  insieme", titoli che alternano sottile e **grassetto**, quadrato nero sfalsato dietro le foto.
+- **Stile** (skill): Minimalism & Swiss Style, fondo bianco caldo, accento oro preso dalle
+  stelle del logo. Angoli vivi.
+- **Struttura**: le stesse pagine dell'originale (Home, Chi siamo, Arredo bagno, Pavimenti e
+  rivestimenti, Sanitari e rubinetteria, Servizi, Contatti) + privacy.
+- **Migliorie principali**: testo dell'hero su pannello pieno invece che sopra la foto;
+  carosello con frecce, contatore e pausa; modulo preventivo vero (prima il riquadro era
+  vuoto) in ogni pagina; marchi leggibili in testo; pulsanti grandi; orari con stato
+  "aperto ora"; WhatsApp e barra azioni su mobile; niente banner cookie (nessun cookie di terze parti).
 
 ## Principi di interazione (motion)
 
