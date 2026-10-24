@@ -371,6 +371,28 @@ fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
   .progress { display: none; }
 }
 
+/* ==========================================================================
+   Intro all'ingresso (splash): cubo, EUROCERAMICHE, "progettiamo insieme", poi si dissolve.
+   Solo al primo ingresso della sessione; si dissolve via CSS anche se il JS si ferma.
+   ========================================================================== */
+.splash { display: none; }
+.js:not(.splash-done) .splash {
+  position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; background: var(--bg); cursor: pointer;
+  animation: introOut 700ms var(--ease) 2000ms forwards;
+}
+.splash-in { display: grid; justify-items: center; gap: 14px; text-align: center; padding: 24px; animation: introGrow 700ms var(--ease) 2000ms forwards; }
+.splash-cube { width: clamp(56px, 9vw, 76px); height: auto; color: var(--ink); margin-bottom: 8px; }
+.splash-cube path { stroke-dasharray: 90; stroke-dashoffset: 90; animation: introDraw 1000ms var(--ease-expo, cubic-bezier(.16,1,.3,1)) 100ms forwards; }
+.splash-name { font-weight: 700; font-size: clamp(1.6rem, 5.4vw, 3rem); letter-spacing: .6em; margin-right: -.6em; opacity: 0; animation: introName 1100ms cubic-bezier(.16,1,.3,1) 450ms forwards; }
+.splash-tag { font-style: italic; font-size: clamp(1rem, 2.2vw, 1.25rem); color: var(--gold-ink); opacity: 0; transform: translateY(8px); animation: introTag 700ms cubic-bezier(.16,1,.3,1) 1050ms forwards; }
+@keyframes introDraw { to { stroke-dashoffset: 0; } }
+@keyframes introName { to { opacity: 1; letter-spacing: .22em; margin-right: -.22em; } }
+@keyframes introTag { to { opacity: 1; transform: none; } }
+@keyframes introGrow { to { transform: scale(1.05); } }
+@keyframes introOut { to { opacity: 0; visibility: hidden; } }
+.splash.is-skip { animation: introOut 350ms var(--ease) forwards !important; }
+@media (prefers-reduced-motion: reduce) { .splash { display: none !important; } }
+
 /* ---------- comparsa allo scroll: stagger standard (skill: 300–450ms) ---------- */
 .js [data-reveal] { opacity: 0; transform: translateY(16px); transition: opacity 450ms var(--ease), transform 450ms var(--ease); transition-delay: calc(var(--i, 0) * 60ms); }
 .js [data-reveal].is-in { opacity: 1; transform: none; }

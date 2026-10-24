@@ -136,7 +136,21 @@ const CONFIG = {
     root.classList.add('is-loaded');
     $$('.hero .words, .page-head .words, .hero [data-clip]').forEach(el => el.classList.add('is-in'));
   };
-  if (reduce) start(); else requestAnimationFrame(() => requestAnimationFrame(start));
+  // intro all'ingresso: il sito entra quando l'intro si dissolve (o subito se si tocca per saltarla)
+  const intro = $('.splash');
+  const introOn = intro && !root.classList.contains('splash-done') && getComputedStyle(intro).display !== 'none';
+  if (introOn) {
+    let done = false;
+    const finish = skip => {
+      if (done) return; done = true;
+      if (skip) intro.classList.add('is-skip');
+      setTimeout(() => { root.classList.add('splash-done'); intro.remove(); }, skip ? 360 : 720);
+      setTimeout(start, skip ? 120 : 450);
+    };
+    intro.addEventListener('click', () => finish(true));
+    addEventListener('keydown', e => { if (e.key === 'Escape' || e.key === 'Enter') finish(true); }, { once: true });
+    setTimeout(() => finish(false), 2000);
+  } else if (reduce) start(); else requestAnimationFrame(() => requestAnimationFrame(start));
 
   // barra di avanzamento, parallasse leggera e cubo che ruota (un solo ciclo, solo se serve)
   const bar = document.createElement('div'); bar.className = 'progress'; bar.setAttribute('aria-hidden', 'true'); document.body.append(bar);

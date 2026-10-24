@@ -22,7 +22,8 @@
 </script>
 </head>
 <body>
-<script>document.documentElement.classList.add('js')</script>
+<script>(function(d){d.classList.add('js');try{if(sessionStorage.getItem('ec-splash')||matchMedia('(prefers-reduced-motion: reduce)').matches)d.classList.add('splash-done');else sessionStorage.setItem('ec-splash','1')}catch(e){}})(document.documentElement)</script>
+<div class="splash" aria-hidden="true"><div class="splash-in"><svg class="splash-cube" viewBox="0 0 24 24"><path d="M12 2.5l8.5 4.7v9.6L12 21.5l-8.5-4.7V7.2z M3.5 7.2L12 12l8.5-4.8 M12 12v9.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg><p class="splash-name">EUROCERAMICHE</p><p class="splash-tag">progettiamo insieme</p></div></div>
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="header">
   <div class="wrap">
