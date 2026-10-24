@@ -81,13 +81,27 @@ pulsanti brevi ("Scrivici su WhatsApp").
 - SEO locale: dati strutturati `HomeGoodsStore`, titolo e description con
   "Niscemi", orari e indirizzo in chiaro.
 
-## Dati da completare prima della pubblicazione
+## Dati reali (fonte: sito attuale euroceramiche-niscemi.it, ottobre 2026)
 
-Tutti i segnaposto sono tra parentesi quadre `[ ]` nell'HTML e raccolti nel
-blocco `CONFIG` in fondo a `index.html`:
+- **Ragione sociale**: Euroceramiche di Di Giovanni Donatella · P.IVA 01619090853
+- **Indirizzo**: Via Paolo VI, 23 — 93015 Niscemi (CL)
+  (la pagina "Servizi" del vecchio sito indica lo showroom al n. 27: da verificare)
+- **Telefono**: +39 0933 953210 · **Cellulare/WhatsApp**: +39 320 351 3244
+- **Email**: infoeuroceramiche@gmail.com · **Instagram**: @euroceramicheniscemi
+- **Orari** (da directory online, da verificare): lun–ven 8–13 / 15–20, sab 8–13 / 15–19
+- **Servizi**: progettazione e rendering 3D gratuiti per chi acquista, preventivi
+  gratuiti, consegna a domicilio inclusa nel prezzo, assistenza pre e post vendita,
+  collaborazione con un team di architetti, appuntamenti dedicati
+- **Categorie**: arredo bagno, sanitari e rubinetteria, accessori e illuminazione,
+  gres porcellanato, parquet e laminati, rivestimenti e pietre
+- **Marchi (23)**: Palombini, Royo, Blue Life, Vica, Eban, Legno Bagno, Global Trade,
+  Progetto Idea Stella, Carlo Frattini, Mamoli, Morini, Keller Taps, Gattoni,
+  Paffoni, CSA, New Flag, Azzurra, Dado Ceramica, Imola, Herberia, FAP, Faetano, Flab
+- **Marchio**: cubo in linea + "EUROCERAMICHE", motto "progettare insieme"
 
-- Numero WhatsApp Business e telefono fisso
-- Indirizzo esatto, email, Partita IVA
-- Orari reali dello showroom
-- Nomi reali delle collezioni/marchi trattati
-- Foto reali dello showroom e delle collezioni (cartella `img/`, stessi nomi file)
+I testi del sito sono riscritti da zero: dal vecchio sito sono presi solo i dati.
+
+## Ancora da fare prima della pubblicazione
+
+- Foto reali dello showroom e dei lavori (le attuali sono stock Pexels)
+- Verificare orari e numero civico, e che il 320 351 3244 sia su WhatsApp Business

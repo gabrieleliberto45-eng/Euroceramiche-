@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Euroceramiche Niscemi — Piastrelle, ceramiche e arredo bagno · Showroom a Niscemi (CL)</title>
-<meta name="description" content="Piastrelle, gres porcellanato, marmi e arredo bagno di qualità a Niscemi. Showroom con campionario completo, preventivi gratuiti, progettazione e consegna in cantiere per privati e professionisti.">
+<title>Euroceramiche Niscemi — Arredo bagno, pavimenti e rivestimenti · Via Paolo VI, Niscemi (CL)</title>
+<meta name="description" content="Euroceramiche, showroom in Via Paolo VI a Niscemi: arredo bagno, pavimenti, rivestimenti, sanitari e rubinetteria dei migliori marchi. Progetto e rendering 3D gratuiti, preventivi gratuiti, consegna a domicilio. Niscemi e Gela.">
 <meta name="theme-color" content="#0d0d0c">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
@@ -20,17 +20,19 @@
 {
   "@context": "https://schema.org",
   "@type": "HomeGoodsStore",
-  "name": "Euroceramiche Niscemi",
-  "description": "Piastrelle, ceramiche, gres porcellanato e arredo bagno. Showroom a Niscemi.",
-  "telephone": "+39 000 000 0000",
-  "email": "info@euroceramiche-niscemi.it",
-  "image": "img/hero.webp",
-  "address": { "@type": "PostalAddress", "streetAddress": "[Via e numero civico]", "addressLocality": "Niscemi", "postalCode": "93015", "addressRegion": "CL", "addressCountry": "IT" },
+  "name": "Euroceramiche",
+  "slogan": "Progettare insieme",
+  "description": "Arredo bagno, pavimenti, rivestimenti, sanitari e rubinetteria. Progettazione e rendering 3D gratuiti, preventivi gratuiti, consegna a domicilio.",
+  "telephone": "+39 0933 953210",
+  "email": "infoeuroceramiche@gmail.com",
+  "vatID": "IT01619090853",
+  "address": { "@type": "PostalAddress", "streetAddress": "Via Paolo VI, 23", "addressLocality": "Niscemi", "postalCode": "93015", "addressRegion": "CL", "addressCountry": "IT" },
   "areaServed": ["Niscemi", "Gela", "Caltagirone", "Provincia di Caltanissetta"],
+  "sameAs": ["https://www.instagram.com/euroceramicheniscemi/"],
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:30", "closes": "13:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "15:30", "closes": "19:30" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:30", "closes": "13:00" }
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "13:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "15:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "15:00", "closes": "19:00" }
   ]
 }
 </script>
@@ -795,6 +797,26 @@ html:not(.js) .jt .split { visibility: visible; }
 @keyframes jReveal { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
 @media (max-width: 760px) { @keyframes jDoor { 0% { clip-path: inset(50% 50% 50% 50%); } .1% { clip-path: inset(20% 43% 20% 43% round 6px); } 100% { clip-path: inset(0 0 0 0 round 0); } } }
 
+/* ==========================================================================
+   Identità reale: logo a cubo, marchi trattati
+   ========================================================================== */
+.logo { flex-direction: row; align-items: center; gap: 12px; }
+.logo > span { display: flex; flex-direction: column; }
+.logo-cube { width: 30px; height: 30px; flex: none; color: var(--amber); }
+.logo b::before { display: none; }
+.logo small { margin-left: 0; text-transform: none; letter-spacing: .02em; font-size: .72rem; font-style: italic; opacity: .65; margin-top: 4px; }
+.product-brands { font-size: .78rem; color: var(--ink-3); line-height: 1.6; }
+.brands { padding-block: clamp(64px, 8vw, 112px); overflow: hidden; }
+.brands-head { margin-bottom: 32px; }
+.brands-row { overflow: hidden; -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent); mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent); }
+.brands-row + .brands-row { margin-top: 14px; }
+.brands-track { display: inline-flex; white-space: nowrap; animation: brandsMove 60s linear infinite; }
+.brands-row--rev .brands-track { animation-direction: reverse; animation-duration: 70s; }
+.brands-track span { font-size: clamp(1.6rem, 3.6vw, 3rem); font-weight: 600; letter-spacing: -.04em; padding-inline: .6em; color: var(--ink-3); transition: color 400ms var(--ease-out); }
+.brands-track span:nth-child(3n+1) { color: var(--ink); }
+@media (hover: hover) and (pointer: fine) { .brands-row:hover .brands-track { animation-play-state: paused; } .brands-track span:hover { color: var(--amber); } }
+@keyframes brandsMove { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 1ms !important; animation: none !important; transition-delay: 0s !important; }
   .js [data-reveal], .js [data-clip], .js .frame.arch[data-clip], .js .frame.round[data-clip], .step { opacity: 1; transform: none; }
@@ -814,16 +836,17 @@ html:not(.js) .jt .split { visibility: visible; }
   <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M4 12h16M14 6l6 6-6 6"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></g></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></g></symbol>
 </svg>
 
 <header class="header is-over" id="header">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="Euroceramiche Niscemi — inizio pagina"><b>Euroceramiche</b><small>Niscemi · Sicilia</small></a>
+    <a class="logo" href="#top" aria-label="Euroceramiche Niscemi — inizio pagina"><svg class="logo-cube" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8.5 4.7v9.6L12 21.5l-8.5-4.7V7.2z M3.5 7.2L12 12l8.5-4.8 M12 12v9.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span><b>Euroceramiche</b><small>Progettare insieme</small></span></a>
     <nav class="nav" id="nav" aria-label="Principale">
       <a href="#ambienti">Ambienti</a>
       <a href="#collezioni">Collezioni</a>
-      <a href="#professionisti">Professionisti</a>
+      <a href="#progettazione">Progetto 3D</a>
       <a href="#showroom">Showroom</a>
       <a href="#preventivo">Preventivo</a>
     </nav>
@@ -851,13 +874,13 @@ html:not(.js) .jt .split { visibility: visible; }
         <div class="wrap">
           <div class="jt is-active">
             <span class="jt-k">01 / 04</span>
-            <span class="label">Showroom — Niscemi, Sicilia</span>
+            <span class="label">Showroom — Via Paolo VI, Niscemi</span>
             <h1 class="jt-h split" data-jsplit>Superfici da scegliere <em>con le mani.</em></h1>
-            <p class="jt-sub">Ceramiche, gres e pietre dei migliori produttori italiani. Consulenza, preventivo e consegna fino al cantiere.</p>
-            <div class="tags"><span data-fill-stat="years">30 anni</span><span data-fill-stat="clients">5.000+ clienti</span><span>Privati e professionisti</span></div>
+            <p class="jt-sub">Arredo bagno, pavimenti, rivestimenti, sanitari e rubinetteria dei marchi migliori. Vi aiutiamo a scegliere, progettiamo con voi e consegniamo a casa vostra.</p>
+            <div class="tags"><span>Rendering 3D gratuito</span><span>Preventivi gratuiti</span><span>Consegna a domicilio</span></div>
             <div class="hero-cta">
               <a class="btn" href="#preventivo">Richiedi un preventivo</a>
-              <a class="link" href="https://wa.me/390000000000" data-wa="Buongiorno, vorrei qualche informazione sulle vostre collezioni." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> WhatsApp</a>
+              <a class="link" href="https://wa.me/393203513244" data-wa="Buongiorno, vorrei qualche informazione sulle vostre collezioni." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> WhatsApp</a>
             </div>
           </div>
           <div class="jt" aria-hidden="true">
@@ -865,23 +888,23 @@ html:not(.js) .jt .split { visibility: visible; }
             <span class="label">La materia — 02 / 04</span>
             <p class="jt-h split" data-jsplit>La verità è <em>nella materia.</em></p>
             <p class="jt-sub">Venature, grana, riflessi: dal vivo si capisce tutto. Per questo vi facciamo toccare ogni lastra.</p>
-            <div class="tags"><span>Marmo</span><span>Pietra</span><span>Legno</span><span>Cemento</span></div>
+            <div class="tags"><span>Gres porcellanato</span><span>Parquet e laminati</span><span>Pietre naturali</span></div>
           </div>
           <div class="jt" aria-hidden="true">
             <span class="jt-k">03 / 04</span>
             <span class="label">Gli spazi — 03 / 04</span>
             <p class="jt-h split" data-jsplit>Grandi lastre, <em>nessun confine.</em></p>
-            <p class="jt-sub">Pareti e pavimenti continui fino a 120×280 cm, per ambienti che respirano.</p>
+            <p class="jt-sub">Pavimenti e rivestimenti per interni ed esterni, in ogni formato, colore e finitura.</p>
             <div class="tags"><span>Bagno</span><span>Cucina</span><span>Zona giorno</span><span>Esterni</span></div>
           </div>
           <div class="jt" aria-hidden="true">
             <span class="jt-k">04 / 04</span>
             <span class="label">L'esperienza — 04 / 04</span>
             <p class="jt-h split" data-jsplit>Entrate nello <em>showroom.</em></p>
-            <p class="jt-sub">Prenotate una visita: un consulente vi guida tra materiali, ambienti allestiti e campionature.</p>
-            <div class="tags"><span>Niscemi</span><span>Gela</span><span>Caltagirone</span></div>
+            <p class="jt-sub">Fissate un appuntamento: avrete un consulente tutto per voi e il tempo per costruire il progetto, dal primo schizzo al rendering 3D.</p>
+            <div class="tags"><span>Via Paolo VI, 23</span><span>Niscemi</span><span>Gela</span></div>
             <div class="hero-cta">
-              <a class="btn" href="https://wa.me/390000000000" data-wa="Buongiorno, vorrei prenotare una visita in showroom." target="_blank" rel="noopener">Prenota una visita</a>
+              <a class="btn" href="https://wa.me/393203513244" data-wa="Buongiorno, vorrei prenotare una visita in showroom." target="_blank" rel="noopener">Prenota una visita</a>
               <a class="link" href="#collezioni">Vedi le collezioni <svg><use href="#i-arrow"/></svg></a>
             </div>
           </div>
@@ -904,31 +927,26 @@ html:not(.js) .jt .split { visibility: visible; }
   <section class="section statement" id="chi-siamo">
     <div class="wrap">
       <span class="label" data-reveal><span class="n">01</span> Chi siamo</span>
-      <p class="big" data-words style="margin-top:36px">Selezioniamo ceramiche, gres e pietre dei migliori produttori italiani. Nel nostro showroom le scegliete come si sceglie un materiale: alla luce, a grandezza reale, toccandole.</p>
+      <p class="big" data-words style="margin-top:36px">Da Niscemi selezioniamo ceramiche, arredo bagno e rubinetteria dei marchi più affidabili. Il nostro mestiere è progettare insieme a voi: ascoltare, proporre, mostrarvi il risultato prima ancora di iniziare.</p>
 
       <div class="collage">
         <figure class="c1" style="margin:0">
           <div class="frame arch" data-clip data-speed="-0.06"><img src="img/bagno-marmo.webp" srcset="img/bagno-marmo-800.webp 800w, img/bagno-marmo.webp 1400w" sizes="(max-width: 760px) 100vw, 58vw" alt="Bagno con pareti in marmo bianco venato e doccia in vetro" width="1400" height="934" loading="lazy" decoding="async"></div>
-          <figcaption><span>Marmo bianco venato, grande formato</span><span>Bagno</span></figcaption>
+          <figcaption><span>Arredo bagno e rivestimenti</span><span>Ispirazione</span></figcaption>
         </figure>
         <div class="c2" data-speed="0.08">
           <div class="frame round" data-clip><img src="img/marmo-dettaglio.webp" alt="Dettaglio delle venature di una lastra di marmo" width="1000" height="667" loading="lazy" decoding="async"></div>
-          <p data-reveal>Consulenza, progetto, preventivo chiaro e consegna in cantiere: un solo interlocutore, dalla scelta alla posa.</p>
+          <p data-reveal>Consulenza, progetto e rendering 3D, preventivo gratuito e consegna a domicilio: un solo punto di riferimento, prima, durante e dopo l'acquisto.</p>
           <a class="link" href="#servizi" data-reveal>Come lavoriamo <svg><use href="#i-arrow"/></svg></a>
         </div>
       </div>
 
-      <!-- Numeri: i valori si impostano in CONFIG.stats (in fondo alla pagina). Il testo qui è il fallback senza JS. -->
+      <!-- Numeri: valori reali in CONFIG.stats. Il testo qui è il fallback senza JS. -->
       <div class="stats" data-reveal style="margin-top:clamp(80px,11vw,160px)" aria-label="Euroceramiche in numeri">
-        <div class="stat"><span class="stat-n" data-count="years">30</span><span class="stat-l">Anni di attività</span><span class="stat-sub">Dal <span data-fill="founded">1995</span>, a Niscemi</span></div>
-        <div class="stat"><span class="stat-n" data-count="clients" data-suffix="+">5.000<small>+</small></span><span class="stat-l">Clienti serviti</span><span class="stat-sub">Privati e professionisti</span></div>
-        <div class="stat">
-          <span class="stat-n" data-count="rating" data-decimals="1" data-suffix="/5">4,9<small>/5</small></span>
-          <span class="stat-l">Valutazione Google</span>
-          <span class="stat-sub"><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span> su <span data-count="reviews">120</span> recensioni</span>
-          <a class="link" href="https://www.google.com/maps/search/?api=1&query=Euroceramiche+Niscemi" data-href="reviews" target="_blank" rel="noopener">Leggi le recensioni <svg><use href="#i-arrow"/></svg></a>
-        </div>
-        <div class="stat"><span class="stat-n" data-count="showroom" data-suffix="m²">800<small>m²</small></span><span class="stat-l">Di showroom</span><span class="stat-sub">Ambienti allestiti e campionario</span></div>
+        <div class="stat"><span class="stat-n" data-count="brands">23</span><span class="stat-l">Marchi selezionati</span><span class="stat-sub">Arredo bagno, ceramiche e rubinetteria</span></div>
+        <div class="stat"><span class="stat-n" data-count="quote" data-suffix="€">0<small>€</small></span><span class="stat-l">Progetto e preventivo</span><span class="stat-sub">Rendering 3D e preventivi gratuiti</span></div>
+        <div class="stat"><span class="stat-n" data-count="days" data-suffix="/7">6<small>/7</small></span><span class="stat-l">Giorni di apertura</span><span class="stat-sub">Dal lunedì al sabato, mattina e pomeriggio</span></div>
+        <div class="stat"><span class="stat-n" data-count="delivery" data-suffix="%">100<small>%</small></span><span class="stat-l">Consegna inclusa</span><span class="stat-sub">A domicilio, compresa nel prezzo finale</span></div>
       </div>
     </div>
   </section>
@@ -951,137 +969,147 @@ html:not(.js) .jt .split { visibility: visible; }
     </div>
   </section>
 
-  <!-- COLLEZIONI — sostituire nomi e foto con le collezioni realmente trattate -->
+  <!-- COLLEZIONI: categorie e marchi reali (fonte: sito attuale euroceramiche-niscemi.it). Foto provvisorie. -->
   <section class="section panel panel--cream" id="collezioni">
     <div class="wrap">
       <div class="head" data-reveal>
-        <span class="label"><span class="n">03</span> Collezioni</span>
-        <h2>Materia, formato, <em>finitura.</em></h2>
-        <p>Una selezione di ciò che trovate in showroom. Per ogni collezione vi mostriamo campioni a grandezza reale e ambientazioni.</p>
+        <span class="label"><span class="n">03</span> Cosa trovate da noi</span>
+        <h2>Tutto per la casa, <em>in un solo showroom.</em></h2>
+        <p>Dall'arredo bagno ai pavimenti, dai rivestimenti alla rubinetteria: collezioni dei produttori più apprezzati, da vedere e toccare in Via Paolo VI.</p>
       </div>
 
-      <div class="filters" role="toolbar" aria-label="Filtra per tipologia" data-reveal>
-        <button class="chip" type="button" aria-pressed="true" data-filter="tutti">Tutte<span class="count"></span></button>
-        <button class="chip" type="button" aria-pressed="false" data-filter="marmo">Effetto marmo<span class="count"></span></button>
-        <button class="chip" type="button" aria-pressed="false" data-filter="pietra">Pietra e cemento<span class="count"></span></button>
-        <button class="chip" type="button" aria-pressed="false" data-filter="legno">Effetto legno<span class="count"></span></button>
+      <div class="filters" role="toolbar" aria-label="Filtra per area" data-reveal>
+        <button class="chip" type="button" aria-pressed="true" data-filter="tutti">Tutto<span class="count"></span></button>
+        <button class="chip" type="button" aria-pressed="false" data-filter="bagno">Bagno<span class="count"></span></button>
+        <button class="chip" type="button" aria-pressed="false" data-filter="superfici">Pavimenti e rivestimenti<span class="count"></span></button>
       </div>
 
       <div class="products" id="products">
-        <article class="product" data-cat="marmo">
-          <div class="frame" data-clip><img src="img/calacatta.webp" alt="Bagno con lastre effetto marmo Calacatta e vasca freestanding" width="900" height="632" loading="lazy" decoding="async"></div>
+        <article class="product" data-cat="bagno">
+          <div class="frame" data-clip><img src="img/calacatta.webp" alt="Bagno con vasca freestanding e mobile sospeso" width="900" height="632" loading="lazy" decoding="async"></div>
           <div class="product-body">
-            <p class="product-cat">Gres effetto marmo</p>
-            <h3>Calacatta Bianco</h3>
-            <p class="product-meta">60×120 · 120×280 cm — lucido, naturale</p>
+            <p class="product-cat">Bagno</p>
+            <h3>Arredo bagno</h3>
+            <p class="product-meta">Mobili e lavabi, specchiere anche illuminate, box doccia su misura, vasche e idromassaggio, termoarredo.</p>
+            <p class="product-brands">Palombini · Royo · Blue Life · Vica · Eban · Legno Bagno · Global Trade · Progetto Idea Stella</p>
             <div class="product-actions">
-              <button class="link" type="button" data-quote="Calacatta Bianco">Preventivo <svg><use href="#i-arrow"/></svg></button>
-              <a class="link" href="https://wa.me/390000000000" data-wa-product="Calacatta Bianco" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Calacatta Bianco"><svg class="wa-icon"><use href="#i-wa"/></svg> WhatsApp</a>
+              <button class="link" type="button" data-quote="Arredo bagno">Preventivo <svg><use href="#i-arrow"/></svg></button>
+              <a class="link" href="https://wa.me/393203513244" data-wa-product="Arredo bagno" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Arredo bagno"><svg class="wa-icon"><use href="#i-wa"/></svg> WhatsApp</a>
             </div>
           </div>
         </article>
-        <article class="product" data-cat="marmo">
-          <div class="frame" data-clip><img src="img/nero-marquinia.webp" alt="Top bagno in marmo nero con lavabo d'appoggio bianco" width="900" height="601" loading="lazy" decoding="async"></div>
+        <article class="product" data-cat="bagno">
+          <div class="frame" data-clip><img src="img/nero-marquinia.webp" alt="Lavabo d'appoggio su top in marmo nero con rubinetto" width="900" height="601" loading="lazy" decoding="async"></div>
           <div class="product-body">
-            <p class="product-cat">Gres effetto marmo</p>
-            <h3>Nero Marquinia</h3>
-            <p class="product-meta">60×60 · 120×120 cm — lucido</p>
+            <p class="product-cat">Bagno</p>
+            <h3>Sanitari e rubinetteria</h3>
+            <p class="product-meta">Vasi, bidet e lavabi; miscelatori e colonne doccia fatti per durare e per ridurre lo spreco d’acqua.</p>
+            <p class="product-brands">Carlo Frattini · Mamoli · Morini · Keller Taps · Gattoni · Paffoni · CSA · New Flag · Azzurra</p>
             <div class="product-actions">
-              <button class="link" type="button" data-quote="Nero Marquinia">Preventivo <svg><use href="#i-arrow"/></svg></button>
-              <a class="link" href="https://wa.me/390000000000" data-wa-product="Nero Marquinia" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Nero Marquinia"><svg class="wa-icon"><use href="#i-wa"/></svg> WhatsApp</a>
+              <button class="link" type="button" data-quote="Sanitari e rubinetteria">Preventivo <svg><use href="#i-arrow"/></svg></button>
+              <a class="link" href="https://wa.me/393203513244" data-wa-product="Sanitari e rubinetteria" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Sanitari e rubinetteria"><svg class="wa-icon"><use href="#i-wa"/></svg> WhatsApp</a>
             </div>
           </div>
         </article>
-        <article class="product" data-cat="pietra">
-          <div class="frame" data-clip><img src="img/pietra-lavica.webp" alt="Parete in pietra scura con mensola in legno e lavabo" width="900" height="900" loading="lazy" decoding="async"></div>
+        <article class="product" data-cat="bagno">
+          <div class="frame" data-clip><img src="img/pietra-beige.webp" alt="Bagno con nicchie, accessori e illuminazione" width="900" height="601" loading="lazy" decoding="async"></div>
           <div class="product-body">
-            <p class="product-cat">Gres effetto pietra</p>
-            <h3>Pietra Lavica</h3>
-            <p class="product-meta">30×60 · 60×120 cm — strutturato</p>
+            <p class="product-cat">Bagno e casa</p>
+            <h3>Accessori e illuminazione</h3>
+            <p class="product-meta">I dettagli che completano il progetto: accessori bagno, complementi e luci coordinate con le finiture.</p>
             <div class="product-actions">
-              <button class="link" type="button" data-quote="Pietra Lavica">Preventivo <svg><use href="#i-arrow"/></svg></button>
-              <a class="link" href="https://wa.me/390000000000" data-wa-product="Pietra Lavica" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Pietra Lavica"><svg class="wa-icon"><use href="#i-wa"/></svg> WhatsApp</a>
+              <button class="link" type="button" data-quote="Accessori e illuminazione">Preventivo <svg><use href="#i-arrow"/></svg></button>
+              <a class="link" href="https://wa.me/393203513244" data-wa-product="Accessori e illuminazione" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Accessori e illuminazione"><svg class="wa-icon"><use href="#i-wa"/></svg> WhatsApp</a>
             </div>
           </div>
         </article>
-        <article class="product" data-cat="pietra">
-          <div class="frame" data-clip><img src="img/pietra-beige.webp" alt="Bagno in toni beige con rivestimento effetto pietra e nicchie" width="900" height="601" loading="lazy" decoding="async"></div>
+        <article class="product" data-cat="superfici">
+          <div class="frame" data-clip><img src="img/cemento.webp" alt="Ambiente con parete effetto cemento e pavimento effetto legno" width="900" height="601" loading="lazy" decoding="async"></div>
           <div class="product-body">
-            <p class="product-cat">Gres effetto pietra</p>
-            <h3>Pietra Sabbia</h3>
-            <p class="product-meta">60×120 cm — naturale, R10</p>
+            <p class="product-cat">Pavimenti</p>
+            <h3>Gres porcellanato</h3>
+            <p class="product-meta">Resistente, impermeabile e facile da pulire: smaltato, lappato o levigato, per interni ed esterni.</p>
             <div class="product-actions">
-              <button class="link" type="button" data-quote="Pietra Sabbia">Preventivo <svg><use href="#i-arrow"/></svg></button>
-              <a class="link" href="https://wa.me/390000000000" data-wa-product="Pietra Sabbia" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Pietra Sabbia"><svg class="wa-icon"><use href="#i-wa"/></svg> WhatsApp</a>
+              <button class="link" type="button" data-quote="Pavimenti in gres porcellanato">Preventivo <svg><use href="#i-arrow"/></svg></button>
+              <a class="link" href="https://wa.me/393203513244" data-wa-product="Pavimenti in gres porcellanato" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Pavimenti in gres porcellanato"><svg class="wa-icon"><use href="#i-wa"/></svg> WhatsApp</a>
             </div>
           </div>
         </article>
-        <article class="product" data-cat="pietra legno">
-          <div class="frame" data-clip><img src="img/cemento.webp" alt="Bagno con parete effetto cemento e pavimento effetto legno" width="900" height="601" loading="lazy" decoding="async"></div>
+        <article class="product" data-cat="superfici">
+          <div class="frame" data-clip><img src="img/legno-900.webp" alt="Soggiorno con pavimento in legno a spina di pesce" width="900" height="601" loading="lazy" decoding="async"></div>
           <div class="product-body">
-            <p class="product-cat">Gres effetto cemento</p>
-            <h3>Cemento Antracite</h3>
-            <p class="product-meta">60×60 · 120×120 cm — matt</p>
+            <p class="product-cat">Pavimenti</p>
+            <h3>Parquet e laminati</h3>
+            <p class="product-meta">Il calore del legno: massello tradizionale oppure prefinito multistrato con superficie in legno nobile.</p>
             <div class="product-actions">
-              <button class="link" type="button" data-quote="Cemento Antracite">Preventivo <svg><use href="#i-arrow"/></svg></button>
-              <a class="link" href="https://wa.me/390000000000" data-wa-product="Cemento Antracite" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Cemento Antracite"><svg class="wa-icon"><use href="#i-wa"/></svg> WhatsApp</a>
+              <button class="link" type="button" data-quote="Parquet e laminati">Preventivo <svg><use href="#i-arrow"/></svg></button>
+              <a class="link" href="https://wa.me/393203513244" data-wa-product="Parquet e laminati" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Parquet e laminati"><svg class="wa-icon"><use href="#i-wa"/></svg> WhatsApp</a>
             </div>
           </div>
         </article>
-        <article class="product" data-cat="legno">
-          <div class="frame" data-clip><img src="img/legno-900.webp" alt="Pavimento effetto rovere posato a spina di pesce in un soggiorno" width="900" height="601" loading="lazy" decoding="async"></div>
+        <article class="product" data-cat="superfici">
+          <div class="frame" data-clip><img src="img/pietra-lavica.webp" alt="Parete rivestita in pietra scura con mensola in legno" width="900" height="900" loading="lazy" decoding="async"></div>
           <div class="product-body">
-            <p class="product-cat">Gres effetto legno</p>
-            <h3>Rovere Naturale</h3>
-            <p class="product-meta">20×120 · 26×160 cm — anche a spina</p>
+            <p class="product-cat">Pareti</p>
+            <h3>Rivestimenti e pietre</h3>
+            <p class="product-meta">Ceramiche decorative, effetti materici, pietre naturali e ricostruite per bagni, cucine e pareti d'arredo.</p>
+            <p class="product-brands">Dado Ceramica · Imola · Herberia · FAP · Faetano · Flab</p>
             <div class="product-actions">
-              <button class="link" type="button" data-quote="Rovere Naturale">Preventivo <svg><use href="#i-arrow"/></svg></button>
-              <a class="link" href="https://wa.me/390000000000" data-wa-product="Rovere Naturale" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Rovere Naturale"><svg class="wa-icon"><use href="#i-wa"/></svg> WhatsApp</a>
+              <button class="link" type="button" data-quote="Rivestimenti e pietre">Preventivo <svg><use href="#i-arrow"/></svg></button>
+              <a class="link" href="https://wa.me/393203513244" data-wa-product="Rivestimenti e pietre" target="_blank" rel="noopener" aria-label="Chiedi su WhatsApp: Rivestimenti e pietre"><svg class="wa-icon"><use href="#i-wa"/></svg> WhatsApp</a>
             </div>
           </div>
         </article>
       </div>
 
       <div class="products-note" data-reveal>
-        <p>In showroom trovate centinaia di altre collezioni, sanitari, rubinetteria e mobili bagno.</p>
-        <a class="link" href="https://wa.me/390000000000" data-wa="Buongiorno, sto cercando una piastrella specifica: " target="_blank" rel="noopener">Mandateci una foto su WhatsApp <svg><use href="#i-arrow"/></svg></a>
+        <p>Non trovate quello che cercate? In showroom l'assortimento è molto più ampio di quello che vedete qui.</p>
+        <a class="link" href="https://wa.me/393203513244" data-wa="Buongiorno, sto cercando: " target="_blank" rel="noopener">Mandateci una foto su WhatsApp <svg><use href="#i-arrow"/></svg></a>
       </div>
     </div>
+  </section>
+
+  <!-- MARCHI: nastro con i marchi trattati (in testo, non loghi) -->
+  <section class="brands" aria-label="Marchi trattati">
+    <div class="wrap brands-head" data-reveal><span class="label">Alcuni dei marchi che trattiamo</span></div>
+    <div class="brands-row" aria-hidden="true"><div class="brands-track"><span>Imola</span><span>Dado Ceramica</span><span>Herberia</span><span>FAP</span><span>Palombini</span><span>Royo</span><span>Blue Life</span><span>Vica</span><span>Eban</span><span>Legno Bagno</span><span>Gattoni</span><span>Paffoni</span><span>Imola</span><span>Dado Ceramica</span><span>Herberia</span><span>FAP</span><span>Palombini</span><span>Royo</span><span>Blue Life</span><span>Vica</span><span>Eban</span><span>Legno Bagno</span><span>Gattoni</span><span>Paffoni</span></div></div>
+    <div class="brands-row brands-row--rev" aria-hidden="true"><div class="brands-track"><span>Carlo Frattini</span><span>Mamoli</span><span>Morini</span><span>Keller Taps</span><span>CSA</span><span>New Flag</span><span>Azzurra</span><span>Faetano</span><span>Flab</span><span>Global Trade</span><span>Progetto Idea Stella</span><span>Carlo Frattini</span><span>Mamoli</span><span>Morini</span><span>Keller Taps</span><span>CSA</span><span>New Flag</span><span>Azzurra</span><span>Faetano</span><span>Flab</span><span>Global Trade</span><span>Progetto Idea Stella</span></div></div>
+    <p class="sr-only">Marchi trattati: Imola, Dado Ceramica, Herberia, FAP, Palombini, Royo, Blue Life, Vica, Eban, Legno Bagno, Gattoni, Paffoni, Carlo Frattini, Mamoli, Morini, Keller Taps, CSA, New Flag, Azzurra, Faetano, Flab, Global Trade, Progetto Idea Stella.</p>
   </section>
 
   <!-- COME LAVORIAMO -->
   <section class="section" id="servizi" style="padding-top:0">
     <div class="wrap">
       <div class="head" data-reveal>
-        <span class="label"><span class="n">04</span> Come lavoriamo</span>
-        <h2>Dalla prima idea <em>alla posa.</em></h2>
-        <p>Un solo interlocutore per tutto il lavoro: niente rimbalzi fra fornitore, progettista e posatore.</p>
+        <span class="label"><span class="n">04</span> Servizi</span>
+        <h2>Vi seguiamo <em>prima, durante e dopo.</em></h2>
+        <p>Un consulente dedicato vi accompagna in ogni fase: dalla scelta dei materiali fino a lavoro finito.</p>
       </div>
       <ol class="steps" data-reveal>
-        <li class="step"><span class="n">i.</span><h3>Visita in showroom</h3><p>Toccate i materiali dal vivo, con un consulente che conosce ogni collezione. Su richiesta portiamo i campioni a casa.</p></li>
-        <li class="step"><span class="n">ii.</span><h3>Progetto</h3><p>Studio dell'ambiente e rendering: vedete il risultato prima di decidere.</p></li>
-        <li class="step"><span class="n">iii.</span><h3>Preventivo chiaro</h3><p>Materiali, sfridi e accessori di posa voce per voce. Nessuna sorpresa a fine lavoro.</p></li>
-        <li class="step"><span class="n">iv.</span><h3>Consegna e posa</h3><p>A domicilio o in cantiere, con posatori di fiducia per un lavoro a regola d'arte.</p></li>
+        <li class="step"><span class="n">i.</span><h3>Appuntamento in showroom</h3><p>Prenotate una visita: avrete più tempo dedicato e un consulente che conosce ogni collezione.</p></li>
+        <li class="step"><span class="n">ii.</span><h3>Progetto e rendering 3D</h3><p>Partendo dalle vostre misure creiamo immagini fotorealistiche degli ambienti. Gratis per chi acquista da noi.</p></li>
+        <li class="step"><span class="n">iii.</span><h3>Preventivo gratuito</h3><p>Chiaro e dettagliato, senza impegno, con le soluzioni migliori per il vostro budget.</p></li>
+        <li class="step"><span class="n">iv.</span><h3>Consegna e assistenza</h3><p>Consegna a domicilio compresa nel prezzo finale e assistenza anche dopo la vendita.</p></li>
       </ol>
     </div>
   </section>
 
-  <!-- PROFESSIONISTI -->
-  <section class="section pro panel" id="professionisti">
+  <!-- PROGETTAZIONE 3D -->
+  <section class="section pro panel" id="progettazione">
     <div class="wrap">
       <div>
-        <span class="label" data-reveal><span class="n">05</span> Professionisti</span>
-        <h2 class="split" data-split>Il vostro magazzino, <em>a pochi minuti dal cantiere.</em></h2>
-        <p class="pro-lead" data-reveal>Lavoriamo ogni giorno con posatori, imprese, architetti e geometri della zona. Materiale disponibile, tempi certi e un referente che risponde al telefono.</p>
+        <span class="label" data-reveal><span class="n">05</span> Progettazione 3D</span>
+        <h2 class="split" data-split>Vedete la casa <em>prima di rinnovarla.</em></h2>
+        <p class="pro-lead" data-reveal>Piantine e disegni spesso non bastano per immaginare il risultato. Per questo, sulle misure del vostro ambiente, realizziamo rendering fotorealistici: spazi, volumi, arredi e finiture come saranno davvero.</p>
         <ul class="perks" data-reveal>
-          <li><strong>Listino riservato</strong><span>Partite IVA e forniture continuative</span></li>
-          <li><strong>Consegna in cantiere</strong><span>Niscemi, Gela, Caltagirone e provincia</span></li>
-          <li><strong>Campionature</strong><span>Campioni e schede tecniche per i vostri clienti</span></li>
-          <li><strong>Sistemi di posa</strong><span>Collanti, stucchi, impermeabilizzanti</span></li>
+          <li><strong>Rendering fotorealistico</strong><span>Ogni stanza, prima dei lavori</span></li>
+          <li><strong>Progetto su misura</strong><span>Costruito sulle vostre misure</span></li>
+          <li><strong>Team di architetti</strong><span>Per chi desidera un progetto completo</span></li>
+          <li><strong>Gratuito</strong><span>Per chi acquista in showroom</span></li>
         </ul>
-        <a class="btn btn--line-light" href="#preventivo" data-pro data-reveal>Richiedi condizioni dedicate <svg class="arrow"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--line-light" href="#preventivo" data-reveal>Richiedi il tuo progetto <svg class="arrow"><use href="#i-arrow"/></svg></a>
       </div>
-      <div class="frame arch" data-clip><img src="img/campioni.webp" srcset="img/campioni-800.webp 800w, img/campioni.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" alt="Due mani confrontano campioni di marmo bianco e nero su un tavolo da progetto" width="1400" height="934" loading="lazy" decoding="async"></div>
+      <div class="frame arch" data-clip><img src="img/campioni.webp" srcset="img/campioni-800.webp 800w, img/campioni.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" alt="Mani che confrontano campioni di materiali su un tavolo di progetto" width="1400" height="934" loading="lazy" decoding="async"></div>
     </div>
   </section>
 
@@ -1091,32 +1119,34 @@ html:not(.js) .jt .split { visibility: visible; }
       <div class="head" data-reveal>
         <span class="label"><span class="n">06</span> Showroom</span>
         <h2>Venite a <em>trovarci.</em></h2>
-        <p>Ambienti allestiti e campioni di tutte le collezioni. Il sabato mattina c'è più calma: è il momento ideale per un progetto completo.</p>
+        <p>Vi aspettiamo in Via Paolo VI a Niscemi, sei giorni su sette. Per un progetto completo conviene fissare un appuntamento: avrete un consulente tutto per voi.</p>
       </div>
       <div class="showroom" data-reveal>
         <div class="visit">
           <span class="status" data-status><span class="status-dot"></span><span data-status-text>Orari showroom</span></span>
-          <address><span data-fill="street">[Via e numero civico]</span><br>93015 Niscemi (CL)</address>
+          <address><span data-fill="street">Via Paolo VI, 23</span><br>93015 Niscemi (CL)</address>
           <!-- Orari: unica fonte di verità. Formato data-hours: "HH:MM-HH:MM,HH:MM-HH:MM" (vuoto = chiuso). -->
           <table class="hours" aria-label="Orari di apertura">
-            <tr data-day="1" data-hours="08:30-13:00,15:30-19:30"><th scope="row">Lunedì</th><td>8:30–13:00 · 15:30–19:30</td></tr>
-            <tr data-day="2" data-hours="08:30-13:00,15:30-19:30"><th scope="row">Martedì</th><td>8:30–13:00 · 15:30–19:30</td></tr>
-            <tr data-day="3" data-hours="08:30-13:00,15:30-19:30"><th scope="row">Mercoledì</th><td>8:30–13:00 · 15:30–19:30</td></tr>
-            <tr data-day="4" data-hours="08:30-13:00,15:30-19:30"><th scope="row">Giovedì</th><td>8:30–13:00 · 15:30–19:30</td></tr>
-            <tr data-day="5" data-hours="08:30-13:00,15:30-19:30"><th scope="row">Venerdì</th><td>8:30–13:00 · 15:30–19:30</td></tr>
-            <tr data-day="6" data-hours="08:30-13:00"><th scope="row">Sabato</th><td>8:30–13:00</td></tr>
+            <tr data-day="1" data-hours="08:00-13:00,15:00-20:00"><th scope="row">Lunedì</th><td>8:00–13:00 · 15:00–20:00</td></tr>
+            <tr data-day="2" data-hours="08:00-13:00,15:00-20:00"><th scope="row">Martedì</th><td>8:00–13:00 · 15:00–20:00</td></tr>
+            <tr data-day="3" data-hours="08:00-13:00,15:00-20:00"><th scope="row">Mercoledì</th><td>8:00–13:00 · 15:00–20:00</td></tr>
+            <tr data-day="4" data-hours="08:00-13:00,15:00-20:00"><th scope="row">Giovedì</th><td>8:00–13:00 · 15:00–20:00</td></tr>
+            <tr data-day="5" data-hours="08:00-13:00,15:00-20:00"><th scope="row">Venerdì</th><td>8:00–13:00 · 15:00–20:00</td></tr>
+            <tr data-day="6" data-hours="08:00-13:00,15:00-19:00"><th scope="row">Sabato</th><td>8:00–13:00 · 15:00–19:00</td></tr>
             <tr data-day="0" data-hours=""><th scope="row">Domenica</th><td>Chiuso</td></tr>
           </table>
           <div class="contact-list">
-            <a href="tel:+390000000000" data-href="tel"><svg><use href="#i-phone"/></svg><span data-fill="phone">[+39 000 000 0000]</span></a>
-            <a href="mailto:info@euroceramiche-niscemi.it" data-href="mail"><svg><use href="#i-mail"/></svg><span data-fill="email">info@euroceramiche-niscemi.it</span></a>
+            <a href="tel:+390933953210" data-href="tel"><svg><use href="#i-phone"/></svg><span data-fill="phone">+39 0933 953210</span></a>
+            <a href="tel:+393203513244" data-href="mobile"><svg><use href="#i-phone"/></svg><span data-fill="mobile">+39 320 351 3244</span></a>
+            <a href="mailto:infoeuroceramiche@gmail.com" data-href="mail"><svg><use href="#i-mail"/></svg><span data-fill="email">infoeuroceramiche@gmail.com</span></a>
+            <a href="https://www.instagram.com/euroceramicheniscemi/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg><span>@euroceramicheniscemi</span></a>
           </div>
           <div class="visit-actions">
             <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Euroceramiche+Niscemi" data-href="maps" target="_blank" rel="noopener">Indicazioni stradali <svg class="arrow"><use href="#i-arrow"/></svg></a>
-            <a class="btn btn--line" href="https://wa.me/390000000000" data-wa="Buongiorno, vorrei prendere un appuntamento in showroom." target="_blank" rel="noopener">Prenota una visita</a>
+            <a class="btn btn--line" href="https://wa.me/393203513244" data-wa="Buongiorno, vorrei prendere un appuntamento in showroom." target="_blank" rel="noopener">Prenota una visita</a>
           </div>
         </div>
-        <!-- Sostituire con una foto reale dello showroom (es. img/showroom.webp) -->
+        <!-- Sostituire con una foto reale dello showroom di Via Paolo VI (es. img/showroom.webp) -->
         <div class="frame" data-clip><img src="img/marmo-bianco.webp" alt="" width="1400" height="934" loading="lazy" decoding="async"></div>
       </div>
     </div>
@@ -1208,28 +1238,28 @@ html:not(.js) .jt .split { visibility: visible; }
       <div data-reveal>
         <span class="label"><span class="n">08</span> Domande frequenti</span>
         <h2>Prima di <em>chiedere.</em></h2>
-        <p class="lead">Non trovate la risposta? <a href="https://wa.me/390000000000" data-wa="Buongiorno, avrei una domanda: " target="_blank" rel="noopener">Scriveteci su WhatsApp</a>, rispondiamo in giornata.</p>
+        <p class="lead">Non trovate la risposta? <a href="https://wa.me/393203513244" data-wa="Buongiorno, avrei una domanda: " target="_blank" rel="noopener">Scriveteci su WhatsApp</a>, rispondiamo in giornata.</p>
       </div>
       <div class="faq" data-reveal style="--i:1">
         <div class="faq-item">
           <button class="faq-q" type="button" aria-expanded="false" id="q1" aria-controls="a1">Il preventivo è davvero gratuito?<span class="plus" aria-hidden="true"></span></button>
-          <div class="faq-a" id="a1" role="region" aria-labelledby="q1"><div><p>Sì, sempre e senza impegno. Per lavori importanti facciamo anche il sopralluogo con le misure, gratuitamente e su appuntamento.</p></div></div>
+          <div class="faq-a" id="a1" role="region" aria-labelledby="q1"><div><p>Sì, gratuito e senza impegno. Potete chiederlo in showroom, per telefono o direttamente da questa pagina.</p></div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" id="q2" aria-controls="a2">Consegnate a domicilio o in cantiere?<span class="plus" aria-hidden="true"></span></button>
-          <div class="faq-a" id="a2" role="region" aria-labelledby="q2"><div><p>Sì, a Niscemi, Gela, Caltagirone e in tutta la provincia, con mezzi nostri e imballi protetti. Vi confermiamo giorno e fascia oraria.</p></div></div>
+          <button class="faq-q" type="button" aria-expanded="false" id="q2" aria-controls="a2">Quanto costa il rendering 3D?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a" id="a2" role="region" aria-labelledby="q2"><div><p>Nulla per chi acquista i materiali da noi: progetto, rendering degli interni e preventivo d'arredo sono compresi.</p></div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" id="q3" aria-controls="a3">Posso vedere un campione prima di comprare?<span class="plus" aria-hidden="true"></span></button>
-          <div class="faq-a" id="a3" role="region" aria-labelledby="q3"><div><p>Certo. In showroom sono esposte tutte le collezioni e, su richiesta, vi lasciamo i campioni da provare a casa con la vostra luce.</p></div></div>
+          <button class="faq-q" type="button" aria-expanded="false" id="q3" aria-controls="a3">La consegna a domicilio si paga a parte?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a" id="a3" role="region" aria-labelledby="q3"><div><p>No: la consegna a domicilio è già compresa nel prezzo finale, ovunque vi troviate.</p></div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" id="q4" aria-controls="a4">Quanto materiale devo ordinare in più?<span class="plus" aria-hidden="true"></span></button>
-          <div class="faq-a" id="a4" role="region" aria-labelledby="q4"><div><p>Di solito dal 5 al 10% per tagli e sfridi, di più per posa in diagonale o formati grandi. Lo calcoliamo noi nel preventivo, ambiente per ambiente.</p></div></div>
+          <button class="faq-q" type="button" aria-expanded="false" id="q4" aria-controls="a4">Serve un appuntamento per venire in showroom?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a" id="a4" role="region" aria-labelledby="q4"><div><p>No, siete sempre i benvenuti negli orari di apertura. Per un progetto di ristrutturazione però conviene prenotare: avrete più tempo dedicato.</p></div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" id="q5" aria-controls="a5">Che tempi di consegna avete?<span class="plus" aria-hidden="true"></span></button>
-          <div class="faq-a" id="a5" role="region" aria-labelledby="q5"><div><p>Il materiale a magazzino arriva in pochi giorni; le collezioni su ordinazione di solito in 1–3 settimane. I tempi ve li confermiamo per iscritto.</p></div></div>
+          <button class="faq-q" type="button" aria-expanded="false" id="q5" aria-controls="a5">E dopo l'acquisto?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a" id="a5" role="region" aria-labelledby="q5"><div><p>Un consulente vi segue anche dopo la vendita: per qualsiasi dubbio o necessità sapete sempre a chi rivolgervi.</p></div></div>
         </div>
       </div>
     </div>
@@ -1241,34 +1271,36 @@ html:not(.js) .jt .split { visibility: visible; }
     <p class="footer-big" data-reveal>Il vostro progetto<br>inizia da <a href="#preventivo">qui.</a></p>
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="logo" href="#top" aria-label="Torna all'inizio"><b>Euroceramiche</b><small>Niscemi · Sicilia</small></a>
-        <p>Piastrelle, ceramiche e arredo bagno. Showroom e consulenza a due passi da Caltagirone, terra della maiolica.</p>
+        <a class="logo" href="#top" aria-label="Torna all'inizio"><svg class="logo-cube" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8.5 4.7v9.6L12 21.5l-8.5-4.7V7.2z M3.5 7.2L12 12l8.5-4.8 M12 12v9.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span><b>Euroceramiche</b><small>Progettare insieme</small></span></a>
+        <p>Arredo bagno, pavimenti, rivestimenti, sanitari e rubinetteria. Showroom in Via Paolo VI, 23 a Niscemi.</p>
       </div>
       <div>
         <h4>Sito</h4>
-        <ul><li><a href="#ambienti">Ambienti</a></li><li><a href="#collezioni">Collezioni</a></li><li><a href="#professionisti">Professionisti</a></li><li><a href="#showroom">Showroom</a></li></ul>
+        <ul><li><a href="#ambienti">Ambienti</a></li><li><a href="#collezioni">Collezioni</a></li><li><a href="#progettazione">Progetto 3D</a></li><li><a href="#showroom">Showroom</a></li></ul>
       </div>
       <div>
         <h4>Contatti</h4>
         <ul>
-          <li><a href="tel:+390000000000" data-href="tel" data-fill="phone">[+39 000 000 0000]</a></li>
-          <li><a href="https://wa.me/390000000000" data-wa="Buongiorno!" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li><a href="mailto:info@euroceramiche-niscemi.it" data-href="mail" data-fill="email">info@euroceramiche-niscemi.it</a></li>
+          <li><a href="tel:+390933953210" data-href="tel" data-fill="phone">+39 0933 953210</a></li>
+          <li><a href="tel:+393203513244" data-href="mobile" data-fill="mobile">+39 320 351 3244</a></li>
+          <li><a href="https://wa.me/393203513244" data-wa="Buongiorno!" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:infoeuroceramiche@gmail.com" data-href="mail" data-fill="email">infoeuroceramiche@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/euroceramicheniscemi/" target="_blank" rel="noopener">Instagram</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-legal">
-      <span>© <span data-year>2026</span> Euroceramiche Niscemi · <span data-fill="street">[Via e numero civico]</span>, 93015 Niscemi (CL) · P.IVA <span data-fill="vat">[00000000000]</span></span>
+      <span>© <span data-year>2026</span> Euroceramiche di Di Giovanni Donatella · <span data-fill="street">Via Paolo VI, 23</span>, 93015 Niscemi (CL) · P.IVA <span data-fill="vat">01619090853</span></span>
       <span><a href="privacy.html">Privacy</a> · Nessun cookie di profilazione · Foto: Pexels</span>
     </div>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/390000000000" data-wa="Buongiorno, vorrei qualche informazione." target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp"><svg><use href="#i-wa"/></svg></a>
+<a class="wa-float" href="https://wa.me/393203513244" data-wa="Buongiorno, vorrei qualche informazione." target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
 <nav class="actionbar" aria-label="Azioni rapide">
-  <a href="tel:+390000000000" data-href="tel"><svg><use href="#i-phone"/></svg> Chiama</a>
-  <a class="wa" href="https://wa.me/390000000000" data-wa="Buongiorno, vorrei qualche informazione." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> WhatsApp</a>
+  <a href="tel:+390933953210" data-href="tel"><svg><use href="#i-phone"/></svg> Chiama</a>
+  <a class="wa" href="https://wa.me/393203513244" data-wa="Buongiorno, vorrei qualche informazione." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> WhatsApp</a>
   <a class="main" href="#preventivo">Preventivo</a>
 </nav>
 
@@ -1279,22 +1311,16 @@ html:not(.js) .jt .split { visibility: visible; }
    CONFIG — l'unico punto da modificare con i dati reali.
    ========================================================================== */
 const CONFIG = {
-  whatsapp: '390000000000',               // numero WhatsApp Business: prefisso 39, senza + né spazi
-  phone: '+39 000 000 0000',
-  email: 'info@euroceramiche-niscemi.it',
-  street: '[Via e numero civico]',
-  vat: '[00000000000]',
-  mapsQuery: 'Euroceramiche Niscemi',
+  whatsapp: '393203513244',               // cellulare usato per WhatsApp (verificare che sia il numero WhatsApp Business)
+  phone: '+39 0933 953210',               // telefono fisso del negozio
+  mobile: '+39 320 351 3244',
+  email: 'infoeuroceramiche@gmail.com',
+  street: 'Via Paolo VI, 23',
+  vat: '01619090853',
+  mapsQuery: 'Euroceramiche, Via Paolo VI 23, 93015 Niscemi CL',
   formEndpoint: '',                       // opzionale: URL Formspree/Netlify per ricevere anche i dati via POST
-  googleReviewsUrl: '',                   // link alla scheda Google con le recensioni (se vuoto: ricerca su Google Maps)
-  // ⚠️ VALORI DI ESEMPIO: sostituirli con i dati reali prima di pubblicare
-  stats: {
-    foundedYear: 1995,                    // anno di apertura → gli anni di attività si calcolano da soli
-    clients: 5000,                        // clienti serviti (circa)
-    rating: 4.9,                          // valutazione media su Google
-    reviews: 120,                         // numero di recensioni su Google
-    showroom: 800                         // metri quadri di showroom
-  }
+  googleReviewsUrl: '',
+  stats: { brands: 23, quote: 0, days: 6, delivery: 100 }   // dati reali dal sito attuale
 };
 
 (() => {
@@ -1305,10 +1331,11 @@ const CONFIG = {
   const waUrl = text => `https://wa.me/${CONFIG.whatsapp}${text ? '?text=' + encodeURIComponent(text) : ''}`;
 
   /* Dati di contatto da CONFIG */
-  const fills = { phone: CONFIG.phone, email: CONFIG.email, street: CONFIG.street, vat: CONFIG.vat, addressShort: `${CONFIG.street.startsWith('[') ? '' : CONFIG.street + ', '}Niscemi (CL)` };
+  const fills = { phone: CONFIG.phone, mobile: CONFIG.mobile, email: CONFIG.email, street: CONFIG.street, vat: CONFIG.vat, addressShort: `${CONFIG.street.startsWith('[') ? '' : CONFIG.street + ', '}Niscemi (CL)` };
   $$('[data-fill]').forEach(el => { const v = fills[el.dataset.fill]; if (v) el.textContent = v; });
   $$('[data-href="tel"]').forEach(a => a.href = 'tel:' + CONFIG.phone.replace(/\s/g, ''));
   $$('[data-href="mail"]').forEach(a => a.href = 'mailto:' + CONFIG.email);
+  $$('[data-href="mobile"]').forEach(a => a.href = 'tel:' + CONFIG.mobile.replace(/\s/g, ''));
   $$('[data-href="maps"]').forEach(a => a.href = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(CONFIG.mapsQuery));
   $$('[data-wa]').forEach(a => a.href = waUrl(a.dataset.wa));
   $$('[data-wa-product]').forEach(a => a.href = waUrl(`Buongiorno, vorrei informazioni e disponibilità per la collezione "${a.dataset.waProduct}".`));
@@ -1316,7 +1343,7 @@ const CONFIG = {
   if (CONFIG.googleReviewsUrl) $$('[data-href="reviews"]').forEach(a => a.href = CONFIG.googleReviewsUrl);
 
   /* Contatori */
-  const statValues = { ...CONFIG.stats, years: new Date().getFullYear() - CONFIG.stats.foundedYear };
+  const statValues = { ...CONFIG.stats };
   const fmtNum = (v, dec) => v.toLocaleString('it-IT', { minimumFractionDigits: dec, maximumFractionDigits: dec });
   const setCount = (el, v) => {
     const dec = +(el.dataset.decimals || 0);
@@ -1324,9 +1351,6 @@ const CONFIG = {
   };
   const counters = $$('[data-count]');
   counters.forEach(el => setCount(el, statValues[el.dataset.count]));
-  $$('[data-fill="founded"]').forEach(el => el.textContent = CONFIG.stats.foundedYear);
-  $$('[data-fill-stat="years"]').forEach(el => el.textContent = statValues.years + ' anni');
-  $$('[data-fill-stat="clients"]').forEach(el => el.textContent = fmtNum(statValues.clients, 0) + '+ clienti');
   const runCounters = () => counters.forEach(el => {
     const target = statValues[el.dataset.count], t0 = performance.now(), dur = 2000;
     const step = now => {
@@ -1561,7 +1585,7 @@ const CONFIG = {
     $('#preventivo').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
     setTimeout(() => $('#q-nome').focus({ preventScroll: true }), reduceMotion ? 0 : 700);
   }));
-  $('[data-pro]').addEventListener('click', () => { $('#c-pro').checked = true; });
+  $('[data-pro]')?.addEventListener('click', () => { $('#c-pro').checked = true; });
 
   /* FAQ */
   $$('.faq-q').forEach(q => q.addEventListener('click', () => {
