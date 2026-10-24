@@ -98,6 +98,66 @@ const CONFIG = {
     $$('[data-status]').forEach(el => { el.dataset.open = open; $('span', el).textContent = open ? 'Showroom aperto ora' : 'Showroom chiuso ora'; });
   }
 
+
+  /* ---------- Effetti di ingresso e di scroll ---------- */
+  const root = document.documentElement;
+  // titoli brevi (≤ 8 parole) parola per parola, conservando <strong>; testo intero per gli screen reader
+  $$('h1, .head h2, .intro-text h2, .prose h2, .band h2, .quote-aside h2').forEach(h => {
+    const words = h.textContent.trim().split(/\s+/);
+    if (words.length > 8 || reduce) return;
+    h.setAttribute('aria-label', h.textContent.replace(/\s+/g, ' ').trim());
+    let k = 0;
+    const wrap = node => [...node.childNodes].forEach(n => {
+      if (n.nodeType === 3) {
+        const f = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(t => {
+          if (!t) return;
+          if (/^\s+$/.test(t)) { f.append(' '); return; }
+          const w = document.createElement('span'); w.className = 'w'; w.setAttribute('aria-hidden', 'true');
+          const i = document.createElement('span'); i.textContent = t; i.style.setProperty('--wi', k++);
+          w.append(i); f.append(w);
+        });
+        n.replaceWith(f);
+      } else if (n.nodeType === 1) wrap(n);
+    });
+    wrap(h); h.classList.add('words');
+    if (h.matches('h1')) h.style.setProperty('--wd', '250ms');
+  });
+  // foto: svelamento dal basso
+  $$('.frame').forEach(f => f.setAttribute('data-clip', ''));
+  // celle dei marchi a cascata
+  $$('.brands').forEach(u => $$('li', u).forEach((li, k) => li.style.setProperty('--bi', k)));
+
+  const fx = new IntersectionObserver(en => en.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-in'); fx.unobserve(e.target); } }), { rootMargin: '0px 0px -12% 0px' });
+  $$('.words, [data-clip], .offset, .service, .brands').forEach(el => { if (!el.closest('.hero')) fx.observe(el); });
+
+  // apertura: header, titolo e foto dell'hero
+  const start = () => {
+    root.classList.add('is-loaded');
+    $$('.hero .words, .page-head .words, .hero [data-clip]').forEach(el => el.classList.add('is-in'));
+  };
+  if (reduce) start(); else requestAnimationFrame(() => requestAnimationFrame(start));
+
+  // barra di avanzamento, parallasse leggera e cubo che ruota (un solo ciclo, solo se serve)
+  const bar = document.createElement('div'); bar.className = 'progress'; bar.setAttribute('aria-hidden', 'true'); document.body.append(bar);
+  const frames = $$('[data-clip]').filter(f => !f.closest('.hero')), cubes = $$('.band svg.cube, .quote-aside svg.cube');
+  let ticking = false;
+  const onFx = () => {
+    ticking = false;
+    const vh = innerHeight, y = scrollY;
+    bar.style.setProperty('--sp', (y / Math.max(1, document.documentElement.scrollHeight - vh)).toFixed(4));
+    if (reduce) return;
+    frames.forEach(f => {
+      const r = f.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) return;
+      const c = (r.top + r.height / 2 - vh / 2) / vh;          // -0.5 … 0.5 circa
+      $('img', f)?.style.setProperty('--py', (c * -28).toFixed(1) + 'px');
+    });
+    cubes.forEach(c => c.style.setProperty('--rot', (y * .12 % 360).toFixed(1) + 'deg'));
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onFx); } }, { passive: true });
+  onFx();
+
   /* Comparsa allo scroll */
   const io = new IntersectionObserver(en => en.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
   $$('[data-reveal]').forEach(el => io.observe(el));

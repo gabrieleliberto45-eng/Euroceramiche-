@@ -315,6 +315,62 @@ fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
 .toast.is-on { opacity: 1; transform: none; }
 @media (max-width: 760px) { .toast { bottom: calc(80px + env(safe-area-inset-bottom)); } }
 
+/* ==========================================================================
+   Effetti di ingresso e di scroll (skill: expo.out 400–700ms, titoli brevi
+   parola per parola, spostamenti piccoli, tutto visibile senza JS,
+   nessun effetto con prefers-reduced-motion)
+   ========================================================================== */
+:root { --ease-expo: cubic-bezier(.16, 1, .3, 1); }
+
+/* barra di avanzamento dorata */
+.progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 60; background: var(--gold); transform-origin: left; transform: scaleX(var(--sp, 0)); pointer-events: none; }
+
+/* apertura della pagina */
+.js .header { transform: translateY(-100%); transition: transform 700ms var(--ease-expo), border-color var(--t-base) var(--ease); }
+.js.is-loaded .header { transform: none; }
+.js .hero .slides, .js .page-hero-img { clip-path: inset(0 0 0 100%); transition: clip-path 1200ms var(--ease-expo) 150ms; }
+.js.is-loaded .hero .slides, .js.is-loaded .page-hero-img { clip-path: inset(0 0 0 0); }
+.js .hero .slide.is-active img { transform: scale(1.18); }
+.js.is-loaded .hero .slide.is-active img { transform: scale(1); transition: transform 2400ms var(--ease-expo); }
+.js .slides-ui { opacity: 0; transition: opacity 600ms var(--ease) 1100ms; }
+.js.is-loaded .slides-ui { opacity: 1; }
+
+/* titoli che salgono parola per parola */
+.words .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .08em; margin-bottom: -.08em; }
+.words .w > span { display: inline-block; transform: translateY(105%); transition: transform 700ms var(--ease-expo); transition-delay: calc(var(--wi) * 55ms + var(--wd, 0ms)); }
+.words.is-in .w > span { transform: none; }
+
+/* foto che si svelano dal basso e si assestano */
+.js [data-clip] { clip-path: inset(100% 0 0 0); transition: clip-path 1000ms var(--ease-expo); }
+.js [data-clip].is-in { clip-path: inset(0 0 0 0); }
+.js [data-clip] img { transform: translateY(var(--py, 0px)) scale(1.18); transition: transform 1400ms var(--ease-expo); }
+.js [data-clip].is-in img { transform: translateY(var(--py, 0px)) scale(1.06); }
+@media (hover: hover) and (pointer: fine) { .js .cat:hover [data-clip].is-in img { transform: translateY(var(--py, 0px)) scale(1.1); } }
+
+/* quadrato nero del marchio che entra dietro la foto */
+.js .offset::before { transform: scale(0); transform-origin: top left; transition: transform 700ms var(--ease-expo) 350ms; }
+.js .offset.is-in::before { transform: scale(1); }
+
+/* icone dei servizi che si disegnano */
+.js .service svg * { stroke-dasharray: 80; stroke-dashoffset: 80; transition: stroke-dashoffset 1200ms var(--ease-expo); transition-delay: calc(var(--i, 0) * 120ms + 200ms); }
+.js .service.is-in svg * { stroke-dashoffset: 0; }
+
+/* cubo che ruota con lo scroll */
+.band svg.cube, .quote-aside svg.cube { transform: rotate(var(--rot, 0deg)); }
+
+/* griglia marchi: le celle compaiono a cascata */
+.js .brands li { opacity: 0; transform: translateY(10px); transition: opacity 500ms var(--ease-expo), transform 500ms var(--ease-expo), background-color var(--t-base) var(--ease), color var(--t-base) var(--ease); transition-delay: calc(var(--bi, 0) * 50ms); }
+.js .is-in .brands li, .js .brands.is-in li { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .header, .js .hero .slides, .js .page-hero-img, .js [data-clip], .js .offset::before, .js .brands li, .js .slides-ui { transform: none !important; clip-path: none !important; opacity: 1 !important; }
+  .js [data-clip] img, .js .hero .slide img { transform: none !important; }
+  .words .w > span { transform: none !important; }
+  .js .service svg * { stroke-dashoffset: 0 !important; }
+  .band svg.cube, .quote-aside svg.cube { transform: none !important; }
+  .progress { display: none; }
+}
+
 /* ---------- comparsa allo scroll: stagger standard (skill: 300–450ms) ---------- */
 .js [data-reveal] { opacity: 0; transform: translateY(16px); transition: opacity 450ms var(--ease), transform 450ms var(--ease); transition-delay: calc(var(--i, 0) * 60ms); }
 .js [data-reveal].is-in { opacity: 1; transform: none; }
