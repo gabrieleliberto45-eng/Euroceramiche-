@@ -8,6 +8,16 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [x] 2026-11-22 La peste nera e la parola quarantena (storia)
 - [x] 2026-11-23 Göbekli Tepe, il tempio più antico (misteri)
 
+## Top 5 (mercoledì e sabato alle 18:00)
+- [ ] Top 5 invenzioni romane che usi ancora: cemento, giornale (Acta Diurna), riscaldamento a pavimento (ipocausto), strade lastricate, calendario giuliano.
+- [ ] Top 5 misteri irrisolti: manoscritto Voynich, colonia di Roanoke, Mary Celeste, passo Dyatlov (teorie), meccanismo di Antikythera (come fu possibile).
+- [ ] Top 5 animali più antichi della Terra: spugne, meduse, limuli (~450 milioni di anni), squali, coccodrilli (presentare come lignaggi antichissimi).
+- [ ] Top 5 miti storici falsi: Napoleone basso, elmi vichinghi con le corna, "brioche" di Maria Antonietta, Colombo e la Terra piatta, Nerone che suona mentre Roma brucia.
+- [ ] Top 5 luoghi abbandonati più inquietanti d'Italia: Craco (Basilicata), Consonno (Lombardia), Poveglia (Venezia), Balestrino (Liguria), Pentedattilo (Calabria).
+- [ ] Top 5 record del corpo umano: osso più forte (femore), muscolo più forte per dimensione (massetere), il cervello usa ~20% dell'energia, ~37 mila miliardi di cellule, lo stomaco rinnova il rivestimento in pochi giorni.
+- [ ] Top 5 armi antiche geniali: fuoco greco, balista, testuggine romana, artiglio di Archimede (manus ferrea, a Siracusa), arco lungo inglese.
+- [ ] Top 5 scoperte fatte per sbaglio: penicillina (Fleming 1928), forno a microonde (Spencer 1945), raggi X (Röntgen 1895), Post-it (3M), vulcanizzazione della gomma (Goodyear).
+
 ## Storia
 - [x] 2026-11-23 Il medico della peste: la maschera a becco è del Seicento (Charles de Lorme, ~1619), non della peste nera del 1348.
 - [ ] Pompei: i Romani non sapevano che il Vesuvio fosse un vulcano attivo; Plinio il Giovane descrive l'eruzione del 79 d.C.

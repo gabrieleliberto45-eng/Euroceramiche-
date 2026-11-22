@@ -11,6 +11,17 @@ per il **giorno dopo** alle **13:00, 18:00, 21:00** (Europe/Rome) su YouTube Sho
 - Max 8 job immagini in parallelo: inviare in gruppi da 8.
 - Budget: ~25 crediti/giorno. Se il saldo Higgsfield è < 30, NON produrre: fermarsi e segnalarlo.
 
+## Formato Top 5 (due volte a settimana)
+Quando il giorno di pubblicazione (il giorno DOPO l'esecuzione) è **mercoledì o sabato**, lo Short delle **18:00**
+è una **Top 5** presa dalla sezione "Top 5" di `topics.md` (al posto dell'argomento singolo di quella categoria).
+- Struttura (45-58 s): apertura ("Cinque ... che non conoscevi. Resta fino al numero uno."), poi dal **numero cinque
+  al numero uno**, 1-2 frasi ciascuno, il più sorprendente per ultimo; chiusura Svelarium.
+- Ogni elemento inizia con la parola del numero ("Numero cinque: ...", ..., "Numero uno: ...") così l'allineamento è facile.
+- 7 scene: 1 = apertura, 2-6 = numeri 5..1, 7 = chiusura (riusa l'immagine dell'apertura). 6 immagini.
+- `HEAD`: scena 1 il titolo della classifica ("TOP 5", "...") ; scene 2-6 il numero grande ("#5", colore g; "#1" colore r)
+  e sotto il nome dell'elemento in 2-4 parole.
+- Titolo YouTube/TikTok: "TOP 5 ... 🤯 #shorts". Stessi controlli di qualità e stesse regole sui fatti.
+
 ## Procedura (una esecuzione = 3 Short)
 1. `cd svelarium && bash setup.sh`
 2. Leggere `topics.md`: scegliere il primo argomento **non usato** per ciascuna categoria (storia, misteri, scienza).
