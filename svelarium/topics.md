@@ -9,7 +9,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [x] 2026-11-23 Göbekli Tepe, il tempio più antico (misteri)
 
 ## Storia
-- [ ] Il medico della peste: la maschera a becco è del Seicento (Charles de Lorme, ~1619), non della peste nera del 1348.
+- [x] 2026-11-23 Il medico della peste: la maschera a becco è del Seicento (Charles de Lorme, ~1619), non della peste nera del 1348.
 - [ ] Pompei: i Romani non sapevano che il Vesuvio fosse un vulcano attivo; Plinio il Giovane descrive l'eruzione del 79 d.C.
 - [ ] Il fuoco greco: arma bizantina (VII sec., attribuita a Callinico), bruciava sull'acqua, ricetta perduta.
 - [ ] I vetrai di Murano: dal 1291 fornaci spostate a Murano; ai maestri vetrai era vietato lasciare la Repubblica.
@@ -37,7 +37,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [ ] La Stele di Rosetta: scoperta nel 1799, permise a Champollion di decifrare i geroglifici nel 1822.
 
 ## Scienza
-- [ ] Il miele non scade: trovati vasi di miele ancora commestibile nelle tombe egizie.
+- [x] 2026-11-23 Il miele non scade: trovati vasi di miele ancora commestibile nelle tombe egizie.
 - [ ] Siamo fatti di polvere di stelle: carbonio, ossigeno, ferro nel corpo sono nati nelle stelle.
 - [ ] I polpi hanno tre cuori e sangue blu (emocianina).
 - [ ] Il tardigrado sopravvive nello spazio (esperimento FOTON-M3, 2007).

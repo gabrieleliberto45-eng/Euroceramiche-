@@ -27,10 +27,19 @@ wn = [norm(w[0]) for w in words]
 starts_idx, pos = [], 0
 for _, spoken, _, _ in LINES:
     first = norm(spoken.split()[0].split("'")[0])
-    while wn[pos] != first:
-        pos += 1
-        if pos >= len(wn): raise SystemExit(f"alignment failed at line starting {spoken!r}: rephrase so it starts with a plain word")
-    starts_idx.append(pos); pos += 1
+    window = range(pos, min(pos + 40, len(wn)))
+    hit = next((i for i in window if wn[i] == first), None)
+    if hit is None:  # whisper may mangle a word ("Negli scavi" -> "Nell'escavi"): fall back to a prefix match
+        hit = next((i for i in window if len(first) >= 3 and wn[i][:3] == first[:3]), None)
+    if hit is None:  # last resort: fuzzy match of the first two words
+        import difflib
+        two = norm("".join(spoken.split()[:2]))
+        scored = [(difflib.SequenceMatcher(None, two, wn[i] + (wn[i + 1] if i + 1 < len(wn) else "")).ratio(), i) for i in window]
+        best = max(scored, default=(0, None))
+        hit = best[1] if best[0] >= 0.7 else None
+    if hit is None:
+        raise SystemExit(f"alignment failed at line starting {spoken!r}: rephrase so it starts with a plain word")
+    starts_idx.append(hit); pos = hit + 1
 timings = []
 for k, si in enumerate(starts_idx):
     end_i = (starts_idx[k + 1] - 1) if k + 1 < len(starts_idx) else len(words) - 1
