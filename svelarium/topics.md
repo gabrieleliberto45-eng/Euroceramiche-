@@ -33,13 +33,13 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 ## Spazio e notizie scientifiche (foto NASA reali; verificare sempre la notizia prima di scriverla)
 - [ ] Voyager 1: l'oggetto umano più lontano, lanciato nel 1977, oltre 24 miliardi di km; ha ancora il Golden Record a bordo.
 - [ ] Su Venere un giorno dura più di un anno (243 giorni terrestri di rotazione contro 225 di rivoluzione).
-- [ ] Olympus Mons su Marte: vulcano alto circa 22 km, quasi tre volte l'Everest.
+- [x] 2026-11-23 (extra) Olympus Mons su Marte: vulcano alto circa 22 km, quasi tre volte l'Everest.
 - [ ] I "Pilastri della Creazione" fotografati da Hubble (1995) e James Webb (2022): culle di nuove stelle.
 - [ ] Encelado, luna di Saturno: geyser d'acqua dal sottosuolo, oceano nascosto (Cassini).
 - [ ] La Luna si allontana dalla Terra di circa 3,8 cm all'anno (misurato con i riflettori laser dell'Apollo).
 - [ ] La Grande Macchia Rossa di Giove: una tempesta più grande della Terra che dura da secoli e si sta restringendo.
 - [ ] Il primo selfie di un buco nero: M87*, Event Horizon Telescope, 2019.
-- [ ] Pale Blue Dot: la foto della Terra scattata da Voyager 1 nel 1990 da 6 miliardi di km.
+- [x] 2026-11-23 (extra) Pale Blue Dot: la foto della Terra scattata da Voyager 1 nel 1990 da 6 miliardi di km.
 - [ ] Notizia recente della settimana (cercare con WebSearch: NASA/ESA/James Webb, ultimi 7 giorni).
 
 ## Storia
@@ -53,10 +53,11 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [ ] Le Vestali: sacerdotesse di Roma; se infrangevano il voto venivano sepolte vive.
 - [ ] Gli acquedotti romani: l'Aqua Appia (312 a.C.) era quasi tutta sotterranea; pendenza minima calcolata.
 - [ ] Il garum: salsa di pesce fermentato amatissima dai Romani, prodotta anche a Pompei.
-- [ ] La Grande Muraglia non si vede dallo spazio a occhio nudo (smentito anche da astronauti cinesi, Yang Liwei 2003).
+- [x] 2026-11-23 (extra) La Grande Muraglia non si vede dallo spazio a occhio nudo (smentito anche da astronauti cinesi, Yang Liwei 2003).
 - [ ] Napoleone non era basso: ~1,69 m, nella media; il mito nasce da pollici francesi vs inglesi e propaganda.
 
 ## Misteri
+- [x] 2026-11-23 (extra) 'Oumuamua, il primo oggetto interstellare (2017).
 - [x] 2026-11-24 Il manoscritto Voynich: pergamena datata al radiocarbonio 1404-1438, scrittura mai decifrata.
 - [ ] La colonia di Roanoke: 1590, coloni scomparsi, parola "CROATOAN" incisa su un palo.
 - [ ] Il meccanismo di Antikythera: trovato nel 1901 in un relitto greco, calcolatore astronomico a ingranaggi (~II-I sec. a.C.).

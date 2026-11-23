@@ -100,7 +100,7 @@ for k in range(NS):
     inputs += ["-i", f"{IMG}/{im_no:02d}.png", "-i", overlay(k + 1)]
     z0, z1 = zz if zz else ((1.0, 1.12) if k % 2 == 0 else (1.12, 1.0))
     z = f"{z0}+({z1 - z0:.3f})*on/{n}"
-    fl.append(f"[{2 * k}:v]scale=2160:3840:force_original_aspect_ratio=increase:flags=lanczos,crop=2160:3840,zoompan=z='{z}':x='(iw-iw/zoom)*{fx}':y='(ih-ih/zoom)*{fy}':d={n}:s={W}x{H}:fps={FPS},setsar=1[b{k}];"
+    fl.append(f"[{2 * k}:v]scale=2160:3840:force_original_aspect_ratio=increase:flags=lanczos,crop=2160:3840:(iw-ow)*{fx}:(ih-oh)*{fy},zoompan=z='{z}':x='(iw-iw/zoom)*{fx}':y='(ih-ih/zoom)*{fy}':d={n}:s={W}x{H}:fps={FPS},setsar=1[b{k}];"
               f"[{2 * k + 1}:v]loop=loop=-1:size=1,trim=duration={dur:.3f},fps={FPS},setpts=PTS-STARTPTS[o{k}];"
               f"[b{k}][o{k}]overlay=0:0:shortest=1[v{k}]")
 fl.append("".join(f"[v{k}]" for k in range(NS)) + f"concat=n={NS}:v=1:a=0,subtitles={OUT}/subs.ass:fontsdir={FONTS}[vid]")
