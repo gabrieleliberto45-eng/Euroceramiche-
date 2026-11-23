@@ -39,7 +39,8 @@ for _, spoken, _, _ in LINES:
         hit = best[1] if best[0] >= 0.7 else None
     if hit is None:
         raise SystemExit(f"alignment failed at line starting {spoken!r}: rephrase so it starts with a plain word")
-    starts_idx.append(hit); pos = hit + 1
+    # skip most of this line's own words, so a repeated word ("tre secondi... Tre") is not matched too early
+    starts_idx.append(hit); pos = hit + max(1, len(spoken.split()) - 1)
 timings = []
 for k, si in enumerate(starts_idx):
     end_i = (starts_idx[k + 1] - 1) if k + 1 < len(starts_idx) else len(words) - 1
@@ -56,7 +57,8 @@ def ts(x):
 cues = []
 for (a, b), (_, _, sub, pause) in zip(timings, LINES):
     a, b = a + 0.05, b - 0.05
-    parts = [p.strip() for p in sub.split("|")]
+    parts = [p.strip() for p in sub.split("|") if p.strip()]
+    if not parts: continue
     tot = sum(len(p) for p in parts); x = a
     for p in parts:
         e = x + (b - a) * len(p) / tot; cues.append([x, e, p]); x = e
