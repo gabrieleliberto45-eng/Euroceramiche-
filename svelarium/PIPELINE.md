@@ -11,6 +11,39 @@ consegnati all'utente come file + testi: li carica lui a mano su YouTube Shorts 
 - Max 8 job immagini in parallelo: inviare in gruppi da 8.
 - Budget: ~25 crediti/giorno. Se il saldo Higgsfield è < 30, NON produrre: fermarsi e segnalarlo.
 
+## Calendario settimanale (giorno di PUBBLICAZIONE = giorno dopo l'esecuzione)
+| Giorno | Slot 1 (12:00) | Slot 2 (19:00) | Slot 3 (21:30) |
+|---|---|---|---|
+| Lunedì, Giovedì | storia | scienza/spazio | **ENIGMA** |
+| Mercoledì, Sabato | storia | **TOP 5** | misteri |
+| Martedì, Venerdì, Domenica | storia | scienza/spazio | misteri |
+Almeno 3 Short a settimana devono essere di **spazio/scienza con foto NASA reali**.
+L'esecuzione della **domenica** prepara anche la **compilation settimanale** (vedi sotto).
+
+## Titoli (formule che funzionano, ispirate ai canali di divulgazione italiani più grandi)
+- "Gli scienziati hanno **appena** scoperto…" / "La NASA ha rilevato…" / "James Webb ha visto qualcosa di **impossibile**…"
+- "**Dopo** 100 / 600 / 2.000 anni, … ha **finalmente** una spiegazione" (usare solo se è vero)
+- "**Perché nessuno** riesce a…" / "Ecco perché…"
+- "Il libro / tempio / cibo che **NESSUNO**…" + una parola emotiva (terrificante, inquietante, impossibile, incredibile)
+- Una o due parole in MAIUSCOLO, massimo un'emoji, ≤ 70 caratteri. Niente promesse false: il titolo deve essere vero.
+- Notizie recenti ("appena", "nuova scoperta"): **verificare con WebSearch** su fonti serie (NASA, ESA, Nature, università,
+  ANSA/Le Scienze) e citare la fonte in descrizione. Se non si trova conferma, cambiare argomento.
+
+## Formato ENIGMA (lunedì e giovedì, slot 21:30)
+- 18-25 s. Apertura: "Solo una persona su dieci risolve questo enigma." → enigma in 2-3 frasi → "Hai tre secondi."
+  → tre scene brevissime con "3", "2", "1" a tutto schermo → "Scrivi la risposta nei commenti." → "La risposta è..."
+  e il video riparte dall'apertura (loop: **la risposta NON si dice mai** nel video).
+- Prendere l'enigma da `topics.md` (sezione Enigmi), che contiene anche la risposta: scriverla in `testi.md` con
+  il consiglio di **fissarla come commento il giorno dopo**.
+- Immagini: illustrative (IA consentita se serve: in quel caso etichetta).
+
+## Compilation settimanale (esecuzione della domenica)
+- Prendere gli Short consegnati negli ultimi 7 giorni (cartelle `work/consegna/`) e unirli con
+  `.venv/bin/python -I compile.py work/consegna/<data>/compilation.mp4 "<titolo 1>" file1.mp4 "<titolo 2>" file2.mp4 ...`
+  (formato 16:9, cartello "#n + titolo" tra un video e l'altro). Ordine: i più forti per primi.
+- Titolo: "N curiosità che non sapevi: storia, misteri e scienza (settimana del GG mese)" o simile; descrizione con
+  l'elenco dei capitoli (timestamp 00:00 ...) e le fonti delle immagini. Consegnarla insieme ai 3 Short del lunedì.
+
 ## Formato Top 5 (due volte a settimana)
 Quando il giorno di pubblicazione (il giorno DOPO l'esecuzione) è **mercoledì o sabato**, lo Short di scienza (o quello della categoria con meno argomenti)
 è una **Top 5** presa dalla sezione "Top 5" di `topics.md` (al posto dell'argomento singolo di quella categoria).
