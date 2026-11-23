@@ -20,7 +20,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 
 ## Storia
 - [x] 2026-11-23 Il medico della peste: la maschera a becco è del Seicento (Charles de Lorme, ~1619), non della peste nera del 1348.
-- [ ] Pompei: i Romani non sapevano che il Vesuvio fosse un vulcano attivo; Plinio il Giovane descrive l'eruzione del 79 d.C.
+- [x] 2026-11-24 Pompei: i Romani non sapevano che il Vesuvio fosse un vulcano attivo; Plinio il Giovane descrive l'eruzione del 79 d.C.
 - [ ] Il fuoco greco: arma bizantina (VII sec., attribuita a Callinico), bruciava sull'acqua, ricetta perduta.
 - [ ] I vetrai di Murano: dal 1291 fornaci spostate a Murano; ai maestri vetrai era vietato lasciare la Repubblica.
 - [ ] Damnatio memoriae: Geta cancellato da Caracalla (212 d.C.), volto rimosso dal tondo Severiano.
@@ -33,7 +33,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [ ] Napoleone non era basso: ~1,69 m, nella media; il mito nasce da pollici francesi vs inglesi e propaganda.
 
 ## Misteri
-- [ ] Il manoscritto Voynich: pergamena datata al radiocarbonio 1404-1438, scrittura mai decifrata.
+- [x] 2026-11-24 Il manoscritto Voynich: pergamena datata al radiocarbonio 1404-1438, scrittura mai decifrata.
 - [ ] La colonia di Roanoke: 1590, coloni scomparsi, parola "CROATOAN" incisa su un palo.
 - [ ] Il meccanismo di Antikythera: trovato nel 1901 in un relitto greco, calcolatore astronomico a ingranaggi (~II-I sec. a.C.).
 - [ ] La Mary Celeste: 1872, trovata alla deriva nell'Atlantico, intatta, senza equipaggio.
@@ -48,7 +48,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 
 ## Scienza
 - [x] 2026-11-23 Il miele non scade: trovati vasi di miele ancora commestibile nelle tombe egizie.
-- [ ] Siamo fatti di polvere di stelle: carbonio, ossigeno, ferro nel corpo sono nati nelle stelle.
+- [x] 2026-11-24 Siamo fatti di polvere di stelle: carbonio, ossigeno, ferro nel corpo sono nati nelle stelle.
 - [ ] I polpi hanno tre cuori e sangue blu (emocianina).
 - [ ] Il tardigrado sopravvive nello spazio (esperimento FOTON-M3, 2007).
 - [ ] Le banane sono leggermente radioattive (potassio-40).
