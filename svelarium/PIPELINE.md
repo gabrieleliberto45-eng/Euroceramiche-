@@ -65,8 +65,10 @@ Quando il giorno di pubblicazione (il giorno DOPO l'esecuzione) è **mercoledì 
     Copiare i 3 video in `work/consegna/<data>/` con nomi chiari (es. `1_storia_pompei.mp4`).
 12. Scrivere `work/consegna/<data>/testi.md` con, per ogni Short: orario consigliato (storia 12:00, scienza 19:00,
     misteri 21:30), titolo YouTube (≤ 70 caratteri, con " #shorts"), titolo TikTok (senza #shorts), descrizione
-    (riassunto + "👉 Iscriviti a Svelarium: ogni giorno un segreto svelato." + "Voce generata con IA. Immagini: <fonti>" (aggiungere "e IA" se ci sono immagini IA) + 6-7 hashtag), tag YouTube, e il promemoria
-    "Contenuti alterati: Sì" (YouTube) / "contenuto IA" (TikTok).
+    (riassunto + "👉 Iscriviti a Svelarium: ogni giorno un segreto svelato." + "Voce generata con IA. Immagini: <fonti>" (aggiungere "e IA" se ci sono immagini IA) + 6-7 hashtag), tag YouTube, e il promemoria:
+    se il video contiene immagini IA realistiche → "Contenuti alterati: Sì" (YouTube) / "contenuto IA" (TikTok);
+    se le immagini sono tutte reali e solo la voce narrante è sintetica (voce generica, non di una persona reale)
+    l'etichetta non è richiesta da YouTube.
 13. Inviare all'utente i 3 video e `testi.md` con SendUserFile (status proactive), più un breve messaggio in chat
     con titoli e orari consigliati. Evitare argomenti simili a meno di 3-4 giorni di distanza da quelli recenti.
 14. Segnare gli argomenti usati in `topics.md` (data + titolo), committare spec e topics, push sul ramo.
