@@ -47,7 +47,7 @@ for k, si in enumerate(starts_idx):
 subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", os.environ["VOICE"], "-af",
                 "highpass=f=60,acompressor=threshold=-20dB:ratio=2.5:attack=5:release=80,apad=pad_dur=0.6",
                 "-ar", "44100", f"{OUT}/voice.wav"], check=True)
-TOTAL = words[-1][2] + 0.6
+TOTAL = words[-1][2] + float(ns.get("TAIL", 0.6))
 
 # --- subtitles (ASS) ------------------------------------------------------------
 def ts(x):
@@ -98,12 +98,12 @@ for k in range(NS):
     inputs += ["-i", f"{IMG}/{im_no:02d}.png", "-i", overlay(k + 1)]
     z0, z1 = zz if zz else ((1.0, 1.12) if k % 2 == 0 else (1.12, 1.0))
     z = f"{z0}+({z1 - z0:.3f})*on/{n}"
-    fl.append(f"[{2 * k}:v]scale=2160:3840:flags=lanczos,zoompan=z='{z}':x='(iw-iw/zoom)*{fx}':y='(ih-ih/zoom)*{fy}':d={n}:s={W}x{H}:fps={FPS},setsar=1[b{k}];"
+    fl.append(f"[{2 * k}:v]scale=2160:3840:force_original_aspect_ratio=increase:flags=lanczos,crop=2160:3840,zoompan=z='{z}':x='(iw-iw/zoom)*{fx}':y='(ih-ih/zoom)*{fy}':d={n}:s={W}x{H}:fps={FPS},setsar=1[b{k}];"
               f"[{2 * k + 1}:v]loop=loop=-1:size=1,trim=duration={dur:.3f},fps={FPS},setpts=PTS-STARTPTS[o{k}];"
-              f"[b{k}][o{k}]overlay=0:0:shortest=1,fade=t=in:st=0:d=0.15[v{k}]")
+              f"[b{k}][o{k}]overlay=0:0:shortest=1[v{k}]")
 fl.append("".join(f"[v{k}]" for k in range(NS)) + f"concat=n={NS}:v=1:a=0,subtitles={OUT}/subs.ass:fontsdir={FONTS}[vid]")
 nv = 2 * NS
-fl.append(f"[{nv + 1}:a]volume=0.10,afade=t=in:d=1,afade=t=out:st={TOTAL - 2}:d=2[bgm];[{nv}:a][bgm]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5[aud]")
+fl.append(f"[{nv + 1}:a]volume=0.10,afade=t=in:d=0.3,afade=t=out:st={TOTAL - 0.6}:d=0.6[bgm];[{nv}:a][bgm]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5[aud]")
 cmd = ["ffmpeg", "-loglevel", "error", "-y", *inputs, "-i", f"{OUT}/voice.wav", "-stream_loop", "-1", "-i", SONG,
        "-filter_complex", ";".join(fl), "-map", "[vid]", "-map", "[aud]", "-t", f"{TOTAL:.3f}",
        "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k",
