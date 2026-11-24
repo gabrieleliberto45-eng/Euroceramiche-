@@ -107,7 +107,9 @@ Quando il giorno di pubblicazione (il giorno DOPO l'esecuzione) è **mercoledì 
 10. **Controllo qualità**: estrarre un fotogramma per scena e guardarli. Verificare: durata 28-45 s, primo e ultimo fotogramma uguali (loop),
     titoli leggibili, sottotitoli corretti e a tempo, immagini senza difetti evidenti. Se un controllo fallisce
     e non si riesce a correggere, **non pubblicare** quello Short.
-11. **NON programmare in Metricool** (dal 23/11 l'utente carica a mano: i video caricati via API rendevano meno).
+11. **TikTok: programmare IO in Metricool** (dal 24/11, richiesta dell'utente) solo rete `tiktok`, brand `8287937`, con `tiktokData.title`,
+    `isAigc false` (immagini reali), agli orari del calendario. Video caricati prima con Higgsfield media_upload (URL cloudfront).
+    **YouTube: NON programmare** (lo carica l'utente a mano).
     Copiare i 3 video in `work/consegna/<data>/` con nomi chiari (es. `1_storia_pompei.mp4`).
 12. Scrivere `work/consegna/<data>/testi.md` con, per ogni Short: orario consigliato (storia 12:00, scienza 19:00,
     misteri 21:30), titolo YouTube (≤ 70 caratteri, con " #shorts"), titolo TikTok (senza #shorts), descrizione
