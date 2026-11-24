@@ -9,7 +9,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [x] 2026-11-23 Göbekli Tepe, il tempio più antico (misteri)
 
 ## Top 5 (mercoledì e sabato alle 18:00)
-- [ ] Top 5 invenzioni romane che usi ancora: cemento, giornale (Acta Diurna), riscaldamento a pavimento (ipocausto), strade lastricate, calendario giuliano.
+- [x] 2026-11-25 Top 5 invenzioni romane che usi ancora: cemento, giornale (Acta Diurna), riscaldamento a pavimento (ipocausto), strade lastricate, calendario giuliano.
 - [ ] Top 5 misteri irrisolti: manoscritto Voynich, colonia di Roanoke, Mary Celeste, passo Dyatlov (teorie), meccanismo di Antikythera (come fu possibile).
 - [ ] Top 5 animali più antichi della Terra: spugne, meduse, limuli (~450 milioni di anni), squali, coccodrilli (presentare come lignaggi antichissimi).
 - [ ] Top 5 miti storici falsi: Napoleone basso, elmi vichinghi con le corna, "brioche" di Maria Antonietta, Colombo e la Terra piatta, Nerone che suona mentre Roma brucia.
@@ -54,7 +54,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [ ] Gli acquedotti romani: l'Aqua Appia (312 a.C.) era quasi tutta sotterranea; pendenza minima calcolata.
 - [ ] Il garum: salsa di pesce fermentato amatissima dai Romani, prodotta anche a Pompei.
 - [x] 2026-11-23 (extra) La Grande Muraglia non si vede dallo spazio a occhio nudo (smentito anche da astronauti cinesi, Yang Liwei 2003).
-- [ ] Napoleone non era basso: ~1,69 m, nella media; il mito nasce da pollici francesi vs inglesi e propaganda.
+- [x] 2026-11-25 Napoleone non era basso: ~1,69 m, nella media; il mito nasce da pollici francesi vs inglesi e propaganda.
 
 ## Misteri
 - [x] 2026-11-23 (extra) 'Oumuamua, il primo oggetto interstellare (2017).
@@ -65,7 +65,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [ ] Il passo Dyatlov: 1959, nove escursionisti morti, tende tagliate dall'interno; studio 2021 ipotizza valanga a lastroni.
 - [ ] La Sindone di Torino: radiocarbonio 1988 la data al 1260-1390; dibattito ancora aperto (tono rispettoso).
 - [ ] Azzurrina e il castello di Montebello: leggenda di una bambina scomparsa nel 1375 (presentare come leggenda).
-- [ ] Le linee di Nazca: geoglifi in Perù, ~2.000 anni, visibili bene solo dall'alto; scopo dibattuto.
+- [x] 2026-11-25 Le linee di Nazca: geoglifi in Perù, ~2.000 anni, visibili bene solo dall'alto; scopo dibattuto.
 - [ ] La città sommersa di Baia: villa e terme romane sott'acqua per il bradisismo dei Campi Flegrei.
 - [ ] Il Mare di Sargasso / Triangolo delle Bermuda: statisticamente non più pericoloso di altre rotte (smontare il mito).
 - [ ] I moai dell'Isola di Pasqua hanno il corpo: molti sono sepolti fino alle spalle.

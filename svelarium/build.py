@@ -81,7 +81,7 @@ def overlay(scene):
         d.line([(0, y), (W, y)], fill=(0, 0, 0, int(190 * (1 - y / 760) ** 1.4)))
     for y in range(1200, H):
         d.line([(0, y), (W, y)], fill=(0, 0, 0, int(170 * ((y - 1200) / (H - 1200)) ** 1.6)))
-    y = 190
+    y = ns.get("HEAD_Y", {}).get(scene, 190)
     for text, size, c in HEAD[scene]:
         f = ImageFont.truetype(BOLD, size)
         while d.textlength(text, font=f) > W - 100: size -= 4; f = ImageFont.truetype(BOLD, size)

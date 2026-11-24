@@ -78,12 +78,15 @@ Quando il giorno di pubblicazione (il giorno DOPO l'esecuzione) è **mercoledì 
      Cercare gli id con `https://images-api.nasa.gov/search?q=<query>&media_type=image`
      → `links[0].href` sostituendo `~medium`/`~thumb` con `~orig`.
    - **Yale/IIIF e altre biblioteche** (manoscritti, documenti): manifest IIIF → `<service>/full/!2000,2000/0/default.jpg`.
-   - **Europeana** (musei europei): `https://api.europeana.eu/record/v2/search.json?wskey=api2demo&query=<q>&reusability=open&media=true`
+   - **Europeana**: `python3 -I fetch_europeana.py <dir> "<query>" <indici> ["&qf=DATA_PROVIDER:%22Rijksmuseum%22"]`
+     (stampa titolo, fornitore e licenza da citare). Rijksmuseum e SMK hanno moltissimo materiale storico in pubblico dominio.
+     Endpoint: `https://api.europeana.eu/record/v2/search.json?wskey=api2demo&query=<q>&reusability=open&media=true`
      → `edmIsShownBy`; usare solo licenze PD/CC0/CC-BY (citare l'autore in descrizione se CC-BY).
    - Se servono comunque immagini IA: Higgsfield `gpt_image_2_6` 9:16 (prompt in inglese, "photorealistic
      cinematic ..., no text"); in quel caso nel video ci sono immagini IA e l'etichetta va messa.
    `build.py` ritaglia da solo qualsiasi formato a 9:16: il ritaglio e lo zoom seguono il punto (fx, fy) di `SCENE_IMG`
    (0 = sinistra/alto, 1 = destra/basso) → per immagini orizzontali puntare fx sul soggetto.
+   Se il titolo copre un volto, nello spec: `HEAD_Y = {scena: 1060}` sposta il titolo in basso (sopra i sottotitoli).
    Attenzione alle licenze: ESA/ESO/Hubble sono spesso CC BY 4.0 (citare l'autore); Library of Congress oggi può
    bloccare con verifica anti-bot (non aggirarla: usare altre fonti); Wellcome Collection (IIIF) è CC BY 4.0.
    Nella descrizione indicare la fonte delle immagini reali (es. "Immagini: Library of Congress, NASA").
