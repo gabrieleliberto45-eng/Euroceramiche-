@@ -3,6 +3,8 @@
 Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 
 ## Già pubblicati
+- [x] ~2026-11-20 Il lago Nyos, il lago che uccise nel silenzio (1986, CO2) — 1.570 views
+- [x] ~2026-11-21 5 fatti scientifici che sembrano falsi (Top 5) — 1.864 views
 - [x] 2026-11-22 Il velarium del Colosseo (storia)
 - [x] 2026-11-22 Il cemento romano si ripara da solo (scienza)
 - [x] 2026-11-22 La peste nera e la parola quarantena (storia)
@@ -36,7 +38,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [x] 2026-11-23 (extra) Olympus Mons su Marte: vulcano alto circa 22 km, quasi tre volte l'Everest.
 - [ ] I "Pilastri della Creazione" fotografati da Hubble (1995) e James Webb (2022): culle di nuove stelle.
 - [ ] Encelado, luna di Saturno: geyser d'acqua dal sottosuolo, oceano nascosto (Cassini).
-- [ ] La Luna si allontana dalla Terra di circa 3,8 cm all'anno (misurato con i riflettori laser dell'Apollo).
+- [x] 2026-11-2x (già sul canale, 2.265 views: il migliore) La Luna si allontana dalla Terra di circa 3,8 cm all'anno (misurato con i riflettori laser dell'Apollo).
 - [ ] La Grande Macchia Rossa di Giove: una tempesta più grande della Terra che dura da secoli e si sta restringendo.
 - [ ] Il primo selfie di un buco nero: M87*, Event Horizon Telescope, 2019.
 - [x] 2026-11-23 (extra) Pale Blue Dot: la foto della Terra scattata da Voyager 1 nel 1990 da 6 miliardi di km.

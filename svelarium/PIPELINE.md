@@ -60,7 +60,8 @@ Quando il giorno di pubblicazione (il giorno DOPO l'esecuzione) è **mercoledì 
 2. Leggere `topics.md`: scegliere il primo argomento **non usato** per ciascuna categoria (storia, misteri, scienza).
    Se una categoria è esaurita, aggiungere nuovi argomenti solidi alla lista prima di procedere.
 3. Per ciascun argomento scrivere il testo nel **formato corto con loop** (dal 23/11):
-   - **22-30 secondi** (~60-80 parole), 8-9 frasi brevi: una scena ogni 2-3 s;
+   - **30-40 secondi** (~85-110 parole), 10-12 frasi brevi: una scena ogni 2-3 s. (Dati canale 24/11: i migliori
+     sono di 45-55 s con 30-38 s di visione media; spazio/scienza e "fatto smentito" rendono di più);
    - prima frase = gancio fortissimo, e il **titolo grande è già nel primo fotogramma**;
    - **niente saluto finale** ("Seguimi su Svelarium" NO): l'ultima frase deve ricollegarsi alla prima
      (es. fine "E dopo seicento anni..." → inizio "Questo libro non lo sa leggere nessuno.");
@@ -98,7 +99,7 @@ Quando il giorno di pubblicazione (il giorno DOPO l'esecuzione) è **mercoledì 
    (`output005.mp3`, `output008.mp3`, `output012.mp3`). I titoli non devono svelare la risposta prima della voce.
    Usare solo caratteri presenti nel font (niente frecce/simboli speciali).
 9. Build: `SPEC=specs/<file>.py IMG=work/<slug>/img VOICE=work/<slug>/voice.mp3 WORDS=work/<slug>/words.json OUT=work/<slug>/out .venv/bin/python -I build.py`
-10. **Controllo qualità**: estrarre un fotogramma per scena e guardarli. Verificare: durata 20-35 s, primo e ultimo fotogramma uguali (loop),
+10. **Controllo qualità**: estrarre un fotogramma per scena e guardarli. Verificare: durata 28-45 s, primo e ultimo fotogramma uguali (loop),
     titoli leggibili, sottotitoli corretti e a tempo, immagini senza difetti evidenti. Se un controllo fallisce
     e non si riesce a correggere, **non pubblicare** quello Short.
 11. **NON programmare in Metricool** (dal 23/11 l'utente carica a mano: i video caricati via API rendevano meno).
