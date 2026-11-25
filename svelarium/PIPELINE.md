@@ -56,8 +56,9 @@ Quando il giorno di pubblicazione (il giorno DOPO l'esecuzione) è **mercoledì 
 - Titolo YouTube/TikTok: "TOP 5 ... 🤯 #shorts". Stessi controlli di qualità e stesse regole sui fatti.
 
 ## Giorni già coperti (aggiornare a ogni consegna)
-- Fino a **sabato 28/11/2026** compreso: pacchetti `2026-11-25/` (25/11) e `9_video_misti/` (26, 27, 28/11).
-- La routine giornaliera produce per il **primo giorno non ancora coperto** (prossimo: domenica 29/11, con la compilation),
+- Fino a **domenica 29/11/2026** compreso: pacchetti `2026-11-25/`, `9_video_misti/` (26-28/11), `2026-11-29/` (TikTok già programmato).
+- La compilation settimanale si fa nell'esecuzione che avviene **di domenica** (calendario reale), con gli Short della settimana.
+- La routine giornaliera produce per il **primo giorno non ancora coperto** (prossimo: lunedì 30/11, con ENIGMA alle 21:30),
   poi aggiorna questa riga. Se i giorni coperti sono già 3 o più avanti, produrre comunque per il primo giorno libero.
 
 ## Procedura (una esecuzione = 3 Short)

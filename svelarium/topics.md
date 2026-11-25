@@ -38,7 +38,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [x] 2026-11-24 (dentro Top 5 Sistema Solare) Su Venere un giorno dura più di un anno (243 giorni terrestri di rotazione contro 225 di rivoluzione).
 - [x] 2026-11-23 (extra) Olympus Mons su Marte: vulcano alto circa 22 km, quasi tre volte l'Everest.
 - [ ] I "Pilastri della Creazione" fotografati da Hubble (1995) e James Webb (2022): culle di nuove stelle.
-- [ ] Encelado, luna di Saturno: geyser d'acqua dal sottosuolo, oceano nascosto (Cassini).
+- [x] 2026-11-25 (per il 29/11) Encelado, luna di Saturno: geyser d'acqua dal sottosuolo, oceano nascosto (Cassini).
 - [x] 2026-11-2x (già sul canale, 2.265 views: il migliore) La Luna si allontana dalla Terra di circa 3,8 cm all'anno (misurato con i riflettori laser dell'Apollo).
 - [x] 2026-11-24 (dentro Top 5) La Grande Macchia Rossa di Giove: una tempesta più grande della Terra che dura da secoli e si sta restringendo.
 - [ ] Il primo selfie di un buco nero: M87*, Event Horizon Telescope, 2019.
@@ -54,7 +54,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [ ] Il primo dentista: denti di ~13.000 anni fa al Riparo Fredian (Toscana) con cavità trattate e riempite di bitume (studio 2017).
 - [ ] Ötzi: trovato nel 1991 al Similaun, ~5.300 anni, 61 tatuaggi, punta di freccia nella spalla sinistra.
 - [x] 2026-11-24 Le Vestali: sacerdotesse di Roma; se infrangevano il voto venivano sepolte vive.
-- [ ] Gli acquedotti romani: l'Aqua Appia (312 a.C.) era quasi tutta sotterranea; pendenza minima calcolata.
+- [x] 2026-11-25 (per il 29/11) Gli acquedotti romani: l'Aqua Appia (312 a.C.) era quasi tutta sotterranea; pendenza minima calcolata.
 - [ ] Il garum: salsa di pesce fermentato amatissima dai Romani, prodotta anche a Pompei.
 - [x] 2026-11-23 (extra) La Grande Muraglia non si vede dallo spazio a occhio nudo (smentito anche da astronauti cinesi, Yang Liwei 2003).
 - [x] 2026-11-25 Napoleone non era basso: ~1,69 m, nella media; il mito nasce da pollici francesi vs inglesi e propaganda.
@@ -69,7 +69,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [ ] La Sindone di Torino: radiocarbonio 1988 la data al 1260-1390; dibattito ancora aperto (tono rispettoso).
 - [ ] Azzurrina e il castello di Montebello: leggenda di una bambina scomparsa nel 1375 (presentare come leggenda).
 - [x] 2026-11-25 Le linee di Nazca: geoglifi in Perù, ~2.000 anni, visibili bene solo dall'alto; scopo dibattuto.
-- [ ] La città sommersa di Baia: villa e terme romane sott'acqua per il bradisismo dei Campi Flegrei.
+- [x] 2026-11-25 (per il 29/11) La città sommersa di Baia: villa e terme romane sott'acqua per il bradisismo dei Campi Flegrei.
 - [ ] Il Mare di Sargasso / Triangolo delle Bermuda: statisticamente non più pericoloso di altre rotte (smontare il mito).
 - [ ] I moai dell'Isola di Pasqua hanno il corpo: molti sono sepolti fino alle spalle.
 - [ ] La Stele di Rosetta: scoperta nel 1799, permise a Champollion di decifrare i geroglifici nel 1822.
