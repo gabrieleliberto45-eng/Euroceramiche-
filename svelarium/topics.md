@@ -46,6 +46,10 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [ ] Notizia recente della settimana (cercare con WebSearch: NASA/ESA/James Webb, ultimi 7 giorni).
 
 ## Storia
+- [ ] PRIORITÀ (il Colosseo è il video migliore, 3k): Perché il Colosseo è pieno di BUCHI? Nel Medioevo strapparono i perni di ferro e bronzo che tenevano i blocchi.
+- [ ] PRIORITÀ: Sotto il Colosseo c'era un mondo nascosto: l'ipogeo, gallerie e montacarichi che facevano spuntare belve dal pavimento.
+- [ ] PRIORITÀ: Il Colosseo si riempiva d'acqua? Le battaglie navali (naumachie) dei primi anni, secondo Cassio Dione (presentarlo come dibattuto).
+- [ ] PRIORITÀ: Il Colosseo non si chiamava Colosseo: era l'Anfiteatro Flavio; il nome viene dalla statua colossale di Nerone lì vicino.
 - [x] 2026-11-23 Il medico della peste: la maschera a becco è del Seicento (Charles de Lorme, ~1619), non della peste nera del 1348.
 - [x] 2026-11-24 Pompei: i Romani non sapevano che il Vesuvio fosse un vulcano attivo; Plinio il Giovane descrive l'eruzione del 79 d.C.
 - [x] 2026-11-24 Il fuoco greco: arma bizantina (VII sec., attribuita a Callinico), bruciava sull'acqua, ricetta perduta.
