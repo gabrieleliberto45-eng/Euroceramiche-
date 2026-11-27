@@ -71,8 +71,10 @@ pianeti visti da vicino), eventualmente 1-2 foto NASA vere se spettacolari. Etic
 Foto d'archivio solo OGNI TANTO (al massimo 1-2 Short a settimana, quando la foto vera è il punto forte, es. una foto
 NASA spettacolare o una foto storica famosa): fanno meno visualizzazioni.
 **Varietà degli argomenti:** mai due Short sullo stesso tema o sulla stessa epoca/luogo nella stessa settimana (es. non
-Roma due volte); alternare epoche (preistoria, Egitto, Grecia, Roma, Medioevo, Rinascimento, '800, '900), continenti,
-spazio, corpo umano, animali, invenzioni, misteri, miti da sfatare. Prima di scegliere, rileggere gli argomenti degli
+Roma due volte); i temi del canale restano SEMPRE e SOLO tre: STORIA, MISTERO, SCIENZA (lo spazio fa parte di scienza).
+La varietà è DENTRO questi tre: storia di epoche e continenti diversi (preistoria, Egitto, Grecia, Roma, Medioevo,
+Rinascimento, '800, '900); misteri diversi (sparizioni, enigmi archeologici, leggende, miti da sfatare); scienza diversa
+(spazio, corpo umano, natura, invenzioni e scoperte). Prima di scegliere, rileggere gli argomenti degli
 ultimi 7 giorni in topics.md. Se una categoria si esaurisce, aggiungere argomenti nuovi e verificati.
 Costo: ~6-8 crediti a Short normale. Lo Short animato del giorno usa **3** clip animate (non 4) per stare nel budget
 (~22 crediti). Totale ~950 crediti/mese: se il saldo scende sotto 150 prima del rinnovo, fare animati solo lun-mer-ven.
