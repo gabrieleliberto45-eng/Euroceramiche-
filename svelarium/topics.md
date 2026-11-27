@@ -26,7 +26,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [ ] Tre stanze: una in fiamme, una con assassini armati, una con leoni che non mangiano da tre anni. Quale scegli? (i leoni: dopo tre anni sono morti)
 - [x] 2026-11-24 Il padre di Maria ha cinque figlie: Lala, Lele, Lili, Lolo. Come si chiama la quinta? (Maria)
 - [ ] In una gara superi il secondo. In che posizione sei? (secondo)
-- [ ] Un aereo cade esattamente sul confine tra Italia e Francia. Dove seppelliscono i sopravvissuti? (i sopravvissuti non si seppelliscono)
+- [x] 2026-11-27 (per il 30/11) Un aereo cade esattamente sul confine tra Italia e Francia. Dove seppelliscono i sopravvissuti? (i sopravvissuti non si seppelliscono)
 - [ ] Più ne togli, più diventa grande. Cos'è? (un buco)
 - [ ] Quanti mesi hanno 28 giorni? (tutti)
 - [ ] Cosa si rompe appena lo nomini? (il silenzio)
@@ -37,7 +37,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [x] 2026-11-24 Voyager 1 (a un giorno-luce, notizia NASA 17/11/2026): l'oggetto umano più lontano, lanciato nel 1977, oltre 24 miliardi di km; ha ancora il Golden Record a bordo.
 - [x] 2026-11-24 (dentro Top 5 Sistema Solare) Su Venere un giorno dura più di un anno (243 giorni terrestri di rotazione contro 225 di rivoluzione).
 - [x] 2026-11-23 (extra) Olympus Mons su Marte: vulcano alto circa 22 km, quasi tre volte l'Everest.
-- [ ] I "Pilastri della Creazione" fotografati da Hubble (1995) e James Webb (2022): culle di nuove stelle.
+- [x] 2026-11-27 (per il 30/11) I "Pilastri della Creazione" fotografati da Hubble (1995) e James Webb (2022): culle di nuove stelle.
 - [x] 2026-11-25 (per il 29/11) Encelado, luna di Saturno: geyser d'acqua dal sottosuolo, oceano nascosto (Cassini).
 - [x] 2026-11-2x (già sul canale, 2.265 views: il migliore) La Luna si allontana dalla Terra di circa 3,8 cm all'anno (misurato con i riflettori laser dell'Apollo).
 - [x] 2026-11-24 (dentro Top 5) La Grande Macchia Rossa di Giove: una tempesta più grande della Terra che dura da secoli e si sta restringendo.
@@ -46,7 +46,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [ ] Notizia recente della settimana (cercare con WebSearch: NASA/ESA/James Webb, ultimi 7 giorni).
 
 ## Storia
-- [ ] PRIORITÀ (il Colosseo è il video migliore, 3k): Perché il Colosseo è pieno di BUCHI? Nel Medioevo strapparono i perni di ferro e bronzo che tenevano i blocchi.
+- [x] 2026-11-27 (per il 30/11) Perché il Colosseo è pieno di BUCHI? Nel Medioevo strapparono i perni di ferro e bronzo che tenevano i blocchi.
 - [ ] PRIORITÀ: Sotto il Colosseo c'era un mondo nascosto: l'ipogeo, gallerie e montacarichi che facevano spuntare belve dal pavimento.
 - [ ] PRIORITÀ: Il Colosseo si riempiva d'acqua? Le battaglie navali (naumachie) dei primi anni, secondo Cassio Dione (presentarlo come dibattuto).
 - [ ] PRIORITÀ: Il Colosseo non si chiamava Colosseo: era l'Anfiteatro Flavio; il nome viene dalla statua colossale di Nerone lì vicino.
