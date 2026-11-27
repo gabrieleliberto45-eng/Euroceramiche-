@@ -61,6 +61,24 @@ Quando il giorno di pubblicazione (il giorno DOPO l'esecuzione) è **mercoledì 
 - La routine giornaliera produce per il **primo giorno non ancora coperto** (prossimo: martedì 1/12),
   poi aggiorna questa riga. Se i giorni coperti sono già 3 o più avanti, produrre comunque per il primo giorno libero.
 
+## Formato ANIMATO (dal 27/11, piace molto all'utente: "stile Colosseo con le persone che si muovono")
+Ogni giorno, da **lunedì a venerdì**, UNO dei 3 Short è animato (sabato e domenica tutti con immagini reali, per risparmiare crediti).
+Il tema ruota, NON solo Roma: lun storia (qualsiasi epoca: Egitto, Grecia, Medioevo, Vichinghi, Rinascimento, guerre...),
+mar misteri (navi fantasma, sparizioni, leggende), mer scienza/spazio (astronauti, missioni, scoperte storiche della scienza),
+gio storia (personaggi famosi), ven misteri o "miti da sfatare". Gli altri 2 Short del giorno restano a immagini reali.
+- Costo massimo ~30 crediti a Short animato: **7 immagini** `gpt_image_2_6` 9:16 (0,75 cr l'una), di cui **4 animate**
+  (le scene più d'azione) con `seedance_2_0`, `mode fast`, `480p`, `duration 5`, `generate_audio false`,
+  `medias [{role: start_image, value: <job immagine>}]` (5 cr l'una); le altre 3 restano immagini ferme con zoom.
+  Max 6 job video in contemporanea (la voce conta): inviare 4 video + voce, poi il resto.
+- Prompt immagini: "Photorealistic cinematic film still, <epoca e luogo>, <scena con persone in azione>, vertical composition,
+  epic historical movie look, no text". Niente sangue, ferite, nudità. Prompt video: cosa si muove (persone, animali, folla,
+  camera lenta), "Realistic motion".
+- In `IMG` le clip animate vanno come `NN.mp4` (stesso numero dell'immagine): `build.py` le usa al posto della foto
+  (rallenta fino a 2x per riempire la scena). L'ultima scena riusa la clip 1 per il loop.
+- Controllare una griglia di fotogrammi (ffmpeg fps=0.5,tile) prima di consegnare: niente volti o cavalli deformati.
+- Etichetta: immagini IA → nel testo "Contenuti alterati: Sì" (YouTube) e "contenuto IA" (TikTok, `isAigc: true` in Metricool).
+- Esempio funzionante: `specs/anim_auriga.py` (l'atleta più pagato della storia).
+
 ## Procedura (una esecuzione = 3 Short)
 1. `cd svelarium && bash setup.sh`
 2. Leggere `topics.md`: scegliere il primo argomento **non usato** per ciascuna categoria (storia, misteri, scienza).

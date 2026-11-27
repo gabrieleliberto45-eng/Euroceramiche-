@@ -2,6 +2,24 @@
 
 Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 
+## ANIMATI (lun-ven, uno al giorno, temi vari: scegliere quello del giorno)
+- [x] 2026-11-27 (prova) L'atleta più pagato della storia: l'auriga Diocle, 35 milioni di sesterzi (storia, Roma).
+- [ ] Storia: la costruzione delle piramidi di Giza: operai pagati (birra e pane), non schiavi (scoperte del villaggio degli operai).
+- [ ] Storia: i Vichinghi arrivarono in America 500 anni prima di Colombo (L'Anse aux Meadows, ~1000 d.C.).
+- [ ] Storia: Cleopatra visse più vicina all'iPhone che alle piramidi (piramidi ~2560 a.C., Cleopatra 69-30 a.C.).
+- [ ] Storia: Leonardo da Vinci scriveva al contrario (scrittura speculare) e progettò macchine volanti.
+- [ ] Storia: Annibale attraversò le Alpi con gli elefanti (218 a.C.).
+- [ ] Storia: la Grande Guerra e la tregua di Natale del 1914 (soldati che giocano a calcio).
+- [ ] Misteri: la Mary Celeste animata? (già fatta statica: scegliere altro) -> la colonia perduta di Roanoke, CROATOAN.
+- [ ] Misteri: il volo 19 nel Triangolo delle Bermuda (1945) e cosa dicono davvero i dati.
+- [ ] Misteri: il faro delle isole Flannan: tre guardiani spariti nel 1900.
+- [ ] Misteri: la maledizione di Tutankhamon (Carter, 1922; morti spiegate) come mito da sfatare.
+- [ ] Spazio/scienza: Apollo 13, "Houston, abbiamo un problema" (1970) e il filtro costruito con nastro adesivo.
+- [ ] Spazio/scienza: Jurij Gagarin, il primo uomo nello spazio (1961), 108 minuti.
+- [ ] Scienza: Archimede e "Eureka" nella vasca da bagno (la corona di Gerone).
+- [ ] Scienza: Marie Curie, unica persona con due Nobel in due scienze diverse; i suoi quaderni sono ancora radioattivi.
+- [ ] Miti da sfatare: i Vichinghi non avevano elmi con le corna.
+
 ## Già pubblicati
 - [x] ~2026-11-20 Il lago Nyos, il lago che uccise nel silenzio (1986, CO2) — 1.570 views
 - [x] ~2026-11-21 5 fatti scientifici che sembrano falsi (Top 5) — 1.864 views
