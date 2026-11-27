@@ -61,15 +61,25 @@ Quando il giorno di pubblicazione (il giorno DOPO l'esecuzione) è **mercoledì 
 - La routine giornaliera produce per il **primo giorno non ancora coperto** (prossimo: martedì 1/12),
   poi aggiorna questa riga. Se i giorni coperti sono già 3 o più avanti, produrre comunque per il primo giorno libero.
 
+## STILE IMMAGINI (dal 27/11, decisione dell'utente: "tutti nello stile del primo Short del Colosseo")
+Gli Short NON animati non usano più foto d'archivio/stampe (all'utente sembrano "noiosi, senza senso"): usano
+**ricostruzioni cinematografiche IA** come il primo video del Colosseo (velarium): `gpt_image_2_6`, 9:16, 7-8 immagini,
+"Photorealistic cinematic film still, <epoca, luogo>, <scena VIVA con persone che fanno qualcosa legato alla frase>,
+dramatic golden light, epic historical movie look, vertical composition, no text". Ogni immagine illustra esattamente la
+frase della sua scena (niente immagini generiche). Per lo spazio: ricostruzioni cinematografiche (astronauti, sonde,
+pianeti visti da vicino), eventualmente 1-2 foto NASA vere se spettacolari. Etichetta "Contenuti alterati: Sì" su TUTTI.
+Costo: ~6-8 crediti a Short normale. Lo Short animato del giorno usa **3** clip animate (non 4) per stare nel budget
+(~22 crediti). Totale ~950 crediti/mese: se il saldo scende sotto 150 prima del rinnovo, fare animati solo lun-mer-ven.
+
 ## Formato ANIMATO (dal 27/11, piace molto all'utente: "stile Colosseo con le persone che si muovono")
 Ogni giorno, da **lunedì a venerdì**, UNO dei 3 Short è animato (sabato e domenica tutti con immagini reali, per risparmiare crediti).
 Il tema ruota, NON solo Roma: lun storia (qualsiasi epoca: Egitto, Grecia, Medioevo, Vichinghi, Rinascimento, guerre...),
 mar misteri (navi fantasma, sparizioni, leggende), mer scienza/spazio (astronauti, missioni, scoperte storiche della scienza),
 gio storia (personaggi famosi), ven misteri o "miti da sfatare". Gli altri 2 Short del giorno restano a immagini reali.
-- Costo massimo ~30 crediti a Short animato: **7 immagini** `gpt_image_2_6` 9:16 (0,75 cr l'una), di cui **4 animate**
+- Costo massimo ~30 crediti a Short animato: **7 immagini** `gpt_image_2_6` 9:16 (0,75 cr l'una), di cui **3 animate**
   (le scene più d'azione) con `seedance_2_0`, `mode fast`, `480p`, `duration 5`, `generate_audio false`,
   `medias [{role: start_image, value: <job immagine>}]` (5 cr l'una); le altre 3 restano immagini ferme con zoom.
-  Max 6 job video in contemporanea (la voce conta): inviare 4 video + voce, poi il resto.
+  Max 6 job video in contemporanea (la voce conta): inviare 3 video + voce, poi il resto.
 - Prompt immagini: "Photorealistic cinematic film still, <epoca e luogo>, <scena con persone in azione>, vertical composition,
   epic historical movie look, no text". Niente sangue, ferite, nudità. Prompt video: cosa si muove (persone, animali, folla,
   camera lenta), "Realistic motion".
@@ -93,7 +103,7 @@ gio storia (personaggi famosi), ven misteri o "miti da sfatare". Gli altri 2 Sho
    - **solo fatti consolidati**; teorie come teorie; numeri **in lettere** nel testo per la voce;
    - ogni riga di `LINES` deve iniziare con una **parola normale** (non un numero), e la parola iniziale
      non deve comparire nella riga precedente (allineamento).
-4. Immagini: **prima le REALI**, l'IA solo dove non esiste niente di reale.
+4. Immagini: vedi "STILE IMMAGINI" sopra (ricostruzioni IA cinematografiche). Le fonti reali qui sotto servono solo come extra.
    Fonti raggiungibili (Wikimedia/Met/Pexels NON funzionano da qui):
    - **Library of Congress** (storia, luoghi, foto d'epoca e photochrom a colori ~1890-1900, pubblico dominio):
      `https://www.loc.gov/photos/?q=<query>&fo=json&c=20` → `image_url`; versione grande: sostituire
