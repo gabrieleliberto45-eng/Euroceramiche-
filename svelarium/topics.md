@@ -10,7 +10,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [ ] Storia: Leonardo da Vinci scriveva al contrario (scrittura speculare) e progettò macchine volanti.
 - [ ] Storia: Annibale attraversò le Alpi con gli elefanti (218 a.C.).
 - [ ] Storia: la Grande Guerra e la tregua di Natale del 1914 (soldati che giocano a calcio).
-- [ ] Misteri: la Mary Celeste animata? (già fatta statica: scegliere altro) -> la colonia perduta di Roanoke, CROATOAN.
+- [ ] (Roanoke usato statico il 27/11: per l'animato scegliere altro) Misteri: la Mary Celeste animata? (già fatta statica: scegliere altro) -> la colonia perduta di Roanoke, CROATOAN.
 - [ ] Misteri: il volo 19 nel Triangolo delle Bermuda (1945) e cosa dicono davvero i dati.
 - [ ] Misteri: il faro delle isole Flannan: tre guardiani spariti nel 1900.
 - [ ] Misteri: la maledizione di Tutankhamon (Carter, 1922; morti spiegate) come mito da sfatare.
@@ -84,7 +84,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 ## Misteri
 - [x] 2026-11-23 (extra) 'Oumuamua, il primo oggetto interstellare (2017).
 - [x] 2026-11-24 Il manoscritto Voynich: pergamena datata al radiocarbonio 1404-1438, scrittura mai decifrata.
-- [ ] La colonia di Roanoke: 1590, coloni scomparsi, parola "CROATOAN" incisa su un palo.
+- [x] (27/11 statico IA) La colonia di Roanoke: 1590, coloni scomparsi, parola "CROATOAN" incisa su un palo.
 - [ ] Il meccanismo di Antikythera: trovato nel 1901 in un relitto greco, calcolatore astronomico a ingranaggi (~II-I sec. a.C.).
 - [x] 2026-11-24 La Mary Celeste: 1872, trovata alla deriva nell'Atlantico, intatta, senza equipaggio.
 - [ ] Il passo Dyatlov: 1959, nove escursionisti morti, tende tagliate dall'interno; studio 2021 ipotizza valanga a lastroni.
