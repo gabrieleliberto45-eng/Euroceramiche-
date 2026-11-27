@@ -97,6 +97,17 @@ inputs, fl = [], []
 for k in range(NS):
     dur = bounds[k + 1] - bounds[k]; n = int(round(dur * FPS))
     im_no, fx, fy, *zz = SCENE_IMG[k + 1]
+    mp4 = f"{IMG}/{im_no:02d}.mp4"
+    if os.path.exists(mp4):  # animated scene: the clip, slowed down (at most 2x) to fill the scene, then looped
+        clen = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", mp4],
+                                    capture_output=True, text=True).stdout.strip() or 5)
+        slow = min(2.0, max(1.0, dur / clen))
+        inputs += ["-stream_loop", "-1", "-i", mp4, "-i", overlay(k + 1)]
+        fl.append(f"[{2 * k}:v]setpts={slow:.3f}*(PTS-STARTPTS),scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,"
+                  f"crop={W}:{H}:(iw-ow)*{fx}:(ih-oh)*{fy},fps={FPS},trim=duration={dur:.3f},setpts=PTS-STARTPTS,setsar=1[b{k}];"
+                  f"[{2 * k + 1}:v]loop=loop=-1:size=1,trim=duration={dur:.3f},fps={FPS},setpts=PTS-STARTPTS[o{k}];"
+                  f"[b{k}][o{k}]overlay=0:0:shortest=1[v{k}]")
+        continue
     inputs += ["-i", f"{IMG}/{im_no:02d}.png", "-i", overlay(k + 1)]
     z0, z1 = zz if zz else ((1.0, 1.12) if k % 2 == 0 else (1.12, 1.0))
     z = f"{z0}+({z1 - z0:.3f})*on/{n}"
