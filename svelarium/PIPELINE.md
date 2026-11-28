@@ -56,9 +56,9 @@ Quando il giorno di pubblicazione (il giorno DOPO l'esecuzione) è **mercoledì 
 - Titolo YouTube/TikTok: "TOP 5 ... 🤯 #shorts". Stessi controlli di qualità e stesse regole sui fatti.
 
 ## Giorni già coperti (aggiornare a ogni consegna)
-- Fino a **lunedì 30/11/2026** compreso: pacchetti `2026-11-25/`, `9_video_misti/` (26-28/11), `2026-11-29/`, `2026-11-30/` (TikTok già programmato).
+- Fino a **martedì 1/12/2026** compreso: pacchetti `2026-11-25/`, `9_video_misti/` (26-28/11), `2026-11-29/`, `2026-11-30/`, `2026-12-01/` (TikTok già programmato). Extra 27/11 non programmati: `2026-11-27_extra/` (Roanoke, polpo).
 - La compilation settimanale si fa nell'esecuzione che avviene **di domenica** (calendario reale), con gli Short della settimana.
-- La routine giornaliera produce per il **primo giorno non ancora coperto** (prossimo: martedì 1/12),
+- La routine giornaliera produce per il **primo giorno non ancora coperto** (prossimo: mercoledì 2/12, con TOP 5; animato = scienza/spazio),
   poi aggiorna questa riga. Se i giorni coperti sono già 3 o più avanti, produrre comunque per il primo giorno libero.
 
 ## STILE IMMAGINI (dal 27/11, decisione dell'utente: "tutti nello stile del primo Short del Colosseo")

@@ -12,7 +12,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [ ] Storia: la Grande Guerra e la tregua di Natale del 1914 (soldati che giocano a calcio).
 - [ ] (Roanoke usato statico il 27/11: per l'animato scegliere altro) Misteri: la Mary Celeste animata? (già fatta statica: scegliere altro) -> la colonia perduta di Roanoke, CROATOAN.
 - [ ] Misteri: il volo 19 nel Triangolo delle Bermuda (1945) e cosa dicono davvero i dati.
-- [ ] Misteri: il faro delle isole Flannan: tre guardiani spariti nel 1900.
+- [x] 2026-11-28 (per l'1/12, ANIMATO) Misteri: il faro delle isole Flannan: tre guardiani spariti nel 1900.
 - [ ] Misteri: la maledizione di Tutankhamon (Carter, 1922; morti spiegate) come mito da sfatare.
 - [ ] Spazio/scienza: Apollo 13, "Houston, abbiamo un problema" (1970) e il filtro costruito con nastro adesivo.
 - [ ] Spazio/scienza: Jurij Gagarin, il primo uomo nello spazio (1961), 108 minuti.
@@ -74,7 +74,7 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 - [ ] I vetrai di Murano: dal 1291 fornaci spostate a Murano; ai maestri vetrai era vietato lasciare la Repubblica.
 - [ ] Damnatio memoriae: Geta cancellato da Caracalla (212 d.C.), volto rimosso dal tondo Severiano.
 - [ ] Il primo dentista: denti di ~13.000 anni fa al Riparo Fredian (Toscana) con cavità trattate e riempite di bitume (studio 2017).
-- [ ] Ötzi: trovato nel 1991 al Similaun, ~5.300 anni, 61 tatuaggi, punta di freccia nella spalla sinistra.
+- [x] 2026-11-28 (per l'1/12) Ötzi: trovato nel 1991 al Similaun, ~5.300 anni, 61 tatuaggi, punta di freccia nella spalla sinistra.
 - [x] 2026-11-24 Le Vestali: sacerdotesse di Roma; se infrangevano il voto venivano sepolte vive.
 - [x] 2026-11-25 (per il 29/11) Gli acquedotti romani: l'Aqua Appia (312 a.C.) era quasi tutta sotterranea; pendenza minima calcolata.
 - [ ] Il garum: salsa di pesce fermentato amatissima dai Romani, prodotta anche a Pompei.
@@ -99,8 +99,8 @@ Segnare `[x] AAAA-MM-GG` quando usato. Fatti chiave indicati per non sbagliare.
 ## Scienza
 - [x] 2026-11-23 Il miele non scade: trovati vasi di miele ancora commestibile nelle tombe egizie.
 - [x] 2026-11-24 Siamo fatti di polvere di stelle: carbonio, ossigeno, ferro nel corpo sono nati nelle stelle.
-- [ ] I polpi hanno tre cuori e sangue blu (emocianina).
-- [ ] Il tardigrado sopravvive nello spazio (esperimento FOTON-M3, 2007).
+- [x] 2026-11-27 (extra) I polpi hanno tre cuori e sangue blu (emocianina).
+- [x] 2026-11-28 (per l'1/12) Il tardigrado sopravvive nello spazio (esperimento FOTON-M3, 2007).
 - [ ] Le banane sono leggermente radioattive (potassio-40).
 - [x] 2026-11-24 Il Sole che vedi ha 8 minuti: la luce impiega ~8 min 20 s ad arrivare.
 - [ ] Il DNA di una cellula, srotolato, è lungo circa 2 metri.
